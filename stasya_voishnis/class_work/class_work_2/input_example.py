@@ -54,3 +54,4 @@ far = 32
 cel = int(input('Введите температуру в цельсиях: '))
 
 print(cel + far)
+
