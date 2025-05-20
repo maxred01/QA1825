@@ -9,6 +9,7 @@ print (f'Привет, я {NAME_USER}, мне {AGE_USER} года')
 A = input ('Введите число A')
 B = input ('Введите число B')
 
+
 if A==B:
     print ('Числа равны')
 else:
