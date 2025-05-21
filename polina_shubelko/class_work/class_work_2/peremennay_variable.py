@@ -9,4 +9,3 @@ print (f'Привет, я {NAME_USER}, мне {AGE_USER} года')
 
 
 
-

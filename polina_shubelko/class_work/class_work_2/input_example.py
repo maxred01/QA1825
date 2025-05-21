@@ -6,8 +6,15 @@ print ('Привет, я', NAME_USER, ', мне', AGE_USER,'года')
 print ('Привет, я ' + NAME_USER + ', мне ' + str(AGE_USER) + ' года')
 print (f'Привет, я {NAME_USER}, мне {AGE_USER} года')
 
-A = input ('Введите число A')
-B = input ('Введите число B')
+A = input ('Введите первое число:')
+B = input ('Введите второе число:')
+result = int (A) + int (B)
+print('Сумма:', result)
+
+A = input ('Введите первое число:')
+B = input ('Введите второе число:')
+result = int (A) - int (B)
+print ('Разность:', result)
 
 
 if A==B:
@@ -30,9 +37,9 @@ if A < B:
 else:
     print('>')
 
-A = input('Введите пароль')
-
-if ('A = 123456'):
+password = '123456'
+my_password = input('Введите пароль:')
+if password == my_password:
     print('Доступ разрешен')
 else:
     print('Неверный пароль')
