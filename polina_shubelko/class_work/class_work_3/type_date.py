@@ -31,3 +31,4 @@ print (my_dict)
 
 my_list_1 = [1,2,3,4,5,6,7,8,9,10]
 results_dict = {f"key_{i+1}": num for i, num in enumerate(my_list_1)} # преобразование списка в словарь
+
