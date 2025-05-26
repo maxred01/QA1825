@@ -1,70 +1,82 @@
 #Задача 1
-from os.path import split
 
-#X = int (input('Введите число X: '))
+X = int (input('Введите число X: '))
 
-#print(f'Число: {X}')
+print(f'Число: {X}')
 
 #Задача 2
 
-#A = int (input('Введите число A:'))
-#B = int (input('Введите число B:'))
+A = int (input('Введите число A:'))
+B = int (input('Введите число B:'))
 
-#print(A + B)
+print(A + B)
 
 #Задача 3
 
-#numbers = [5, 10, 15]
-#numbers_tuple = tuple(numbers)
+numbers = [5, 10, 15]
+numbers_tuple = tuple(numbers)
 
-#print (numbers_tuple)
+print (numbers_tuple)
 
 #Задача 4
-#A = input('Введите слово: ')
-#B = input('Введите слово: ')
 
-#print (f'{A} {B}')
+A = input('Введите слово: ')
+B = input('Введите слово: ')
+
+print (f'{A} {B}')
 
 #Задача 5
 
-#A = int(input('Введите число: '))
+A = int(input('Введите число: '))
 
-#print(A * 2)
+print(A * 2)
 
 #Задача 6
 
-#fruits = ['apple', 'banana', 'cherry']
-#fruits_tuple = tuple(fruits)
+fruits = ['apple', 'banana', 'cherry']
+fruits_tuple = tuple(fruits)
 
-#print(len(fruits_tuple))
+print(len(fruits_tuple))
 
 #Задача 7
 
-#A = 3.14
-#I = int(A)
+A = 3.14
+I = int(A)
 
-#print(I)
+print(I)
 
 #Задача 8
 
-#NAME_USER = input('Введите имя:')
-#AGE_USER = input('Введите возраст:')
+NAME_USER = input('Введите имя:')
+AGE_USER = input('Введите возраст:')
 
-#print(f' Имя: {NAME_USER} , Возраст: {AGE_USER} ')
+print(f' Имя: {NAME_USER} , Возраст: {AGE_USER} ')
 
 #Задача 9
 
-#TEXT = "pyton"
+TEXT = "pyton"
 
-#print (list(TEXT))
+print (list(TEXT))
 
 #Задача 10
 
-tuple = (1,2,3)
-list = list(tuple)
-print (list)
+NUMBERS = [1,2,3]
+str_nambers = [str(n) for n in NUMBERS]
+result = ''.join(str_nambers)
 
-#string = ''.join(tuple)
-#print (string)
+print (result)
 
+#Задача 11
+
+TEXT = "Привет мир Pyton"
+WORDS = TEXT.split()
+
+print (len(WORDS))
+
+#Задача 12
+
+WORDS = ["Hello", "word", "!"]
+result = ' '.join(WORDS)
+
+print (result)
 
