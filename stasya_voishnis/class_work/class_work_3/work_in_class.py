@@ -29,8 +29,8 @@ print(text + str(price))
 words = ['Привет', 'мир', 'Python']
 words_python = 'Python'
 words_python_split = 'Привет-мир-Python'
-results_join = '-'.join(words_python)  # разделяет
-results_split = words_python_split.split('-') # соединяет
+results_join = '-'.join(words_python)
+results_split = words_python_split.split('-')
 print(results_join)
 print(results_split)
 print(results_split[0])
