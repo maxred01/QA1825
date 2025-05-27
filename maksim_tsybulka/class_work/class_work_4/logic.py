@@ -122,3 +122,4 @@ if login == "admin" and password == "12345":
     print("Успешный вход")
 else:
     print("Ошибка")
+
