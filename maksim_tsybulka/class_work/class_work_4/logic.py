@@ -78,3 +78,49 @@ if is_weekend:
         print('Смотрим фльм дома')
 else:
     print('Идем на работу')
+
+
+
+# 1
+number = int(input("Введите число: "))
+if number % 2 == 0:
+    print("Четное")
+else:
+    print("Нечетное")
+
+
+# 2
+a = int(input("Число 1: "))
+b = int(input("Число 2: "))
+c = int(input("Число 3: "))
+
+max_num = a
+if b > max_num:
+    max_num = b
+if c > max_num:
+    max_num = c
+print(f"Максимум: {max_num}")
+
+
+#3
+weight = float(input("Вес (кг): "))
+height = float(input("Рост (м): "))
+bmi = weight / (height ** 2)
+
+if bmi < 18.5:
+    print("Недостаточный вес")
+elif 18.5 <= bmi < 25:
+    print("Норма")
+else:
+    print("Избыточный вес")
+
+#4
+login = input("Логин: ")
+password = input("Пароль: ")
+
+if login == "admin" and password == "12345":
+    print("Успешный вход")
+else:
+    print("Ошибка")
+
+
