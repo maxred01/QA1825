@@ -45,15 +45,15 @@
 # else:
 #     print('Не верно')
 
-PASSWORD_PAS=123456
-PASSWORD = int(input('Введите ваш пароль:'))
-if PASSWORD==PASSWORD_PAS:
-    print('Пароль верный, входи в систему')
-else:
-    print('Пароль не верный. Доступ закрыт!')
-
-
-GRADUSI_CILSII = int (input('Введите градусы Цельсия: '))
-GRADUSI_FARENGEIT = (GRADUSI_CILSII*9/5)+32
-
-print('Градусы цельсия: '+str(GRADUSI_CILSII)+ ' | Градусы по фаренгейту: ' + str(GRADUSI_FARENGEIT))
+# PASSWORD_PAS=123456
+# PASSWORD = int(input('Введите ваш пароль:'))
+# if PASSWORD==PASSWORD_PAS:
+#     print('Пароль верный, входи в систему')
+# else:
+#     print('Пароль не верный. Доступ закрыт!')
+#
+#
+# GRADUSI_CILSII = int (input('Введите градусы Цельсия: '))
+# GRADUSI_FARENGEIT = (GRADUSI_CILSII*9/5)+32
+#
+# print('Градусы цельсия: '+str(GRADUSI_CILSII)+ ' | Градусы по фаренгейту: ' + str(GRADUSI_FARENGEIT))
