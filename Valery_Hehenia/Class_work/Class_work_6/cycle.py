@@ -31,6 +31,7 @@ for num in range(1,101):
     print(num*10)
 
 
+
 for num in range(10):
     if num == 5:
         break
