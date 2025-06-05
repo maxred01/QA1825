@@ -1,10 +1,10 @@
-# # NAME_USER = input('Введите своё имя: ')
-# # AGE_USER = input('Введите свой возрост: ')
-# #
-# # print('Привет, я Валерий, мне 28 лет')
-# # print('Привет, я', NAME_USER, ', мне', AGE_USER, 'лет')
-# # print('Привет, я '+NAME_USER+ ', мне ' + str(AGE_USER)+'лет')
-# # print(f'Привет, я {NAME_USER}, мне {AGE_USER} лет')
+NAME_USER = input('Введите своё имя: ')
+AGE_USER = input('Введите свой возрост: ')
+
+print('Привет, я Валерий, мне 28 лет')
+print('Привет, я', NAME_USER, ', мне', AGE_USER, 'лет')
+print('Привет, я '+NAME_USER+ ', мне ' + str(AGE_USER)+'лет')
+print(f'Привет, я {NAME_USER}, мне {AGE_USER} лет')
 #
 # NUMBER_1= int(input('Введите число a: '))
 # NUMBER_2 = int(input('Введите число b: '))
