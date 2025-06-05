@@ -1,0 +1,24 @@
+Index: bachko_irina/home_work/home_work_2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Задача 1\r\n\r\n#X = int (input('Введите число X: '))\r\n\r\n#print(f'Число: {X}')\r\n\r\n#Задача 2\r\n\r\n#A = int (input('Введите число A:'))\r\n#B = int (input('Введите число B:'))\r\n\r\n#print(A + B)\r\n\r\n#Задача 3\r\n\r\n#numbers_tuple = (5, 10, 15)\r\n#print (numbers_tuple)\r\n\r\n#Задача 4\r\n#A = input('Введите слово: ')\r\n#B = input('Введите слово: ')\r\n\r\n#print (f'{A} {B}')\r\n\r\n#Задача 5\r\n\r\n#A = int(input('Введите число: '))\r\n\r\n#print(A * 2)\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/bachko_irina/home_work/home_work_2.py b/bachko_irina/home_work/home_work_2.py
+--- a/bachko_irina/home_work/home_work_2.py	(revision 5d8337f41f0dd929bb76909ff2098b21749fc470)
++++ b/bachko_irina/home_work/home_work_2.py	(date 1748355189726)
+@@ -28,4 +28,13 @@
+ 
+ #print(A * 2)
+ 
++#text = 'Привет мир Piton'
++#print(text.split())
++
++#text = ['Привет', 'мир', 'Piton']
++#print(" ".join(text))
++
++y = 3.14
++txt = int(y)
++print(txt)
+ 
