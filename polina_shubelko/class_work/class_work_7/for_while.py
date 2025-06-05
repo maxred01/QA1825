@@ -47,4 +47,3 @@ for row in matrix:
     for cell in row:
         print(f'{cell:2d}', end=' ')
     print()
-
