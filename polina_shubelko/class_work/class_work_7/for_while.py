@@ -41,6 +41,14 @@ print(squares)
 #     for line_number, line in enumerate(file, 1):
 #         print(f'{line_number}, {line.strip()}')
 
+
+#Обработка вложенных структур
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for row in matrix:
+    for cell in row:
+        print(f'{cell:2d}', end=' ')
+    print()
+
 #Обработка вложенных структур
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 for row in matrix:
