@@ -1,4 +1,5 @@
-import requests
+﻿import requests
+import time
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     Application,
@@ -8,10 +9,8 @@ from telegram.ext import (
     filters
 )
 
-# Токен вашего бота (замените на свой)
 TOKEN = "8025703170:AAGtK4ey87I3gyaPoVVrIwSg7y-KG2JpPoo"
 
-#Текст рассказа о себе
 ABOUT_TEXT = """ *Обо мне*
      Привет! Меня зовут *Валерий Гегеня*, 
     и я анонимный тестировщий. Ловлю баги по утрам,
@@ -19,10 +18,36 @@ ABOUT_TEXT = """ *Обо мне*
     """
 
 
+async def check_response_time(url: str) -> dict:
+    result = {
+        'status_code': None,
+        'response_time_ms': None,
+        'content_size': None,
+        'error': None
+    }
+
+    try:
+        start_time = time.time()
+        response = requests.get(url, timeout=10)
+        end_time = time.time()
+
+        result['status_code'] = response.status_code
+        result['response_time_ms'] = round((end_time - start_time) * 1000)
+        result['content_size'] = len(response.content)
+
+    except requests.exceptions.RequestException as e:
+        result['error'] = str(e)
+
+    return result
+
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        "Привет! Отправь мне URL, и я проверю его HTTP-статус.\n"
-        "Например: `https://google.com` или просто `google.com`",
+        "Привет! Я могу:\n"
+        "1. Проверить статус и время отклика сайта (просто отправь URL)\n"
+        "2. Рассказать обо мне (/about)\n"
+        "3. Связаться со мной (/contact)\n\n"
+        "Пример: https://google.com или просто google.com",
         parse_mode="Markdown"
     )
 
@@ -31,10 +56,7 @@ async def about(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(ABOUT_TEXT, parse_mode="Markdown")
 
 
-
-
 async def contact(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("Написать Валере", url="https://t.me.me/valery_hehenia")],
         [InlineKeyboardButton("Написать кому-то", url="https://t.me.me/valery_hehenia")]
@@ -43,24 +65,28 @@ async def contact(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         "Нажмите кнопку ниже, чтобы написать мне в Telegram:",
         reply_markup=keyboard,
         parse_mode="Markdown"
-        )
-
+    )
 
 
 async def check_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     url = update.message.text.strip()
 
-    # Добавляем схему, если её нет
     if not url.startswith(("http://", "https://")):
         url = "https://" + url
 
-    try:
-        response = requests.head(url, allow_redirects=True, timeout=5)
-        status_code = response.status_code
-        await update.message.reply_text(f"🔎 *Статус-код для* `{url}`: `{status_code}`", parse_mode="Markdown")
-    except requests.exceptions.RequestException as e:
-        await update.message.reply_text(f"❌ Ошибка при проверке URL: `{str(e)}`", parse_mode="Markdown")
+    # Используем отдельную функцию для проверки
+    site_info = await check_response_time(url)
 
+    if site_info['error']:
+        await update.message.reply_text(f"Ошибка: `{site_info['error']}`", parse_mode="Markdown")
+    else:
+        message = (
+            f" *Результат проверки {url}:*\n"
+            f" Код статуса: `{site_info['status_code']}`\n"
+            f" Время отклика: `{site_info['response_time_ms']} мс`\n"
+            f" Размер контента: `{site_info['content_size']} байт`"
+        )
+        await update.message.reply_text(message, parse_mode="Markdown")
 
 
 def main() -> None:
@@ -69,6 +95,7 @@ def main() -> None:
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("about", about))
     app.add_handler(CommandHandler("contact", contact))
+    # app.add_handler(CommandHandler("check_response_time", check_response_time))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, check_url))
 
     app.run_polling()
