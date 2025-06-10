@@ -78,7 +78,6 @@ async def check_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if site_info['error']:
         await update.message.reply_text(f"Ошибка: `{site_info['error']}`", parse_mode="Markdown")
     else:
-
         message = (
             f" *Результат проверки {url}:*\n"
             f" Код статуса: `{site_info['status_code']}`\n"
