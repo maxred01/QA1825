@@ -6,11 +6,15 @@ def test_run_api_tests() -> str:
     """Запускает тесты и возвращает результаты в виде строки"""
     urls = [
         ("https://rocketdata.ru/", 'Главная страница'),
-        ("https://go.rocketdata.io/auth/login", 'Страница входа'),
-        ("https://rocketdata.ru/partners", 'Страница площадок'),
-        ("https://rocketdata.ru/about", 'Страница о компании'),
-        ("https://rocketdata.ru/vacancies", 'Страница карьеры'),
-        ("https://go.rocketdata.io/auth/register", 'Страница регистрации')
+        ("https://go.rocketdata.io/auth/login", 'Страница "Войти"'),
+        ("https://rocketdata.ru/partners", 'Страница "Площадки"'),
+        ("https://rocketdata.ru/about", 'Страница "О компании"'),
+        ("https://rocketdata.ru/vacancies", 'Страница "Карьера"'),
+        ("https://go.rocketdata.io/auth/register", 'Страница "Регистрация"'),
+        ("https://rocketdata.ru/usecases", 'Страница "Кейсы"'),
+        ("https://rocketdata.ru/rates", 'Страница "Тарифы"'),
+        ("https://rocketdata.ru/agencies", 'Страница "Блог"'),
+        ("https://rocketdata.ru/experts", 'Страница "Эксперты"')
 
     ]
 
