@@ -24,3 +24,4 @@ print(text.find("Python")) # -1 (не найден)
 #.rfind(sub[, start[, end]]) -> int
 
 
+
