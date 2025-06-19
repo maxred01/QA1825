@@ -16,6 +16,7 @@ def test_run_api_tests() -> str:
 
     ]
 
+
     results = []
     passed_count = 0
     failed_count = 0
