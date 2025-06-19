@@ -10,17 +10,20 @@ def test_main_pame():
     assert response.status_code == 200 , f'Статус код не равен 200, а {response.status_code}'
 
 
+
+
 def test_autorization():
-    import requests
 
-    url = "https://you.regettingold.com/?dd=22&mm=05&yy=1996&submitButton1=&name="
+    day = "22"
+    month = "05"
+    year = "1996"
 
-    payload = {}
+    url = f"https://you.regettingold.com/{day}/{month}/{year}/"
 
     response = requests.request("GET", url)
-    print(response.text)
 
     assert response.status_code == 200, f'Статус код не равен 200, а {response.status_code}'
+    assert "You're getting old!" in response.text, f'Такой фразы не существует!'
 
 
 def test_main_page():
