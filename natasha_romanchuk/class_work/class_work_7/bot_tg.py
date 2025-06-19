@@ -1,4 +1,4 @@
-import requests
+﻿import requests
 import time
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
