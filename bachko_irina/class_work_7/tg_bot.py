@@ -1,13 +1,13 @@
 import requests
 import time
+import asyncio
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
-    Application,
-    CommandHandler,
-    MessageHandler,
-    ContextTypes,
-    filters
+    Application, CommandHandler, MessageHandler,
+    ContextTypes, filters, CallbackQueryHandler
 )
+
+from test_api import test_run_api_tests
 
 TOKEN = "8110586142:AAFk5SuRe1w2IK1QSP6FfHRxm8bewq8-uHI"
 
@@ -16,6 +16,7 @@ ABOUT_TEXT = """ * ОБО МНЕ *
             я инженер, люблю природу.
             """
 
+ALLOWED_USERS = [1710949632]
 
 async def check_response_time(url: str) -> dict:
     result = {
@@ -41,29 +42,56 @@ async def check_response_time(url: str) -> dict:
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    keyboard = [
+        [InlineKeyboardButton("Запустить тесты", callback_data="run_tests")],
+        [InlineKeyboardButton("Обо мне", callback_data="about"),
+         InlineKeyboardButton("Контакты", callback_data="contact")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
     await update.message.reply_text(
-        "Привет! Я могу:\n"
-        "1. Проверить статус и время отклика сайта (просто отправь URL)\n"
-        "2. Рассказать обо мне (/about)\n"
-        "3. Связаться со мной (/contact)\n\n"
-        "Пример: https://google.com или просто google.com",
+        "Привет! Я бот для тестирования веб-ресурсов.\n\n"
+        "Я могу:\n"
+        "• Проверить доступность любого сайта (просто отправь URL)\n"
+        "• Запустить комплекс API-тестов\n"
+        "• Показать информацию о разработчике\n\n"
+        "Выбери действие:",
+        reply_markup=reply_markup,
         parse_mode="Markdown"
     )
 
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text(ABOUT_TEXT, parse_mode="Markdown")
+    if update.callback_query:
+        await update.callback_query.answer()
+        await update.callback_query.edit_message_text(
+            text=ABOUT_TEXT,
+            parse_mode="Markdown"
+        )
+    else:
+        await update.message.reply_text(ABOUT_TEXT, parse_mode="Markdown")
 
 
 async def contact(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("Написать Ирине", url="https://t.me/bachko_i")]
     ])
-    await update.message.reply_text(
-        "Нажмите кнопку ниже, чтобы написать мне в Telegram:",
-        reply_markup=keyboard,
-        parse_mode="Markdown"
-    )
+
+    text = "Нажмите кнопку ниже, чтобы написать мне в Telegram:"
+
+    if update.callback_query:
+        await update.callback_query.answer()
+        await update.callback_query.edit_message_text(
+            text=text,
+            reply_markup=keyboard,
+            parse_mode="Markdown"
+        )
+    else:
+        await update.message.reply_text(
+            text,
+            reply_markup=keyboard,
+            parse_mode="Markdown"
+        )
 
 
 async def check_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -72,7 +100,6 @@ async def check_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not url.startswith(("http://", "https://")):
         url = "https://" + url
 
-    # Используем отдельную функцию для проверки
     site_info = await check_response_time(url)
 
     if site_info['error']:
@@ -87,14 +114,77 @@ async def check_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(message, parse_mode="Markdown")
 
 
+async def run_tests_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if update.callback_query:
+        user_id = update.callback_query.from_user.id
+        message = update.callback_query.message
+    else:
+        user_id = update.message.from_user.id
+        message = update.message
+
+    if user_id not in ALLOWED_USERS:
+        response = "⛔ У вас нет прав на выполнение этой команды!"
+        if update.callback_query:
+            await update.callback_query.answer(response, show_alert=True)
+        else:
+            await message.reply_text(response)
+        return
+
+    if update.callback_query:
+        await update.callback_query.answer()
+        status_message = await update.callback_query.edit_message_text(
+            "🚀 Запускаю API-тесты... Пожалуйста, подождите...",
+            parse_mode="Markdown"
+        )
+    else:
+        status_message = await message.reply_text(
+            "🚀 Запускаю API-тесты... Пожалуйста, подождите...",
+            parse_mode="Markdown"
+        )
+
+    try:
+        loop = asyncio.get_running_loop()
+        test_results = await loop.run_in_executor(None, test_run_api_tests)
+
+        response_text = f"🔍 <b>Результаты API-тестов:</b>\n\n{test_results}"
+
+        await context.bot.edit_message_text(
+            chat_id=status_message.chat_id,
+            message_id=status_message.message_id,
+            text=response_text,
+            parse_mode="HTML"
+        )
+
+    except Exception as e:
+        error_text = f"⚠️ <b>Ошибка при выполнении тестов:</b>\n{str(e)}"
+        await context.bot.edit_message_text(
+            chat_id=status_message.chat_id,
+            message_id=status_message.message_id,
+            text=error_text,
+            parse_mode="HTML"
+        )
+
+
+async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    await query.answer()
+
+    if query.data == "run_tests":
+        await run_tests_command(update, context)
+    elif query.data == "about":
+        await about(update, context)
+    elif query.data == "contact":
+        await contact(update, context)
+
+
 def main() -> None:
     app = Application.builder().token(TOKEN).build()
-
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("about", about))
     app.add_handler(CommandHandler("contact", contact))
+    app.add_handler(CommandHandler("runtests", run_tests_command))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, check_url))
-
+    app.add_handler(CallbackQueryHandler(button_handler))
     app.run_polling()
 
 
