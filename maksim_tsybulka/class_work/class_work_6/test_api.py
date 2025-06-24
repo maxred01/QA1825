@@ -1,41 +1,112 @@
 import requests
 import time
+import json
+
+
+class TestCase:
+    def __init__(self, name, url, method="GET", headers=None, data=None, expected_status=200, check_field=None,
+                 expected_value=None):
+        self.name = name
+        self.url = url
+        self.method = method
+        self.headers = headers or {}
+        self.data = data
+        self.expected_status = expected_status
+        self.check_field = check_field
+        self.expected_value = expected_value
+
+    def run(self):
+        try:
+            start_time = time.time()
+            response = requests.request(
+                method=self.method,
+                url=self.url,
+                headers=self.headers,
+                data=self.data,
+                timeout=10
+            )
+            response_time = round((time.time() - start_time) * 1000)
+
+            # Проверка статуса
+            if response.status_code != self.expected_status:
+                return False, f"❌ Статус: {response.status_code} (ожидался {self.expected_status}), Время: {response_time}мс"
+
+            # Проверка поля JSON (если указано)
+            if self.check_field:
+                try:
+                    json_data = response.json()
+                    actual_value = json_data.get(self.check_field)
+                    if actual_value != self.expected_value:
+                        return False, f"❌ Поле '{self.check_field}': {actual_value} (ожидалось {self.expected_value}), Время: {response_time}мс"
+                except Exception as e:
+                    return False, f"⚠️ Ошибка парсинга JSON: {str(e)}"
+
+            return True, f"✅ Успешно! Статус: {response.status_code}, Время: {response_time}мс"
+        except Exception as e:
+            return False, f"⚠️ Критическая ошибка: {str(e)}"
+
+
+# Реестр тестов (легко добавлять новые)
+TEST_CASES = [
+    TestCase(
+        name="Главная Spotify",
+        url="https://open.spotify.com/",
+        method="GET"
+    ),
+    TestCase(
+        name="Каталог Onliner",
+        url="https://catalog.onliner.by/",
+        method="GET"
+    ),
+    TestCase(
+        name="Услуги Onliner",
+        url="https://s.onliner.by/tasks",
+        method="GET"
+    ),
+    TestCase(
+        name="Корзина Edostavka",
+        url="https://api2.edostavka.by/api/v2/basket",
+        method="POST",
+        headers={
+            'sec-ch-ua-platform': '"Windows"',
+            'Referer': 'https://edostavka.by/',
+            'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+            'Web-User-Agent': 'SiteEdostavka/1.0.0',
+            'sec-ch-ua-mobile': '?0',
+            'apiToken': 'Fek5TJRyidOSSzB1dGqxkxqX7zBccNMv',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Cookie': 'hg-client-security=2yxsLGA5e6LHVvE1scgoJYwYVah'
+        },
+        data=json.dumps({
+            "productId": 770036,
+            "quantityInBasket": 190,
+            "gtmItemListId": "",
+            "gtmItemListName": ""
+        }),
+        check_field="expressDeliveryPrice",
+        expected_value=5.99
+    ),
+]
 
 
 def test_run_api_tests() -> str:
-    """Запускает тесты и возвращает результаты в виде строки"""
-    urls = [
-        ("https://open.spotify.com/", 'главной Spotify'),
-        ("https://catalog.onliner.by/", 'каталога Onliner'),
-        ("https://s.onliner.by/tasks", 'услуг Onliner')
-    ]
-
     results = []
     passed_count = 0
     failed_count = 0
 
-    for url, name in urls:
-        try:
-            start_time = time.time()
-            response = requests.get(url, timeout=10)
-            response_time = round((time.time() - start_time) * 1000)
-            status = response.status_code
+    for test in TEST_CASES:
+        success, message = test.run()
+        result_line = f"{test.name} ({test.url}): {message}"
+        results.append(result_line)
 
-            if status == 200:
-                result = f"✅ {name} ({url}) - Успешно! Статус: {status}, Время: {response_time}мс"
-                passed_count += 1
-            else:
-                result = f"❌ {name} ({url}) - Ошибка! Статус: {status} (ожидался 200), Время: {response_time}мс"
-                failed_count += 1
-
-        except Exception as e:
-            result = f"⚠️ {name} ({url}) - Критическая ошибка: {str(e)}"
+        if success:
+            passed_count += 1
+        else:
             failed_count += 1
 
-        results.append(result)
-
-    # Итоговая статистика
-    total_tests = len(urls)
+    total_tests = len(TEST_CASES)
     success_rate = round(passed_count / total_tests * 100) if total_tests else 0
 
     summary = (
@@ -47,3 +118,5 @@ def test_run_api_tests() -> str:
     )
 
     return "\n".join(results) + summary
+
+
