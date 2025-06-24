@@ -7,13 +7,14 @@ def test_run_api_tests() -> str:
     urls = [
         ("https://rocketdata.ru/", 'Главная страница'),
         ("https://go.rocketdata.io/auth/login", 'Страница "Войти"'),
+        ("https://go.rocketdata.io/auth/register", 'Страница "Регистрация"'),
         ("https://rocketdata.ru/partners", 'Страница "Площадки"'),
         ("https://rocketdata.ru/about", 'Страница "О компании"'),
         ("https://rocketdata.ru/vacancies", 'Страница "Карьера"'),
-        ("https://go.rocketdata.io/auth/register", 'Страница "Регистрация"'),
         ("https://rocketdata.ru/usecases", 'Страница "Кейсы"'),
         ("https://rocketdata.ru/rates", 'Страница "Тарифы"'),
-        ("https://rocketdata.ru/agencies", 'Страница "Блог"'),
+        ("https://rocketdata.ru/agencies", 'Страница "Партнерам"'),
+        ("https://rocketdata.ru/blog", 'Страница "Блог"'),
         ("https://rocketdata.ru/experts", 'Страница "Эксперты"')
 
     ]
