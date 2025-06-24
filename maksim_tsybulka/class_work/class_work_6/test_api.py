@@ -118,5 +118,3 @@ def test_run_api_tests() -> str:
     )
 
     return "\n".join(results) + summary
-
-
