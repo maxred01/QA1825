@@ -15,4 +15,8 @@ def test_main_page():
 def test_registration():
     url = "https://www.hoyolab.com/circles/2/30/feed?page_type=30&page_sort=hot"
     response = requests.request("Post", url)
-    assert response.status_code == 304, f'error {response.status_code}'
+    assert response.status_code == 200, f'error {response.status_code}'
+
+
+def test_api():
+    return None
