@@ -165,4 +165,3 @@ sum_numbers = lambda a,b: a+b
 result = sum_numbers (3,5)
 print(result)
 
-
