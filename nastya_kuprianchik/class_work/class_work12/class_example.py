@@ -172,3 +172,4 @@ circle = Circle(radius=5)
 square = Square(side=4)
 print_area(circle)
 print_area(square)
+
