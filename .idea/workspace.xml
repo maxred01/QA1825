@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="Мой home 3 коммит">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bachko_irina/home_work/Home_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/bachko_irina/home_work/Home_3.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="bachko_irina_home_work_3" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="bachko_irina_home_work_2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ibachko&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/maxred01/QA1825.git&quot;,
+    &quot;accountId&quot;: &quot;804ab6a1-6cbf-4935-a17a-09ee0d946244&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;maxred01&quot;,
+    &quot;repository&quot;: &quot;QA1825&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2xKPvyBGmmERFYr6idp8bqRkGV9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Home_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_work_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_work_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.imput_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.peremennaya_variable.executor&quot;: &quot;Run&quot;,
+    &quot;Python.type_data.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bachko__irina__home__work3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="" />
+      <created>1747684032672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747684032672</updated>
+      <workItem from="1747684055235" duration="27000" />
+      <workItem from="1747684177404" duration="24000" />
+      <workItem from="1747684319856" duration="4000" />
+      <workItem from="1747684800474" duration="112000" />
+      <workItem from="1747736768742" duration="962000" />
+      <workItem from="1747756827060" duration="9292000" />
+      <workItem from="1748197670881" duration="1244000" />
+      <workItem from="1748198985387" duration="14876000" />
+      <workItem from="1748243212909" duration="4055000" />
+      <workItem from="1748278068364" duration="6406000" />
+      <workItem from="1748346476409" duration="3021000" />
+      <workItem from="1748872902138" duration="18114000" />
+      <workItem from="1748930720125" duration="352000" />
+      <workItem from="1748931139060" duration="19273000" />
+      <workItem from="1749128325402" duration="5659000" />
+      <workItem from="1749134814163" duration="140000" />
+      <workItem from="1749198764512" duration="901000" />
+    </task>
+    <task id="LOCAL-00001" summary="Мой второй коммит">
+      <option name="closed" value="true" />
+      <created>1747766925160</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747766925160</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Мой второй коммит">
+      <option name="closed" value="true" />
+      <created>1748206254007</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748206254007</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Мой второй коммит">
+      <option name="closed" value="true" />
+      <created>1748213709381</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748213709381</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Мой второй коммит">
+      <option name="closed" value="true" />
+      <created>1748248023422</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748248023422</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Мой третий коммит">
+      <option name="closed" value="true" />
+      <created>1748283548323</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748283548323</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Мой третий коммит">
+      <option name="closed" value="true" />
+      <created>1748284901996</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748284901996</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Мой home 3 коммит">
+      <option name="closed" value="true" />
+      <created>1748898081682</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748898081682</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Мой home 3 коммит">
+      <option name="closed" value="true" />
+      <created>1748898140851</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748898140851</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Мой home 3 коммит">
+      <option name="closed" value="true" />
+      <created>1748959420894</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748959420894</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Мой home 3 коммит">
+      <option name="closed" value="true" />
+      <created>1749133176715</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1749133176715</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/bachko_irina_home_work_3" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Мой второй коммит" />
+    <MESSAGE value="Мой третий коммит" />
+    <MESSAGE value="Мой home 3 коммит" />
+    <option name="LAST_COMMIT_MESSAGE" value="Мой home 3 коммит" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QA1825$home_work_2.coverage" NAME="home_work_2 Coverage Results" MODIFIED="1748355189744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
+    <SUITE FILE_PATH="coverage/QA1825$peremennaya_variable.coverage" NAME="peremennaya_variable Coverage Results" MODIFIED="1747762014492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
+    <SUITE FILE_PATH="coverage/QA1825$Home_3.coverage" NAME="Home_3 Coverage Results" MODIFIED="1749132248567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
+    <SUITE FILE_PATH="coverage/QA1825$type_data.coverage" NAME="type_data Coverage Results" MODIFIED="1748283424724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_3" />
+    <SUITE FILE_PATH="coverage/QA1825$imput_example.coverage" NAME="imput_example Coverage Results" MODIFIED="1747766436359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
+    <SUITE FILE_PATH="coverage/QA1825$home_work_3.coverage" NAME="home_work_3 Coverage Results" MODIFIED="1748897965867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work/home_work_3" />
+  </component>
+</project>

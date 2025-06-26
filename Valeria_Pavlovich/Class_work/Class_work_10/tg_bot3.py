@@ -9,12 +9,11 @@ from telegram.ext import (
     filters
 )
 
-TOKEN = "7821707602:AAHEhMXrg9-Bgxnv74g66_wNR67xloS42zM"
+TOKEN = "8061217384:AAFOIZ-nw6-v35q32FYtMdxRCNKE78MFdLw"
 
 ABOUT_TEXT = """
 *Обо мне*  
-Привет! Меня зовут *Наташа*,
-и я Junior QA Automation Engineer (Python).
+Привет, меня зовут *Валерия*, и я - начинающий тестировщик.
 """
 
 
@@ -51,14 +50,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         parse_mode="Markdown"
     )
 
+
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(ABOUT_TEXT, parse_mode="Markdown")
 
 
 async def contact(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("Написать Наташе", url="https://t.me/lam_natali"),],
-        [InlineKeyboardButton("Написать Жене", url="https://t.me/Evgeny_Romanchuk"), ]
+        [InlineKeyboardButton("Написать Валерии", url="https://t.me/VPavlMSQ")]
     ])
     await update.message.reply_text(
         "Нажмите кнопку ниже, чтобы написать мне в Telegram:",
