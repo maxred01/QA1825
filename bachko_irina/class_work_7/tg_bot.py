@@ -18,7 +18,6 @@ ABOUT_TEXT = """ * ОБО МНЕ *
 
 ALLOWED_USERS = [1710949632]
 
-
 async def check_response_time(url: str) -> dict:
     result = {
         'status_code': None,
