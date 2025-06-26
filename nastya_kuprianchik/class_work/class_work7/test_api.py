@@ -14,7 +14,7 @@ def test_main_page():
         assert response.status_code == 200, f'error {response.status_code}'
 def test_registration():
     url = "https://www.hoyolab.com/circles/2/30/feed?page_type=30&page_sort=hot"
-    response = requests.request("Post", url)
+    response = requests.request("GET", url)
     assert response.status_code == 200, f'error {response.status_code}'
 
 
