@@ -214,3 +214,73 @@ circle = Circle(radius=5)
 square = Square(side=4)
 print_area(circle)  # Площадь круга: 78.5
 print_area(square)  # Площадь квадрата: 16
+
+
+# Атрибуты
+class Dog:
+    specis = "Собака"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+my_dog = Dog("Rex", 3)
+
+print(my_dog.name)
+print(my_dog.age)
+print(my_dog.specis)
+
+
+# Методы
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    # Обычный метод
+    def area(self):
+        return self.width * self.height
+
+    # Метод класса (работает с классом, а не экземпляром)
+    @classmethod
+    def from_square(cls, side):
+        return cls(side, side)  # Создоваться квадрат
+
+
+rect = Rectangle(4, 5)
+print(rect.area())
+
+# Вызов метода класс
+square = Rectangle.from_square(4)
+print(square.area())
+
+
+class Circle:
+    def __init__(self, radius):
+        self._radius = radius
+
+    @property
+    def radius(self):
+        return self._radius
+
+    @radius.setter
+    def radius(self, value):
+        if value < 0:
+            raise ValueError("Радиус не может быть отрицательным")
+
+    @property
+    def area(self):
+        return 3.14 * self._radius ** 2
+
+
+circle = Circle(5)
+print(circle.radius)
+
+circle.radius = 10
+
+print(circle.area)
+
+
+"0123456789"[6] = 7
+"0123456789"[6] == "7"
+
