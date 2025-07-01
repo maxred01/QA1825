@@ -7,8 +7,6 @@ from telegram.ext import (
     ContextTypes, filters, CallbackQueryHandler
 )
 
-from test_api import test_api
-
 TOKEN = "7263256379:AAHXS-jb1zK7WbcuMLqFL8Sv049gnHtQPX0"
 ABOUT_TEXT = """*Обо мне*  
 Меня зовут *Куприянчик Анастасия*, и я анонимный тестироващик.
