@@ -4,12 +4,12 @@ from ..clients.api_client import APIClient
 class OnlinerAPI(APIClient):
     """Специализированный клиент для API Onliner.by"""
 
+# Наследование от базового класса APIClient
     def __init__(self):
-        super().__init__("https://emall.by/sdapi")
+        super().__init__("https://emall.by/sdapi") # Вызов конструктора родительского класса
 
-    def search_products(self, query, **params):
+    def search_products(self, query, **params): # Метод для поиска товаров
         """Поиск товаров в каталоге"""
-
         parameters = {'query': query, **params}
         return self.get('catalog.api/search/products', params=parameters)
 
