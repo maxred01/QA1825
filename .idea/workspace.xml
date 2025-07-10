@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="commit class_work_12">
-      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13/Class_example.py" afterDir="false" />
+    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="мой 12 коммит ооп">
+      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/emall/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/clients/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/emall/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/QA1825.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QA1825.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2025_17_16__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/api_client/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/api_client/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/client/api_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/onliner/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/client/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/onliner/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/emall/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/onliner/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/emall/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_4/Задача_8_Генератор_отчетов.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_4/Задача_8_Генератор_отчетов.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +49,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bachko_irina_home_work_2" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +63,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/maxred01/QA1825.git&quot;,
-    &quot;accountId&quot;: &quot;804ab6a1-6cbf-4935-a17a-09ee0d946244&quot;
+    &quot;accountId&quot;: &quot;f4c470ff-a4b0-4cc8-8304-6fd475254580&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -76,27 +87,30 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Class_example.executor": "Run",
     "Python.Home_3.executor": "Run",
+    "Python.api_client.executor": "Run",
+    "Python.conftest.executor": "Run",
     "Python.home_work_2.executor": "Run",
     "Python.home_work_3.executor": "Run",
     "Python.imput_example.executor": "Run",
+    "Python.oop_class.executor": "Run",
     "Python.peremennaya_variable.executor": "Run",
     "Python.type_data.executor": "Run",
+    "Python.Задача_8_Генератор_отчетов.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "natasha__romanchuk__home__work__5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Class_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.api_client">
+    <configuration name="Задача_8_Генератор_отчетов" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,12 +119,77 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13/Class_example.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_4/Задача_8_Генератор_отчетов.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="api_client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/client/api_client.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/conftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="oop_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_10" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_10/oop_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -121,14 +200,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Class_example" />
+        <item itemvalue="Python.api_client" />
+        <item itemvalue="Python.Задача_8_Генератор_отчетов" />
+        <item itemvalue="Python.conftest" />
+        <item itemvalue="Python.oop_class" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
         <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
       </set>
     </attachedChunks>
@@ -238,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749133176715</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="мой 12 коммит ооп">
+      <option name="closed" value="true" />
+      <created>1751439890820</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751439890820</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,15 +360,15 @@
     <MESSAGE value="Мой второй коммит" />
     <MESSAGE value="Мой третий коммит" />
     <MESSAGE value="Мой home 3 коммит" />
-    <option name="LAST_COMMIT_MESSAGE" value="Мой home 3 коммит" />
+    <MESSAGE value="мой 12 коммит ооп" />
+    <option name="LAST_COMMIT_MESSAGE" value="мой 12 коммит ооп" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/QA1825$Home_3.coverage" NAME="Home_3 Coverage Results" MODIFIED="1749132248567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
-    <SUITE FILE_PATH="coverage/QA1825$home_work_3.coverage" NAME="home_work_3 Coverage Results" MODIFIED="1748897965867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work/home_work_3" />
-    <SUITE FILE_PATH="coverage/QA1825$imput_example.coverage" NAME="imput_example Coverage Results" MODIFIED="1747766436359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
-    <SUITE FILE_PATH="coverage/QA1825$type_data.coverage" NAME="type_data Coverage Results" MODIFIED="1748283424724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_3" />
     <SUITE FILE_PATH="coverage/QA1825$home_work_2.coverage" NAME="home_work_2 Coverage Results" MODIFIED="1748355189744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
-    <SUITE FILE_PATH="coverage/QA1825$Class_example.coverage" NAME="Class_example Coverage Results" MODIFIED="1750957959765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13" />
     <SUITE FILE_PATH="coverage/QA1825$peremennaya_variable.coverage" NAME="peremennaya_variable Coverage Results" MODIFIED="1747762014492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
+    <SUITE FILE_PATH="coverage/QA1825$Home_3.coverage" NAME="Home_3 Coverage Results" MODIFIED="1749132248567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
+    <SUITE FILE_PATH="coverage/QA1825$type_data.coverage" NAME="type_data Coverage Results" MODIFIED="1748283424724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_3" />
+    <SUITE FILE_PATH="coverage/QA1825$imput_example.coverage" NAME="imput_example Coverage Results" MODIFIED="1747766436359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
+    <SUITE FILE_PATH="coverage/QA1825$home_work_3.coverage" NAME="home_work_3 Coverage Results" MODIFIED="1748897965867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work/home_work_3" />
   </component>
 </project>
