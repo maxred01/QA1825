@@ -1,0 +1,2 @@
+from pydentic import BaseModel
+

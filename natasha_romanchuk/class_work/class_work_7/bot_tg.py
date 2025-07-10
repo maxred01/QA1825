@@ -38,8 +38,9 @@ Postman (авто-тесты), https://web.postman.co/workspace/My-Workspace~595
 📜 Сертификаты:
 Introduction to SQL
 https://www.sololearn.com/certificates/CC-3FIYZUGW
+Introduction to Python
+https://www.sololearn.com/certificates/CC-UCATCQ4M
 
- 
 🔧 Инструменты и технологии:
 Python, Postman, Jira, Trello, Git
 Тестирование REST API, написание чек-листов, баг-репортов
@@ -50,7 +51,6 @@ Python, Postman, Jira, Trello, Git
 ✉️ Сопроводительное письмо:
 Я начинающий QA Automation Engineer с реальным опытом работы над учебным проектом. Уверенно применяю Postman для тестирования API, работаю с баг-трекингом в Jira, умею писать тест-кейсы и автоматизировать их. Готова развиваться в команде, где ценят ответственность и системный подход.
 """
-
 ALLOWED_USERS = [815451005]
 
 
@@ -110,7 +110,7 @@ async def about(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def contact(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     keyboard = InlineKeyboardMarkup([
-         [InlineKeyboardButton("Написать Наташе", url="https://t.me/lam_natali"),]
+        [InlineKeyboardButton("Написать Наташе", url="https://t.me/lam_natali")]
     ])
 
     text = "Нажмите кнопку ниже, чтобы написать мне в Telegram:"
@@ -173,7 +173,10 @@ async def run_tests_command(update: Update, context: ContextTypes.DEFAULT_TYPE) 
             parse_mode="Markdown"
         )
     else:
-        status_message = await message.reply_text(
+        status_message = await update.callback_query.edit_message_text(
+            "🚀 Запускаю API-тесты... Пожалуйста, подождите...",
+            parse_mode="Markdown"
+        ) if update.callback_query else await message.reply_text(
             "🚀 Запускаю API-тесты... Пожалуйста, подождите...",
             parse_mode="Markdown"
         )
@@ -183,21 +186,20 @@ async def run_tests_command(update: Update, context: ContextTypes.DEFAULT_TYPE) 
         test_results = await loop.run_in_executor(None, test_run_api_tests)
 
         response_text = f"🔍 <b>Результаты API-тестов:</b>\n\n{test_results}"
-
         await context.bot.edit_message_text(
             chat_id=status_message.chat_id,
             message_id=status_message.message_id,
             text=response_text,
             parse_mode="HTML"
         )
-
     except Exception as e:
-        error_text = f"⚠️ <b>Ошибка при выполнении тестов:</b>\n{str(e)}"
+        error_text = f'⚠️ < b > Ошибка при выполнении тестов: < / b >\n {str(e)} '
         await context.bot.edit_message_text(
             chat_id=status_message.chat_id,
             message_id=status_message.message_id,
             text=error_text,
             parse_mode="HTML"
+
         )
 
 

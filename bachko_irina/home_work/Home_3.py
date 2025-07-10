@@ -23,6 +23,7 @@ else:
         print(f'Операция прошла успешно. Остаток: {balance} руб.')
 
 
+
 # Задача 2
 # Умный термостат
 # Условие: Система анализирует:
@@ -35,24 +36,17 @@ time = int(input('Введите время суток: '))
 whether = str(input('Введите: холодно/тепло: ')).lower()
 people = str(input('Люди дома: да/нет: ')).lower()
 
-if time >=6 and time <=11:
-    result_time = 'утро'
-elif 12 <= time <= 17:
-    result_time = 'день'
-elif 18 <= time <= 23:
-    result_time = 'вечер'
-elif 0 <= time <= 5:
-    result_time = 'ночь'
-
-if result_time != 'ночь' and people == 'да' and whether == 'холодно':
-     print('люди дома и холодно → 22°C')
+if 0 <= time <= 5:
+    temp = 18
+elif people_home == "нет":
+    temp = 16
+elif weather == "холодно":
+    temp = 22
 else:
-     print('люди дома и тепло → 20°C')
+    temp = 20
 
-if result_time == 'ночь' and people == 'да':
-    print('ночь → 18°C')
-else:
-    print('людей нет → 16°C')
+print(f"Температура установлена на {temp}°C")
+
 
 
 #Задача 3
@@ -99,6 +93,27 @@ else:
 # Определить день недели
 
 
+date_str = "15.07.2025"
+
+if "." in date_str:
+    parts = date_str.split(".")
+elif "/" in date_str:
+    parts = date_str.split("/")
+else:
+    print('Неверный формат')
+    exit()
+
+if len(parts) != 3:
+    print('Ошибка: должно быть три компонента')
+else:
+    day, month, year = parts
+    if not (day.isdigit() and month.isdigit() and year.isdigit()):
+        print('Ошибка: все части должны быть числами')
+    else:
+        iso_date = f'{year}-{month.zfill(2)}-{day.zfill(2)}'
+        print(f'ISO-формат: {iso_date}')
+
+
 
 # Задача 5: Калькулятор налогов
 # Условие: Рассчитайте налог по прогрессивной шкале:
@@ -106,6 +121,25 @@ else:
 # Доход ≤ 20 000 → 10%
 # 20 000 < доход ≤ 50 000 → 20% на часть превышения
 # Доход > 50 000 → 30% на превышение + фиксированный платеж 5000
+
+
+dohod = int(input('Введите ваш доход: '))
+
+nalog_10 = 0.1
+nalog_20 = 0.2
+nalog_30 = 0.3
+
+lim1=20000
+lim2=30000
+
+if dohod <= 20000:
+    print (f'Сумма налога {dohod * nalog_10}')
+elif 20000 < dohod <= 50000:
+    lim = dohod - 20000
+    print(f'Сумма налога {(lim1 * nalog_10) + (lim * nalog_20)}')
+else:
+    lim = dohod - 50000
+    print(f'Сумма налога {(lim1 * nalog_10) + (lim2 * nalog_20) + (lim * nalog_30) + 5000}')
 
 
 
@@ -179,6 +213,27 @@ else:
 # EUR: 100 руб (покупка), 98 руб (продажа), комиссия 1%
 
 
+USD_buying = 90
+USD_selling = 88
+com1 = 0.015
+
+EUR_buying = 100
+EUR_selling = 98
+com2 = 0.01
+
+if currency == 'USD' and operation == 'покупка':
+    summ_1 = float(summ / USD_buying)
+    print(f'Вы пролучите {summ_1-(summ_1*com1):.2f} USD, Комиссия {com1*100}%')
+elif currency == 'USD' and operation == 'продажа':
+    summ_1 = float(summ / USD_selling)
+    print(f'Вы пролучите  {summ_1 - (summ_1 * com1):.2f} USD, Комиссия {com1 * 100}%')
+elif currency == 'EUR' and operation == 'покупка':
+    summ_2 = float(summ / EUR_buying)
+    print(f'Вы пролучите {summ_2 - (summ_2 * com2):.2f} EUR , Комиссия {com2 * 100}%')
+else:
+    summ_2 = float(summ / EUR_selling)
+    print(f'Вы пролучите {summ_2 - (summ_2 * com2):.2f} EUR , Комиссия {com2 * 100}%')
+
 
 # Задача 9: Система контроля доступа
 # Условие: Проверьте доступ в зону:
@@ -187,9 +242,31 @@ else:
 # Контрагент: только с 9:00 до 18:00 в будни
 # Гость: только с сопровождающим
 # Дополнительные условия:
-#
+
 # Экстренная ситуация → доступ всем
 # Проверка на запрещенный список
+
+
+data = input('Введите данные (сотрудник/контрагент/гость):').lower()
+time = int(input('Введите время? (0-23): '))
+day = input('Введите день недели?:').lower()
+emergency = input('Экстренная ситтуация (да/нет):').lower()
+escorted = input('Есть сопровождающий? (да/нет):').lower()
+black = ['Иванов' , 'Петров']
+lastname = input('Введите вашу фамилию:').capitalize()
+
+if lastname in black:
+    print('Доступ запрещен, Вы в черном списке')
+elif emergency == 'да':
+    print('Доступ разрешен, экстренная ситтуация')
+elif data == 'сотрудник':
+    print('Доступ разрешён')
+elif data == 'контрагент' and day not in ['суббота', 'воскресенье']:
+    print('Доступ разрешён')
+elif data == 'гость' and escorted == 'да':
+    print('Доступ разрешён с сопровождающим')
+else:
+    print('Доступ запрещён')
 
 
 # Задача 10: Генератор научных гипотез
@@ -204,7 +281,6 @@ else:
 # t > 100 и катализатор → "Реакция синтеза"
 # t > 200 и давление > 500 → "Плазменное состояние"
 # Иначе → "Стабильное состояние"
-
 
 
 temp = int(input('Введите температуру: '))
