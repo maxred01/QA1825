@@ -1,5 +1,5 @@
 import pytest
-from maksim_tsybulka.class_work.class_work_14.onliner.api import OnlinerAPI
+from polina_shubelko.class_work.class_work_12.rocketdata.api import OnlinerAPI
 
 
 @pytest.fixture(scope="session")
