@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="мой 12 коммит ооп">
-      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/emall/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/clients/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/emall/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_5_class_tests/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/QA1825.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QA1825.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_06_2025_17_16__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/api_client/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/api_client/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/client/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/onliner/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/client/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/onliner/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/emall/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/onliner/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/class_work/class_work_11/emall/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_4/Задача_8_Генератор_отчетов.py" beforeDir="false" afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_4/Задача_8_Генератор_отчетов.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751439890820</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="мой 12 коммит ооп">
+      <option name="closed" value="true" />
+      <created>1752166329736</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752166329736</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
