@@ -5,18 +5,22 @@ class OnlinerAPI(APIClient):
     """Специализированный клиент для API Onliner.by"""
 
     def __init__(self):
-        super().__init__('https://www.onliner.by/sdapi')
+        super().__init__("https://www.onliner.by/sdapi")
 
-    def searche_produkts(self, query, **params ):
+    def search_products(self, query, **params):
         """Поиск товаров в каталоге"""
 
-        parametrs = {'query': query, **params}
+        parameters = {'query': query, **params}
+        return self.get('catalog.api/search/products', params=parameters)
 
-        return self.request('GET', 'catalog.api/search/schemas', params=parametrs)
+    def get_currency_rates(self):
+        """Получение актуальных курсов валют"""
 
-    def get_currency_rates(self ):
-        """Получение курсов валют"""
-        return self.request('GET', 'main.api/currency')
+        return self.get('main.api/currency')
+
+    def get_product_details(self, product_id):
+        """Получение детальной информации о товаре"""
+        return self.get(f'catalog.api/products/{product_id}')
 
 
 
