@@ -1,13 +1,13 @@
 from pydantic import BaseModel
 
-class ProductShame (BaseModel):
+class ProductSchema(BaseModel):
     id: int
     name: str
     key: str
     description: str | None
-    price: float
+    amount: float
 
-class CurrencyShame (BaseModel):
+class CurrencySchema(BaseModel):
     USD: float
     RUB: float
     EUR: float
