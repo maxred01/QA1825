@@ -1,9 +1,11 @@
 import pytest
-from natasha_romanchuk.class_work.class_work_11.onliner.api import OnlinerAPI
+from maksim_tsybulka.class_work.class_work_14.onliner.api import OnlinerAPI
+
 
 @pytest.fixture(scope="session")
 def api_client():
-    """  """
+    """Фикстура для создания API слиента"""
+
     client = OnlinerAPI()
 
     yield client
