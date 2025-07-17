@@ -1,12 +1,10 @@
 from Valeria_Pavlovich.Class_work.Class_work_14.class_14.conftest import api_client
 import pytest
 
-def test_product_search(api_client):
+def test_hotel_search(api_client):
 
-    respons = api_client.search_products('ноутбук')
-
-
-    print(respons)
+    response = api_client.hotel_search('Москва')
+    print(response)
 
 # class TestClassTests:
 #

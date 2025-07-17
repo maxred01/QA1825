@@ -15,4 +15,4 @@ else:
         else:
             print('The operation is successful - please, take your money')
     else:
-        print('The operation is terminated by the client')
+        print('The operation is terminated by the clients')
