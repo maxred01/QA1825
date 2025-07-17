@@ -49,18 +49,48 @@ class TestCase:
 # Реестр тестов (легко добавлять новые)
 TEST_CASES = [
     TestCase(
-        name="Главная Spotify",
-        url="https://open.spotify.com/",
+        name="Главная",
+        url="https://www.royal.uk/",
         method="GET"
     ),
     TestCase(
-        name="Каталог Onliner",
-        url="https://catalog.onliner.by/",
+        name="Король",
+        url="https://www.royal.uk/the-king-0",
         method="GET"
     ),
     TestCase(
-        name="Услуги Onliner",
-        url="https://s.onliner.by/tasks",
+        name="Королева",
+        url="https://www.royal.uk/the-queen-0",
+        method="GET"
+    ),
+    TestCase(
+        name="Коронация",
+        url="https://www.royal.uk/coronation",
+        method="GET"
+    ),
+    TestCase(
+        name="Королевская семья",
+        url="https://www.royal.uk/royal-family",
+        method="GET"
+    ),
+    TestCase(
+        name="Королева Елизавета",
+        url="https://www.royal.uk/queen-elizabeth",
+        method="GET"
+    ),
+    TestCase(
+        name="Королевские резиденции, искусство и история",
+        url="https://www.royal.uk/royal-residences-art-and-history",
+        method="GET"
+    ),
+    TestCase(
+        name="Новости",
+        url="https://www.royal.uk/news",
+        method="GET"
+    ),
+    TestCase(
+        name="",
+        url=,
         method="GET"
     ),
     TestCase(
