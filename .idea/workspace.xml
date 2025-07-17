@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="commit class_work_12">
+    <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/selenium_ex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QA1825.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QA1825.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_14/api_client/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_14/api_client/api_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_14/onliner_api/onliner_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_14/onliner_api/onliner_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/onliner/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/onliner/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests/test_onliner.py" beforeDir="false" afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests/test_onliner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,94 +23,35 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="bachko_irina_home_work_3" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;ibachko&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/maxred01/QA1825.git&quot;,
-    &quot;accountId&quot;: &quot;804ab6a1-6cbf-4935-a17a-09ee0d946244&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;maxred01&quot;,
-    &quot;repository&quot;: &quot;QA1825&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2xKPvyBGmmERFYr6idp8bqRkGV9" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2zgyATNr7uGEiL09omsBYrGDF3F" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Class_example.executor": "Run",
-    "Python.Home_3.executor": "Run",
-    "Python.home_work_2.executor": "Run",
-    "Python.home_work_3.executor": "Run",
-    "Python.imput_example.executor": "Run",
-    "Python.peremennaya_variable.executor": "Run",
-    "Python.type_data.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "valery__hehenia__class__work__14",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="Class_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.selenium_ex (1)">
+    <configuration name="selenium_ex (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13/Class_example.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/selenium_ex.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,167 +60,115 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="selenium_ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_15\selenium_ex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_onliner.TestClassTests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_onliner.TestClassTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_onliner.test_bel" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_onliner.test_bel&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_onliner.test_product_search" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_onliner.test_product_search&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Class_example" />
+        <item itemvalue="Python.selenium_ex (1)" />
+        <item itemvalue="Python.selenium_ex" />
+        <item itemvalue="Python tests.Python tests for test_onliner.test_bel" />
+        <item itemvalue="Python tests.Python tests for test_onliner.test_product_search" />
+        <item itemvalue="Python tests.Python tests for test_onliner.TestClassTests" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
-      </set>
-    </attachedChunks>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="" />
-      <created>1747684032672</created>
+      <changelist id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="" />
+      <created>1752166868450</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1747684032672</updated>
-      <workItem from="1747684055235" duration="27000" />
-      <workItem from="1747684177404" duration="24000" />
-      <workItem from="1747684319856" duration="4000" />
-      <workItem from="1747684800474" duration="112000" />
-      <workItem from="1747736768742" duration="962000" />
-      <workItem from="1747756827060" duration="9292000" />
-      <workItem from="1748197670881" duration="1244000" />
-      <workItem from="1748198985387" duration="14876000" />
-      <workItem from="1748243212909" duration="4055000" />
-      <workItem from="1748278068364" duration="6406000" />
-      <workItem from="1748346476409" duration="3021000" />
-      <workItem from="1748872902138" duration="18114000" />
-      <workItem from="1748930720125" duration="352000" />
-      <workItem from="1748931139060" duration="19273000" />
-      <workItem from="1749128325402" duration="5659000" />
-      <workItem from="1749134814163" duration="140000" />
-      <workItem from="1749198764512" duration="901000" />
+      <updated>1752166868450</updated>
     </task>
-    <task id="LOCAL-00001" summary="Мой второй коммит">
-      <option name="closed" value="true" />
-      <created>1747766925160</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1747766925160</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Мой второй коммит">
-      <option name="closed" value="true" />
-      <created>1748206254007</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1748206254007</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Мой второй коммит">
-      <option name="closed" value="true" />
-      <created>1748213709381</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1748213709381</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Мой второй коммит">
-      <option name="closed" value="true" />
-      <created>1748248023422</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1748248023422</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Мой третий коммит">
-      <option name="closed" value="true" />
-      <created>1748283548323</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1748283548323</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Мой третий коммит">
-      <option name="closed" value="true" />
-      <created>1748284901996</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1748284901996</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Мой home 3 коммит">
-      <option name="closed" value="true" />
-      <created>1748898081682</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1748898081682</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Мой home 3 коммит">
-      <option name="closed" value="true" />
-      <created>1748898140851</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1748898140851</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Мой home 3 коммит">
-      <option name="closed" value="true" />
-      <created>1748959420894</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1748959420894</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Мой home 3 коммит">
-      <option name="closed" value="true" />
-      <created>1749133176715</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1749133176715</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/bachko_irina_home_work_3" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Мой второй коммит" />
-    <MESSAGE value="Мой третий коммит" />
-    <MESSAGE value="Мой home 3 коммит" />
-    <option name="LAST_COMMIT_MESSAGE" value="Мой home 3 коммит" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/QA1825$Home_3.coverage" NAME="Home_3 Coverage Results" MODIFIED="1749132248567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
-    <SUITE FILE_PATH="coverage/QA1825$home_work_3.coverage" NAME="home_work_3 Coverage Results" MODIFIED="1748897965867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work/home_work_3" />
-    <SUITE FILE_PATH="coverage/QA1825$imput_example.coverage" NAME="imput_example Coverage Results" MODIFIED="1747766436359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
-    <SUITE FILE_PATH="coverage/QA1825$type_data.coverage" NAME="type_data Coverage Results" MODIFIED="1748283424724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_3" />
-    <SUITE FILE_PATH="coverage/QA1825$home_work_2.coverage" NAME="home_work_2 Coverage Results" MODIFIED="1748355189744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
-    <SUITE FILE_PATH="coverage/QA1825$Class_example.coverage" NAME="Class_example Coverage Results" MODIFIED="1750957959765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13" />
-    <SUITE FILE_PATH="coverage/QA1825$peremennaya_variable.coverage" NAME="peremennaya_variable Coverage Results" MODIFIED="1747762014492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests/test_onliner.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests/test_onliner.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
