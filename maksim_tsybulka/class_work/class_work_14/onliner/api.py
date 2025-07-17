@@ -31,3 +31,4 @@ class OnlinerAPI(APIClient):
     def get_product_details(self, product_id):
         """Получение детальной информации о товаре"""
         return self.get(f'catalog.api/products/{product_id}')
+
