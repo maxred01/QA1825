@@ -68,29 +68,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Home_3.executor": "Run",
-    "Python.home_work_2.executor": "Run",
-    "Python.home_work_3.executor": "Run",
-    "Python.imput_example.executor": "Run",
-    "Python.peremennaya_variable.executor": "Run",
-    "Python.selenium.executor": "Run",
-    "Python.selenium1.executor": "Run",
-    "Python.type_data.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "bachko__irina__class__work__10",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Home_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_work_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_work_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.imput_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.peremennaya_variable.executor&quot;: &quot;Run&quot;,
+    &quot;Python.selenium.executor&quot;: &quot;Run&quot;,
+    &quot;Python.selenium1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.type_data.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bachko__irina__class__work__10&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="selenium1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
@@ -249,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752779203162</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Мой home 12 коммит">
+      <option name="closed" value="true" />
+      <created>1752779330147</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1752779330147</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
