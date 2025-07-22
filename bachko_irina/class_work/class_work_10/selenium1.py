@@ -27,6 +27,7 @@ driver = webdriver.Chrome()
 # assert img_korjik.is_displayed() == True, ' Картинки нет на экарне'
 #
 # # Закрыть браузер
+#
 # driver.quit()
 
 
