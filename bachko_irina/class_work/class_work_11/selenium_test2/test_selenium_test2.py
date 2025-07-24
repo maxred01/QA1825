@@ -44,7 +44,7 @@ def test_selenium():
         (driver.find_element(By.ID, 'permanentAddress'), 'Permanent Address', permanent_address)
     ]
     for element, text_elemet, send_keys_element in elemets_form_send_keys:
-        with allure.step(f'Ввод текста для поля {text_element}'):
+#       with allure.step(f'Ввод текста для поля {text_element}'):
             element.send_keys(send_keys_element)
 
     time.sleep(2)
@@ -56,9 +56,10 @@ def test_selenium():
 
     assert output_form.is_displayed(), 'Результат формы не появился на экарне'
     elemets_form = [
-        (driver.find_element(By.ID, 'name'), user_name), (driver.find_element(By.ID, 'email'), user_email),
-        (driver.find_element(By.XPATH, '//p[@id="currentAddress"]'), current_address),
-        (driver.find_element(By.XPATH, '//p[@id="permanentAddress"]'), permanent_address)
+        (driver.find_element(By.ID, 'name'), user_name, 'Name'),
+        (driver.find_element(By.ID, 'email'), user_email, 'Email'),
+        (driver.find_element(By.XPATH, '//p[@id="currentAddress"]'), current_address, 'Current Address'),
+        (driver.find_element(By.XPATH, '//p[@id="permanentAddress"]'), permanent_address, 'Permanent Address')
     ]
     for elemet, elemets_text in elemets_form:
         check.greater(elemet.text.find(elemets_text), -1, f"Текста {elemets_text} нет на экране")
