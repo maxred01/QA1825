@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="Мой 13 коммит">
-      <change afterPath="$PROJECT_DIR$/bachko_irina/class_work/class_work_11/selenium_test2/test_selenium_test2.py" afterDir="false" />
+    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="commit class work 13">
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_7/DemoQA_checkBox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_7/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Home_work/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +38,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="valery_hehenia_class_work_17" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +52,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/maxred01/QA1825.git&quot;,
-    &quot;accountId&quot;: &quot;804ab6a1-6cbf-4935-a17a-09ee0d946244&quot;
+    &quot;accountId&quot;: &quot;7d7b3f02-08e3-487e-b9c1-19c520f47497&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -74,18 +76,23 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_api_example.test_api_status.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_onliner.test_product_search.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for DemoQA_checkBox.test_demoqa_Web_tables.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for DemoQA_checkBox.test_demoqa_checkbox.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for DemoQA_checkBox.test_demoqa_radioButton.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Class_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DemoQA.executor&quot;: &quot;Run&quot;,
     &quot;Python.Home_3.executor&quot;: &quot;Run&quot;,
     &quot;Python.home_work_2.executor&quot;: &quot;Run&quot;,
     &quot;Python.home_work_3.executor&quot;: &quot;Run&quot;,
     &quot;Python.imput_example.executor&quot;: &quot;Run&quot;,
     &quot;Python.peremennaya_variable.executor&quot;: &quot;Run&quot;,
-    &quot;Python.selenium.executor&quot;: &quot;Run&quot;,
-    &quot;Python.selenium1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.selenium_test2.executor&quot;: &quot;Debug&quot;,
     &quot;Python.type_data.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bachko__irina__class__work__11&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;valery__hehenia__home__work__7&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -95,8 +102,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.test_selenium_test2">
-    <configuration name="class_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Studies\Python\QA1825\Valery_Hehenia\Home_work\Home_work_7" />
+      <recent name="D:\Studies\Python\QA1825\Valery_Hehenia\Class_work\Class_work_14" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for DemoQA_checkBox.test_demoqa_Web_tables">
+    <configuration name="Class_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,11 +118,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bachko_irina/class_work_9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bachko_irina/class_work_9/class_example.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13/Class_example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +132,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="selenium1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="DemoQA" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,11 +141,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bachko_irina/class_work/class_work_10" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_6" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Irina\PycharmProjects\QA1825\bachko_irina\class_work\class_work_10\selenium1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_6/DemoQA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,40 +154,71 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_selenium_test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for DemoQA_checkBox.test_demoqa_Web_tables" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bachko_irina/class_work/class_work_11/selenium_test2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Irina\PycharmProjects\QA1825\bachko_irina\class_work\class_work_11\selenium_test2\test_selenium_test2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;DemoQA_checkBox.test_demoqa_Web_tables&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for DemoQA_checkBox.test_demoqa_checkbox" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;DemoQA_checkBox.test_demoqa_checkbox&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for DemoQA_checkBox.test_demoqa_radioButton" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;DemoQA_checkBox.test_demoqa_radioButton&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_selenium_test2" />
-        <item itemvalue="Python.class_example" />
-        <item itemvalue="Python.selenium1" />
+        <item itemvalue="Python tests.pytest for DemoQA_checkBox.test_demoqa_Web_tables" />
+        <item itemvalue="Python tests.pytest for DemoQA_checkBox.test_demoqa_radioButton" />
+        <item itemvalue="Python tests.pytest for DemoQA_checkBox.test_demoqa_checkbox" />
+        <item itemvalue="Python.DemoQA" />
+        <item itemvalue="Python.Class_example" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
       </set>
     </attachedChunks>
   </component>
@@ -201,6 +246,7 @@
       <workItem from="1749128325402" duration="5659000" />
       <workItem from="1749134814163" duration="140000" />
       <workItem from="1749198764512" duration="901000" />
+      <workItem from="1751385972497" duration="9303000" />
     </task>
     <task id="LOCAL-00001" summary="Мой второй коммит">
       <option name="closed" value="true" />
@@ -282,39 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749133176715</updated>
     </task>
-    <task id="LOCAL-00011" summary="Мой home 7 коммит">
+    <task id="LOCAL-00011" summary="commit class work 13">
       <option name="closed" value="true" />
-      <created>1752769922451</created>
+      <created>1750959733026</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1752769922451</updated>
+      <updated>1750959733026</updated>
     </task>
-    <task id="LOCAL-00012" summary="Мой home 12 коммит">
-      <option name="closed" value="true" />
-      <created>1752779203162</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1752779203162</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Мой home 12 коммит">
-      <option name="closed" value="true" />
-      <created>1752779330147</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1752779330147</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Мой 13 коммит">
-      <option name="closed" value="true" />
-      <created>1753201084894</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1753201084894</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,17 +369,17 @@
     <MESSAGE value="Мой второй коммит" />
     <MESSAGE value="Мой третий коммит" />
     <MESSAGE value="Мой home 3 коммит" />
-    <MESSAGE value="Мой home 7 коммит" />
-    <MESSAGE value="Мой home 12 коммит" />
-    <MESSAGE value="Мой 13 коммит" />
-    <option name="LAST_COMMIT_MESSAGE" value="Мой 13 коммит" />
+    <MESSAGE value="commit class work 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit class work 13" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/QA1825$home_work_2.coverage" NAME="home_work_2 Coverage Results" MODIFIED="1748355189744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
-    <SUITE FILE_PATH="coverage/QA1825$peremennaya_variable.coverage" NAME="peremennaya_variable Coverage Results" MODIFIED="1747762014492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
     <SUITE FILE_PATH="coverage/QA1825$Home_3.coverage" NAME="Home_3 Coverage Results" MODIFIED="1749132248567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
-    <SUITE FILE_PATH="coverage/QA1825$type_data.coverage" NAME="type_data Coverage Results" MODIFIED="1748283424724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_3" />
-    <SUITE FILE_PATH="coverage/QA1825$imput_example.coverage" NAME="imput_example Coverage Results" MODIFIED="1747766436359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
     <SUITE FILE_PATH="coverage/QA1825$home_work_3.coverage" NAME="home_work_3 Coverage Results" MODIFIED="1748897965867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work/home_work_3" />
+    <SUITE FILE_PATH="coverage/QA1825$imput_example.coverage" NAME="imput_example Coverage Results" MODIFIED="1747766436359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
+    <SUITE FILE_PATH="coverage/QA1825$type_data.coverage" NAME="type_data Coverage Results" MODIFIED="1748283424724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_3" />
+    <SUITE FILE_PATH="coverage/QA1825$home_work_2.coverage" NAME="home_work_2 Coverage Results" MODIFIED="1748355189744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
+    <SUITE FILE_PATH="coverage/QA1825$.coverage" NAME=" Coverage Results" MODIFIED="1751395486487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_14/tests" />
+    <SUITE FILE_PATH="coverage/QA1825$Class_example.coverage" NAME="Class_example Coverage Results" MODIFIED="1751387335204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_13" />
+    <SUITE FILE_PATH="coverage/QA1825$peremennaya_variable.coverage" NAME="peremennaya_variable Coverage Results" MODIFIED="1747762014492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/class_work_2" />
   </component>
 </project>
