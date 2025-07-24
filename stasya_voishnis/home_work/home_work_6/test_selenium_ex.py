@@ -21,7 +21,6 @@ import pytest_check as check
 @allure.feature("Раздел Elements")
 @allure.story("Test Box")
 def test_selenium():
-
     with allure.step('Подготовка тестовых данных'):
         user_name = 'tri-kota'
         user_email = 'test@gmail.com'
