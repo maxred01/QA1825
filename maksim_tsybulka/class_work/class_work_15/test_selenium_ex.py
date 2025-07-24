@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 import pytest_check as check
+from maksim_tsybulka.class_work.class_work_15.locators.locators_demo_qa import LocatorsCheckBox as Cl
 
 
 @allure.title('Это тест проверяет заполнение и результат заполнения формы')
@@ -66,3 +67,72 @@ def test_selenium():
 
     time.sleep(2)
     driver.quit()
+
+
+@allure.title('Это тест проверяет чекбоксы')
+@allure.description("""Тест вводит нажимает на вложенности и прожимает чекбоксы""")
+@allure.tag("Smoke")
+@allure.severity(Severity.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.id("123")
+@allure.manual
+@allure.link("https://hoster.by/", name="Тест-кейсы теста")
+@allure.issue("AUTH-123")
+@allure.testcase("TMS-456")
+@allure.epic("UI автотетсы")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Check Box")
+def test_selenium_is_selected():
+    with allure.step('Запускаем и настройка браузер'):
+        driver = webdriver.Chrome()
+        driver.get("https://demoqa.com/checkbox")
+        driver.maximize_window()
+        time.sleep(1)
+
+    with allure.step('Прожатие кнопок для открытие вкладок'):
+        driver.find_element(By.XPATH, Cl.check_box_home).click()
+        driver.find_element(By.XPATH, Cl.check_box_downloads).click()
+        driver.find_element(By.XPATH, Cl.btn_word_file).click()
+        driver.find_element(By.XPATH, Cl.btn_excel_file).click()
+
+    with allure.step('Проверка: что нажаты чекбоксы'):
+        assert driver.find_element(By.XPATH, Cl.check_box_word_file).is_selected()
+        assert driver.find_element(By.XPATH, Cl.check_box_excel_file).is_selected()
+
+    with allure.step('Проверка текста: что чекс выбран'):
+        assert driver.find_element(By.ID, Cl.text_result).text.find('downloads') > -1
+        assert driver.find_element(By.ID, Cl.text_result).text.find('wordFile') > -1
+        assert driver.find_element(By.ID, Cl.text_result).text.find('excelFile') > -1
+
+    time.sleep(2)
+    driver.quit()
+
+
+@allure.title('Это тест проверяет радиобаттон')
+@allure.description("""Тест нажимает по кажлй кнопки и проверяет выбран ли радиобатон или нет""")
+@allure.tag("Smoke")
+@allure.severity(Severity.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.id("123")
+@allure.manual
+@allure.link("https://hoster.by/", name="Тест-кейсы теста")
+@allure.issue("AUTH-123")
+@allure.testcase("TMS-456")
+@allure.epic("UI автотетсы")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Check Box")
+def test_selenium_radio_button():
+    with allure.step('Запускаем и настройка браузер'):
+        driver = webdriver.Chrome()
+        driver.get("https://demoqa.com/radio-button")
+        driver.maximize_window()
+        time.sleep(1)
+
+    with allure.step('Прожатие кнопок для открытие вкладок'):
+        driver.find_element(By.CSS_SELECTOR, 'label[for="yesRadio"]').click()
+        assert driver.find_element(By.ID, 'yesRadio').is_selected()
+        assert driver.find_element(By.ID, 'noRadio').is_enabled()
+
+        driver.quit()
+
+

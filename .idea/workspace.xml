@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="12345">
-      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/locators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/locators/locators_demo_qa.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/selenium_ex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_selenium_ex.py">
+  <component name="RunManager" selected="Python tests.pytest for test_selenium_ex.test_selenium_radio_button">
     <configuration name="test_selenium_ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,34 +76,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_onliner.TestClassTests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_onliner.TestClassTests&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_onliner.test_bel" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_onliner.test_bel&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest for test_selenium_ex.test_selenium" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -118,6 +91,38 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_selenium_ex.test_selenium&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_selenium_ex.test_selenium_is_selected" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium_is_selected&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_selenium_ex.test_selenium_radio_button" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium_radio_button&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -139,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium_radio_button" />
+        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium_is_selected" />
         <item itemvalue="Python tests.pytest in test_selenium_ex.py" />
         <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium" />
         <item itemvalue="Python.test_selenium_ex" />
-        <item itemvalue="Python.test_selenium_ex" />
-        <item itemvalue="Python tests.Python tests for test_onliner.test_bel" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752780023949</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="12345">
+      <created>1753210324441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1753210324441</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
