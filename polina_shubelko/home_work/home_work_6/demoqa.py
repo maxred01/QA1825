@@ -45,3 +45,4 @@ time.sleep(3)
 # Закрыть браузер
 driver.quit()
 
+
