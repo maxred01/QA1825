@@ -8,18 +8,19 @@ from selenium.webdriver.common.keys import Keys
 
 import pytest_check as check
 
-@allure.title("Этот тест проверяет заполнение и результатт заполнения полей")
+@allure.title("Этот тест проверяет заполнение и результат заполнения формы")
 @allure.description("""Тест вводит текст для полей user_name и тд и сверяет результат в полях name и тд""")
 @allure.tag("Smoke")
-@allure.severity('Severiti')
-@allure.label()
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "python")
 @allure.id("123")
 @allure.manual
-@allure.link("https://hoster.by/", name="Тест кейсы теста")
-@allure.testcase("TMS-456")
+@allure.link("https://hoster.by/", name="Тест-кейсы теста")
+@allure.issue("AUTH-123")
 @allure.epic("UI автотесты")
 @allure.feature("Раздел Elements")
-@allure.story("Test Box")
+@allure.story("Вкладка Test Box")
+
 def test_selenium():
     with allure.step('Подготовка тестовых данных'):
         user_name = 'tri-kota'
