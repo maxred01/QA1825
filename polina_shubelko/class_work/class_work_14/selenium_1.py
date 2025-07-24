@@ -11,7 +11,7 @@ driver.maximize_window()
 driver.find_element(By.XPATH, '//button[@id="CybotCookiebotDialogBodyButtonAccept"]').click()
 time.sleep(5)
 
-driver.find_element(By.XPATH, '//a[@href="#popup:feedback"]//aria-haspopup="dialog"').click()
+driver.find_element(By.XPATH, '//a[@href="#popup:feedback"]//a[@aria-haspopup="dialog"]').click()
 form_loaded = driver.find_element(By.XPATH, '(//div[@class="tn-atom t-bgimg loaded"])[2]')
 assert form_loaded.is_displayed() == True, 'Кнопки "Свяжитесь со мной" нет на экране'
 
