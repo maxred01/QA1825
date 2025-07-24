@@ -1,5 +1,7 @@
 import time
 
+import allure
+from allure_commons.types import Severity, LabelType
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -45,10 +47,9 @@ def test_selenium():
         with allure.step(f'Ввод текста для поля {text_element}'):
             element.send_keys(send_keys_element)
 
-
     time.sleep(2)
-    with allure.step(''):
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    with allure.step('Скролл страницы вниз'):
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
     # driver.execute_script("window.scrollBy(0, 50);")    # driver.find_element(By.ID, 'submit').send_keys(Keys.DOWN)    driver.find_element(By.ID, 'submit').click()
     output_form = driver.find_element(By.ID, 'output')
@@ -60,7 +61,7 @@ def test_selenium():
         (driver.find_element(By.XPATH, '//p[@id="permanentAddress"]'), permanent_address)
     ]
     for elemet, elemets_text in elemets_form:
-        check.greater(elemet.text.find(elemets_text), -1, f"Текста {elemets_text} нет на экарне")
+        check.greater(elemet.text.find(elemets_text), -1, f"Текста {elemets_text} нет на экране")
 
     time.sleep(2)
     driver.quit()
