@@ -4,14 +4,24 @@ from ..clients.api_client import APIClient
 class OnlinerAPI(APIClient):
     """Специализированный клиент для API Onliner.by"""
 
+    # Наследование от базового класса APIClient
     def __init__(self):
-        super().__init__("https://www.onliner.by/sdapi")
 
-    def search_products(self, query, **params):
+        # Вызов конструктора родителського класс
+        super().__init__("https://hotels.belavia.by")
+
+    # Метод для поиска товара
+    def search_products(self, q, guests,  price,  sid):
         """Поиск товаров в каталоге"""
 
-        parameters = {'query': query, **params}
-        return self.get('catalog.api/search/products', params=parameters)
+        # параметры для поиска товара
+        parameters = {
+            'q': q,
+            'guests': guests,
+            'price': price,
+            'sid': sid,
+                      }
+        return self.get('hotel/belarus/minsk', params=parameters)
 
     def get_currency_rates(self):
         """Получение актуальных курсов валют"""
