@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="commit class work 13">
-      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_7/DemoQA_checkBox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Home_work/Home_work_7/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Home_work/__init__.py" afterDir="false" />
+    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="commit class work 17">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,11 +101,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Studies\Python\QA1825\Valery_Hehenia\Class_work\Class_work_17" />
       <recent name="D:\Studies\Python\QA1825\Valery_Hehenia\Home_work\Home_work_7" />
       <recent name="D:\Studies\Python\QA1825\Valery_Hehenia\Class_work\Class_work_14" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for DemoQA_checkBox.test_demoqa_Web_tables">
+  <component name="RunManager" selected="Python.Class_example">
     <configuration name="Class_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
@@ -154,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for DemoQA_checkBox.test_demoqa_Web_tables" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_Web_tables" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,11 +165,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;DemoQA_checkBox.test_demoqa_Web_tables&quot;" />
+      <option name="_new_target" value="&quot;Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_Web_tables&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for DemoQA_checkBox.test_demoqa_checkbox" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_checkbox" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,11 +182,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;DemoQA_checkBox.test_demoqa_checkbox&quot;" />
+      <option name="_new_target" value="&quot;Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_checkbox&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for DemoQA_checkBox.test_demoqa_radioButton" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_radioButton" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,15 +199,15 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;DemoQA_checkBox.test_demoqa_radioButton&quot;" />
+      <option name="_new_target" value="&quot;Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_radioButton&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for DemoQA_checkBox.test_demoqa_Web_tables" />
-        <item itemvalue="Python tests.pytest for DemoQA_checkBox.test_demoqa_radioButton" />
-        <item itemvalue="Python tests.pytest for DemoQA_checkBox.test_demoqa_checkbox" />
+        <item itemvalue="Python tests.pytest for Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_Web_tables" />
+        <item itemvalue="Python tests.pytest for Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_radioButton" />
+        <item itemvalue="Python tests.pytest for Valery_Hehenia.Class_work.Class_work_17.DemoQA_checkBox.test_demoqa_checkbox" />
         <item itemvalue="Python.DemoQA" />
         <item itemvalue="Python.Class_example" />
       </list>
@@ -336,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750959733026</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit class work 17">
+      <option name="closed" value="true" />
+      <created>1753382930705</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753382930705</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +376,8 @@
     <MESSAGE value="Мой третий коммит" />
     <MESSAGE value="Мой home 3 коммит" />
     <MESSAGE value="commit class work 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit class work 13" />
+    <MESSAGE value="commit class work 17" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit class work 17" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/QA1825$Home_3.coverage" NAME="Home_3 Coverage Results" MODIFIED="1749132248567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bachko_irina/home_work" />
