@@ -20,7 +20,7 @@ import pytest_check as check
 @allure.testcase("TMS-456")
 @allure.epic("UI автотетсы")
 @allure.feature("Раздел Elements")
-@allure.story("Вкладка Check Box")
+@allure.story("Вкладка Radio Button")
 
 def test_selenium_radio_button():
     with allure.step('Запускаем и настройка браузер'):
