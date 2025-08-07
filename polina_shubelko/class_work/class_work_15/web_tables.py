@@ -25,7 +25,8 @@ import pytest_check as check
 @allure.story("Вкладка Web Tables")
 
 
-def test_selenium_web_tables():
+def test_selenium_web_tables_1():
+
     with allure.step('Запускаем и настраиваем браузер'):
         driver = webdriver.Chrome()
         driver.get("https://demoqa.com/webtables")
@@ -40,6 +41,15 @@ def test_selenium_web_tables():
         time.sleep(2)
         check.not_equal(elements, elements_delete)
         time.sleep(2)
+
+def test_selenium_web_tables_2():
+
+    with allure.step('Запускаем и настраиваем браузер'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
 
     with allure.step('Проверка добавление записи'):
         driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
@@ -73,6 +83,15 @@ def test_selenium_web_tables():
                 driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
 
     time.sleep(2)
+
+def test_selenium_web_tables_3():
+
+    with allure.step('Запускаем и настраиваем браузер'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
 
     with allure.step('Проверка редактирования записи'):
         elements_before = driver.find_elements(By.CSS_SELECTOR, 'span[title="Delete"]')
@@ -114,4 +133,93 @@ def test_selenium_web_tables():
                 driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
                 time.sleep(2)
 
-        driver.quit()
+def test_selenium_web_tables_4():
+
+    with allure.step('Запускаем и настраиваем браузер'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
+
+    with allure.step('Проверка поля "Search"'):
+        element = driver.find_element(By.XPATH, '//input[@id="searchBox"]')
+        element.send_keys("Kierra")
+        time.sleep(2)
+
+        with allure.step('Проверка текста: что текст найден'):
+            assert driver.find_element(By.XPATH, '(//*[@role="gridcell"])[15]').text.find('Kierra')
+        time.sleep(2)
+        element.clear()
+        time.sleep(2)
+
+        element = driver.find_element(By.XPATH, '//input[@id="searchBox"]')
+        element.send_keys("Polina")
+        time.sleep(2)
+
+        with allure.step('Проверка текста: что текст не найден'):
+            assert driver.find_element(By.XPATH, '//div[@class="ReactTable -striped -highlight"]')
+        time.sleep(2)
+        element.clear()
+        time.sleep(2)
+
+def test_selenium_web_tables_5():
+
+    with allure.step('Запускаем и настраиваем браузер'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
+
+    with allure.step('Проверка пагинации'):
+        for _ in range(10):
+            driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
+
+            First_Name = 'Ron'
+            Last_Name = 'Rew'
+            Email = 'ron.rew@example.com'
+            Age = '48'
+            Salary = '82000'
+            Department = 'Support'
+
+            elements_form_send_keys = [
+                (driver.find_element(By.XPATH, '//input[@placeholder="First Name"]'), 'First Name', First_Name),
+                (driver.find_element(By.XPATH, '//input[@placeholder="Last Name"]'), 'Last Name', Last_Name),
+                (driver.find_element(By.XPATH, '//input[@placeholder="name@example.com"]'), 'Email', Email),
+                (driver.find_element(By.XPATH, '//input[@pattern="\d*"]'), 'Age', Age),
+                (driver.find_element(By.XPATH, '//input[@placeholder="Salary"]'), 'Salary', Salary),
+                (driver.find_element(By.XPATH, '//input[@placeholder="Department"]'), 'Department', Department)
+        ]
+            for element, name_form, input_value in elements_form_send_keys:
+                with allure.step(f'Заполнение поля {name_form}'):
+                    element.clear()
+                    element.send_keys(input_value)
+
+                with allure.step(f'Проверка текста в поле {name_form}'):
+                    text_in_element = element.get_attribute('value')
+                    index = text_in_element.find(input_value)
+                    check.greater(index, -1, f"Текста {input_value} нет в поле {name_form}")
+
+                    driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
+
+    time.sleep(2)
+    with allure.step('Проверка, что номер страницы изменился'):
+        assert driver.find_element(By.XPATH, '//div[@class="ReactTable -striped -highlight"]').text.find
+
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
+        driver.find_element(By.XPATH, '(//*[@type="button"])[4]').click()
+        time.sleep(2)
+
+        assert driver.find_element(By.XPATH, '//input[@aria-label="jump to page"]'), 'value = "2"'
+        driver.find_element(By.XPATH, '(//*[@type="button"])[3]').click()
+        time.sleep(2)
+        assert driver.find_element(By.XPATH, '//input[@aria-label="jump to page"]'), 'value = "1"'
+        time.sleep(2)
+
+
+
+
+
+    driver.quit()
