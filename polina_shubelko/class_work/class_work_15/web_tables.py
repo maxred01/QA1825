@@ -218,6 +218,64 @@ def test_selenium_web_tables_5():
         assert driver.find_element(By.XPATH, '//input[@aria-label="jump to page"]'), 'value = "1"'
         time.sleep(2)
 
+def test_selenium_web_tables_6():
+
+    with allure.step('Запускаем и настраиваем браузер'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
+
+    with allure.step('Проверка поля "First Name"'):
+        driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
+        first_name_input = driver.find_element(By.XPATH, '//input[@placeholder="First Name"]')
+
+        long_input = 'a' * 26
+        first_name_input.clear()
+        first_name_input.send_keys(long_input)
+        time.sleep(1)
+
+        current_value = first_name_input.get_attribute('value')
+
+        print(f"Введено символов: {len(current_value)}")
+        assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
+        time.sleep(1)
+
+def test_selenium_web_tables_7():
+
+    with allure.step('Запускаем и настраиваем браузер'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
+
+    with allure.step('Проверка поля "Last Name"'):
+        driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
+        last_name_input = driver.find_element(By.XPATH, '//input[@placeholder="Last Name"]')
+
+        long_input = 'b' * 26
+        last_name_input.clear()
+        last_name_input.send_keys(long_input)
+        time.sleep(1)
+
+        current_value = last_name_input.get_attribute('value')
+
+        print(f"Введено символов: {len(current_value)}")
+        assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
+        time.sleep(1)
+
+def test_selenium_web_tables_8():
+
+    with allure.step('Запускаем и настраиваем браузер'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
+
+    with allure.step('Проверка поля "Email"'):
 
 
 
