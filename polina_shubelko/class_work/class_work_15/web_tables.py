@@ -220,39 +220,105 @@ def test_selenium_web_tables_5():
 
 def test_selenium_web_tables_6():
 
-    with allure.step('Запускаем и настраиваем браузер'):
+    with allure.step('Запускаем и настраиваем браузер / Проверка поля "First Name"'):
             driver = webdriver.Chrome()
             driver.get("https://demoqa.com/webtables")
             driver.maximize_window()
             driver.execute_script("window.scrollBy(0, 200);")
             time.sleep(2)
+
+    driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
+
+    Last_Name = 'Sport'
+    Email = 'stas.sport@example.com'
+    Age = '46'
+    Salary = '90000'
+    Department = 'IT'
+
+    elements_form_send_keys = [
+            (driver.find_element(By.XPATH, '//input[@placeholder="Last Name"]'), 'Last Name', Last_Name),
+            (driver.find_element(By.XPATH, '//input[@placeholder="name@example.com"]'), 'Email', Email),
+            (driver.find_element(By.XPATH, '//input[@pattern="\d*"]'), 'Age', Age),
+            (driver.find_element(By.XPATH, '//input[@placeholder="Salary"]'), 'Salary', Salary),
+            (driver.find_element(By.XPATH, '//input[@placeholder="Department"]'), 'Department', Department)
+        ]
+
+    for locator, name_form, input_value in elements_form_send_keys:
+            element = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable(locator)
+            )
+            element.clear()
+            element.send_keys(input_value)
+
+            time.sleep(1)
+
+            driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
+
+    def is_submit_active():
+            submit_btn = driver.find_element(By.XPATH, '// button[ @ id = "submit"]')
+            return submit_btn.is_enabled()
+
+    assert is_submit_active()
 
     with allure.step('Проверка поля "First Name"'):
-        driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
-        first_name_input = driver.find_element(By.XPATH, '//input[@placeholder="First Name"]')
+            first_name_input = driver.find_element(By.XPATH, '//input[@placeholder="First Name"]')
 
-        long_input = 'a' * 26
-        first_name_input.clear()
-        first_name_input.send_keys(long_input)
-        time.sleep(1)
+            long_input = 'a' * 26
+            first_name_input.clear()
+            first_name_input.send_keys(long_input)
+            time.sleep(1)
 
-        current_value = first_name_input.get_attribute('value')
+    current_value = first_name_input.get_attribute('value')
 
-        print(f"Введено символов: {len(current_value)}")
-        assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
-        time.sleep(1)
+    print(f"Введено символов: {len(current_value)}")
+    assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
+    time.sleep(1)
 
-def test_selenium_web_tables_7():
 
-    with allure.step('Запускаем и настраиваем браузер'):
+
+def test_selenium_web_tables_8():
+
+    with allure.step('Запускаем и настраиваем браузер / Проверка поля "Last Name"'):
             driver = webdriver.Chrome()
             driver.get("https://demoqa.com/webtables")
             driver.maximize_window()
             driver.execute_script("window.scrollBy(0, 200);")
             time.sleep(2)
 
+    driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
+
+    First_Name = 'Stas'
+    Email = 'stas.sport@example.com'
+    Age = '46'
+    Salary = '90000'
+    Department = 'IT'
+
+    elements_form_send_keys = [
+            (driver.find_element(By.XPATH, '//input[@placeholder="First Name"]'), 'First Name', First_Name),
+            (driver.find_element(By.XPATH, '//input[@placeholder="name@example.com"]'), 'Email', Email),
+            (driver.find_element(By.XPATH, '//input[@pattern="\d*"]'), 'Age', Age),
+            (driver.find_element(By.XPATH, '//input[@placeholder="Salary"]'), 'Salary', Salary),
+            (driver.find_element(By.XPATH, '//input[@placeholder="Department"]'), 'Department', Department)
+        ]
+
+    for locator, name_form, input_value in elements_form_send_keys:
+            element = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable(locator)
+            )
+            element.clear()
+            element.send_keys(input_value)
+
+            time.sleep(1)
+
+            driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
+
+    def is_submit_active():
+            submit_btn = driver.find_element(By.XPATH, '// button[ @ id = "submit"]')
+            return submit_btn.is_enabled()
+
+    assert is_submit_active()
+
     with allure.step('Проверка поля "Last Name"'):
-        driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
         last_name_input = driver.find_element(By.XPATH, '//input[@placeholder="Last Name"]')
 
         long_input = 'b' * 26
@@ -266,18 +332,74 @@ def test_selenium_web_tables_7():
         assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
         time.sleep(1)
 
-def test_selenium_web_tables_8():
+def test_selenium_web_tables_10():
 
-    with allure.step('Запускаем и настраиваем браузер'):
+    with allure.step('Запускаем и настраиваем браузер / Проверка поля "Email"'):
+            driver = webdriver.Chrome()
+            driver.get("https://demoqa.com/webtables")
+            driver.maximize_window()
+            driver.execute_script("window.scrollBy(0, 200);")
+            time.sleep(2)
+    driver.find_element(By.XPATH, '//button[@id="addNewRecordButton"]').click()
+
+    First_Name = 'Stas'
+    Last_Name = 'Sport'
+    Age = '46'
+    Salary = '90000'
+    Department = 'IT'
+
+    elements_form_send_keys = [
+        (driver.find_element(By.XPATH, '//input[@placeholder="First Name"]'), 'First Name', First_Name),
+        (driver.find_element(By.XPATH, '//input[@placeholder="Last Name"]'), 'Last Name', Last_Name),
+        (driver.find_element(By.XPATH, '//input[@pattern="\d*"]'), 'Age', Age),
+        (driver.find_element(By.XPATH, '//input[@placeholder="Salary"]'), 'Salary', Salary),
+        (driver.find_element(By.XPATH, '//input[@placeholder="Department"]'), 'Department', Department)
+    ]
+
+    for locator, name_form, input_value in elements_form_send_keys:
+        element = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable(locator)
+        )
+        element.clear()
+        element.send_keys(input_value)
+
+        time.sleep(1)
+
+        driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
+
+    def is_submit_active():
+        submit_btn = driver.find_element(By.XPATH, '// button[ @ id = "submit"]')
+        return submit_btn.is_enabled()
+
+    assert is_submit_active()
+
+    with allure.step('Проверка поля "Email"'):
+        email_field = driver.find_element(By.XPATH, '//input[@placeholder="name@example.com"]')
+        email_field.clear()
+        email_field.send_keys('testemail.com')
+
+        driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
+        time.sleep(1)
+
+        assert is_submit_active()
+
+        email_field = driver.find_element(By.XPATH, '//input[@placeholder="name@example.com"]')
+        email_field.clear()
+        email_field.send_keys('test@')
+
+        driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
+        time.sleep(1)
+
+        assert is_submit_active()
+
+def test_selenium_web_tables_11():
+
+    with allure.step('Запускаем и настраиваем браузер / Проверка поля "Age"'):
             driver = webdriver.Chrome()
             driver.get("https://demoqa.com/webtables")
             driver.maximize_window()
             driver.execute_script("window.scrollBy(0, 200);")
             time.sleep(2)
 
-    with allure.step('Проверка поля "Email"'):
 
-
-
-
-    driver.quit()
+            driver.quit()
