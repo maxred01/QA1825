@@ -1,5 +1,6 @@
 import time
 import allure
+from allure_commons.types import Severity
 from allure_commons.types import LabelType
 
 from selenium import webdriver
@@ -10,17 +11,16 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import pytest_check as check
 
-@allure.title('Это тест проверяет форму')
-@allure.description("""Тест проверяет редактирование и удаление""")
+@allure.title('Это тест проверяет удаление записи')
+@allure.description("""При нажатии кнопки 'Delete' запись удаляется - на главной странице её нет""")
 @allure.tag("Smoke")
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.label(LabelType.LANGUAGE, "python")
-@allure.id("123")
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("001")
 @allure.manual
-@allure.link("https://hoster.by/", name="Тест-кейсы теста")
-@allure.issue("AUTH-123")
-@allure.testcase("TMS-456")
-@allure.epic("UI автотетсы")
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/myuskAqA/3-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8")
+@allure.epic("Функциональные автотесты")
 @allure.feature("Раздел Elements")
 @allure.story("Вкладка Web Tables")
 
@@ -41,6 +41,19 @@ def test_selenium_web_tables_1():
         time.sleep(2)
         check.not_equal(elements, elements_delete)
         time.sleep(2)
+
+@allure.title('Это тест проверяет добавление записи')
+@allure.description("""При нажатии кнопки 'Add' открывается 'Registration Form', данные введены корректно, запись сохранена и появляется на главной странице""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("002")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/WkFRjhT7/1-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
 
 def test_selenium_web_tables_2():
 
@@ -83,6 +96,19 @@ def test_selenium_web_tables_2():
                 driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
 
     time.sleep(2)
+
+@allure.title('Это тест проверяет редактирование записи')
+@allure.description("""При нажатии кнопки 'Add' открывается 'Registration Form', данные отредактированы корректно, изменения сохранены""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("003")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/PBGbBmjm/2-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
 
 def test_selenium_web_tables_3():
 
@@ -133,6 +159,19 @@ def test_selenium_web_tables_3():
                 driver.find_element(By.XPATH, '// button[ @ id = "submit"]').click()
                 time.sleep(2)
 
+@allure.title('Это тест проверяет поле "Search"')
+@allure.description("""Проверка поля на отображение корректных данных""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("004")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/yXULcQbm/14-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F-search")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
+
 def test_selenium_web_tables_4():
 
     with allure.step('Запускаем и настраиваем браузер'):
@@ -162,6 +201,19 @@ def test_selenium_web_tables_4():
         time.sleep(2)
         element.clear()
         time.sleep(2)
+
+@allure.title('Это тест проверяет пагинацию')
+@allure.description("""Проверка корректности пагинациии и кнопок 'Next'/'Previous'""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("005")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/etyKalmP/15-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%B0%D0%B3%D0%B8%D0%BD%D0%B0%D1%86%D0%B8%D0%B8")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
 
 def test_selenium_web_tables_5():
 
@@ -217,6 +269,19 @@ def test_selenium_web_tables_5():
         time.sleep(2)
         assert driver.find_element(By.XPATH, '//input[@aria-label="jump to page"]'), 'value = "1"'
         time.sleep(2)
+
+@allure.title('Это тест проверяет поле "First Name"')
+@allure.description("""Проверка корректности вводимых данных с поле 'First Name'""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("006")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/ktnWOkY7/8-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F-first-name")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
 
 def test_selenium_web_tables_6():
 
@@ -274,9 +339,20 @@ def test_selenium_web_tables_6():
     assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
     time.sleep(1)
 
+@allure.title('Это тест проверяет поле "Last Name"')
+@allure.description("""Проверка корректности вводимых данных с поле 'Last Name'""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("007")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/MzSHoGSI/9-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F-last-name")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
 
-
-def test_selenium_web_tables_8():
+def test_selenium_web_tables_7():
 
     with allure.step('Запускаем и настраиваем браузер / Проверка поля "Last Name"'):
             driver = webdriver.Chrome()
@@ -332,7 +408,20 @@ def test_selenium_web_tables_8():
         assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
         time.sleep(1)
 
-def test_selenium_web_tables_10():
+@allure.title('Это тест проверяет поле "Email"')
+@allure.description("""Проверка корректности вводимых данных с поле 'Email'""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("008")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/QyGU1z0e/10-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F-email")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
+
+def test_selenium_web_tables_8():
 
     with allure.step('Запускаем и настраиваем браузер / Проверка поля "Email"'):
             driver = webdriver.Chrome()
@@ -392,7 +481,20 @@ def test_selenium_web_tables_10():
 
         assert is_submit_active()
 
-def test_selenium_web_tables_11():
+@allure.title('Это тест проверяет поле "Age"')
+@allure.description("""Проверка корректности вводимых данных с поле 'Age'""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("009")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/PtCRdVUp/11-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F-age")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
+
+def test_selenium_web_tables_9():
 
     with allure.step('Запускаем и настраиваем браузер / Проверка поля "Age"'):
             driver = webdriver.Chrome()
@@ -464,7 +566,20 @@ def test_selenium_web_tables_11():
         assert len(current_value) <= 2, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
         time.sleep(1)
 
-def test_selenium_web_tables_12():
+@allure.title('Это тест проверяет поле "Salary"')
+@allure.description("""Проверка корректности вводимых данных с поле 'Salary'""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("010")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/AGuViRJJ/12-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F-salary")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
+
+def test_selenium_web_tables_10():
 
     with allure.step('Запускаем и настраиваем браузер / Проверка поля "Salary"'):
             driver = webdriver.Chrome()
@@ -537,7 +652,20 @@ def test_selenium_web_tables_12():
         assert len(current_value) <= 10, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
         time.sleep(1)
 
-def test_selenium_web_tables_13():
+@allure.title('Это тест проверяет поле "Department"')
+@allure.description("""Проверка корректности вводимых данных с поле 'Department'""")
+@allure.tag("Smoke")
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "Python")
+@allure.id("011")
+@allure.manual
+@allure.link("https://trello.com/b/1oUUiGcX/demoqa-web-tables", name="Тест-кейсы теста")
+@allure.testcase("https://trello.com/c/8phJ0dft/13-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F-department")
+@allure.epic("Функциональные автотесты")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Web Tables")
+
+def test_selenium_web_tables_11():
 
     with allure.step('Запускаем и настраиваем браузер / Проверка поля "Department"'):
             driver = webdriver.Chrome()
@@ -592,9 +720,6 @@ def test_selenium_web_tables_13():
             print(f"Введено символов: {len(current_value)}")
             assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
             time.sleep(1)
-
-
-
 
 
     driver.quit()
