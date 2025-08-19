@@ -37,6 +37,8 @@ driver.find_element(By.XPATH,  '//button[@class="Heading Link Link--primary Text
 
 driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('abc')
 
+
+
 time.sleep(5)
 
 # Закрыть браузер
