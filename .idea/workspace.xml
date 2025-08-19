@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="Мой 13 коммит">
-      <change afterPath="$PROJECT_DIR$/bachko_irina/class_work/class_work_11/selenium_test2/test_selenium_test2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7/test_webtables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/maxred01/QA1825.git&quot;,
-    &quot;accountId&quot;: &quot;804ab6a1-6cbf-4935-a17a-09ee0d946244&quot;
+    &quot;accountId&quot;: &quot;f4c470ff-a4b0-4cc8-8304-6fd475254580&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -74,6 +75,12 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.pytest for test_webtables.test_delete_record.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_webtables.test_edit_record.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_webtables.test_pagination.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_webtables.test_search_record.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_webtables.test_web_tables.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_webtables.py.executor&quot;: &quot;Run&quot;,
     &quot;Python.Home_3.executor&quot;: &quot;Run&quot;,
     &quot;Python.home_work_2.executor&quot;: &quot;Run&quot;,
     &quot;Python.home_work_3.executor&quot;: &quot;Run&quot;,
@@ -85,7 +92,7 @@
     &quot;Python.type_data.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bachko__irina__class__work__11&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;natasha__romanchuk__home__work__7&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -95,78 +102,99 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.test_selenium_test2">
-    <configuration name="class_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_webtables.test_delete_record">
+    <configuration name="pytest for test_webtables.test_delete_record" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bachko_irina/class_work_9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bachko_irina/class_work_9/class_example.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_webtables.test_delete_record&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="selenium1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_webtables.test_edit_record" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bachko_irina/class_work/class_work_10" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Irina\PycharmProjects\QA1825\bachko_irina\class_work\class_work_10\selenium1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_webtables.test_edit_record&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test_selenium_test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_webtables.test_pagination" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bachko_irina/class_work/class_work_11/selenium_test2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Irina\PycharmProjects\QA1825\bachko_irina\class_work\class_work_11\selenium_test2\test_selenium_test2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_webtables.test_pagination&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_webtables.test_search_record" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_webtables.test_search_record&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_webtables.test_web_tables" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_webtables.test_web_tables&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_selenium_test2" />
-        <item itemvalue="Python.class_example" />
-        <item itemvalue="Python.selenium1" />
+        <item itemvalue="Python tests.pytest for test_webtables.test_delete_record" />
+        <item itemvalue="Python tests.pytest for test_webtables.test_pagination" />
+        <item itemvalue="Python tests.pytest for test_webtables.test_search_record" />
+        <item itemvalue="Python tests.pytest for test_webtables.test_edit_record" />
+        <item itemvalue="Python tests.pytest for test_webtables.test_web_tables" />
       </list>
     </recent_temporary>
   </component>
