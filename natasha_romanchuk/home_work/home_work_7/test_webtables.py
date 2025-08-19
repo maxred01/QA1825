@@ -32,7 +32,6 @@ def test_web_tables():
         print(table)
         time.sleep(5)
         check.is_in("Nata", table)
-
     driver.quit()
 @allure.title("Проверка редактирования записи в Web Tables")
 @allure.severity(allure.severity_level.CRITICAL)
