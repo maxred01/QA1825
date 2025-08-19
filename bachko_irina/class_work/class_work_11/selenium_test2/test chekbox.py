@@ -191,7 +191,7 @@ def test_selenium():
         user_email = 'test@gmail.com'
         user_age = '45'
         user_salary = '200'
-        user_department = rrrrr
+        user_department = 'rrrrr'
 
 
     with allure.step('Запуск и настройка браузера'):
