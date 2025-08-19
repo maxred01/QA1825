@@ -22,7 +22,9 @@ import pytest_check as check
 @allure.epic("UI автотетсы")
 @allure.feature("Раздел Elements")
 @allure.story("Вкладка Test Box")
-def test_selenium():
+
+
+def test_selenium_test_box():
 
         with allure.step('Подготовка тестовых даных'):
             user_name = 'Polina'
@@ -36,14 +38,14 @@ def test_selenium():
             driver.maximize_window()
         time.sleep(1)
 
-        elemets_form_send_keys = [
+        elements_form_send_keys = [
             (driver.find_element(By.ID, 'userName'), 'Full Name', user_name),
             (driver.find_element(By.ID, 'userEmail'), 'Email', user_email),
             (driver.find_element(By.ID, 'currentAddress'), 'Current Address', current_address),
             (driver.find_element(By.ID, 'permanentAddress'), 'Permanent Address', permanent_address)
         ]
-        for element, text_elemet, send_keys_element in elemets_form_send_keys:
-            with allure.step(f'Ввод текста для поля {text_elemet}'):
+        for element, text_element, send_keys_element in elements_form_send_keys:
+            with allure.step(f'Ввод текста для поля {text_element}'):
                 element.send_keys(send_keys_element)
 
         time.sleep(2)
@@ -53,15 +55,16 @@ def test_selenium():
         with allure.step('Нажатие на кнопку "submit"'):
             driver.find_element(By.ID, 'submit').click()
 
-        elemets_form = [
+        elements_form = [
             (driver.find_element(By.ID, 'name'), user_name, 'Name'),
             (driver.find_element(By.ID, 'email'), user_email, 'Email'),
             (driver.find_element(By.XPATH, '//p[@id="currentAddress"]'), current_address, 'Current Address'),
             (driver.find_element(By.XPATH, '//p[@id="permanentAddress"]'), permanent_address, 'Permanent Address')
         ]
-        for elemet, elemets_text, name_form in elemets_form:
+        for element, elements_text, name_form in elements_form:
             with allure.step(f'Проверка поля {name_form}'):
-                check.greater(elemet.text.find("elemets_text"), -1, f"Текста {elemets_text} нет на экарне")
+                index = element.text.find(elements_text)
+                check.greater(index, -1, f"Текста {elements_text} нет на экране")
 
         time.sleep(2)
         driver.quit()
