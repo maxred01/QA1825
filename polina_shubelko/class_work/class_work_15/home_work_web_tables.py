@@ -24,7 +24,6 @@ import pytest_check as check
 @allure.feature("Раздел Elements")
 @allure.story("Вкладка Web Tables")
 
-
 def test_selenium_web_tables_1():
 
     with allure.step('Запускаем и настраиваем браузер'):
@@ -720,6 +719,7 @@ def test_selenium_web_tables_11():
             print(f"Введено символов: {len(current_value)}")
             assert len(current_value) <= 25, f"Длина введенного текста {len(current_value)} превышает допустимый лимит"
             time.sleep(1)
+
 
 
     driver.quit()
