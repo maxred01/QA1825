@@ -97,6 +97,7 @@ def test_selenium_button(web_browser):
         time.sleep(2)
 
 
+
     # with allure.step('Одиночный клик'):
     #     driver.find_element(By.ID, '(//*[contains(text(),'Click Me')])[3]').click()
 

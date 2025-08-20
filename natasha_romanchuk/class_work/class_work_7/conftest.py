@@ -5,6 +5,7 @@ import requests
 import allure
 import pytest_check as check
 
+
 @pytest.fixture
 def web_browser(request):
     browser = webdriver.Chrome()
