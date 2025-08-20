@@ -22,7 +22,6 @@ import pytest_check as check
 @allure.story("Вкладка Test Box")
 
 def test_selenium():
-
     with allure.step('Подготовка тестовых даных'):
         user_name = 'Nata'
         user_email = 'nata@gmail.com'
@@ -64,4 +63,55 @@ def test_selenium():
     time.sleep(2)
     driver.quit()
 
+############class_work_14######################test_clik
+import time
+import allure
+from allure_commons.types import LabelType
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+import pytest_check as check
+from natasha_romanchuk.class_work.conftest import web_browser
+from natasha_romanchuk.class_work.class_work_13.locators.locators_button import LocatorsButton
+
+
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Buttons")
+def test_selenium_button(web_browser):
+    with allure.step('Запускаем и настраиваем браузер'):
+        driver = web_browser
+        driver.get("https://demoqa.com/buttons")
+
+    with allure.step('Двойной клик'):
+        elements_double_click_btn = driver.find_element(By.ID, LocatorsButton.double_click_btn).click()
+        ActionChains(driver).double_click(elements_double_click_btn).perform()
+        time.sleep(2)
+        # assert not driver.find_element(By.ID, LocatorsButton.double_click_btn_message).is_displayed()
+
+    with allure.step('Клик правой кнопной мыши'):
+        elements_right_click_btn = driver.find_element(By.ID, LocatorsButton.right_click_btn)
+        ActionChains(driver).context_click(elements_right_click_btn).perform()
+        # assert driver.find_element(By.ID, 'rightClickMessage').text == 'You have done a right click'
+        time.sleep(2)
+
+
+
+    # with allure.step('Одиночный клик'):
+    #     driver.find_element(By.ID, '(//*[contains(text(),'Click Me')])[3]').click()
+
+
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка upload-download")
+def test_selenium(web_browser):
+    with allure.step('Запускаем и настраиваем браузер'):
+        driver = web_browser
+        driver.get("https://demoqa.com/upload-download")
+
+    with allure.step('Upload'):  ###локатор обязательно с инпутом и путь к файлу с двойным слешем
+        driver.find_element(By.ID, LocatorsButton.upload_click_btn).send_keys('C:\\Users\\natal\\OneDrive\\Изображения\\1-3.jpg')
+
+        time.sleep(2)
+
+####ФИКСТУРЫ######################
