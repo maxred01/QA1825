@@ -41,3 +41,4 @@ class APIClient:
             return response.json()
         except ValueError:
             return response.text
+
