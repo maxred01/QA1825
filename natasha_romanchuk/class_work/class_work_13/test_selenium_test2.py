@@ -85,15 +85,15 @@ def test_selenium_button(web_browser):
         driver.get("https://demoqa.com/buttons")
 
     with allure.step('Двойной клик'):
-        elements_double_click_btn = driver.find_element(By.ID, LocatorsButton.double_click_btn).click()
+        elements_double_click_btn = driver.find_element(By.ID, LocatorsButton.double_click_btn)
         ActionChains(driver).double_click(elements_double_click_btn).perform()
         time.sleep(2)
-        # assert not driver.find_element(By.ID, LocatorsButton.double_click_btn_message).is_displayed()
+        check.equal(driver.find_element(By.ID,LocatorsButton.double_click_btn_message).text,"You have done a double click")
 
     with allure.step('Клик правой кнопной мыши'):
         elements_right_click_btn = driver.find_element(By.ID, LocatorsButton.right_click_btn)
         ActionChains(driver).context_click(elements_right_click_btn).perform()
-        # assert driver.find_element(By.ID, 'rightClickMessage').text == 'You have done a right click'
+        assert driver.find_element(By.ID, 'rightClickMessage').text == 'You have done a right click'
         time.sleep(2)
 
 
