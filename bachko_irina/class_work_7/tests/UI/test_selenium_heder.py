@@ -18,7 +18,8 @@ def test_heder_logo(web_browser):
         driver.get("https://www.spacex.com/")
 
     with allure.step('Отображение логотипа'):
-        driver.find_element(By.XPATH, LocatorsButton.logo)
+        logo = driver.find_element(By.XPATH, LocatorsButton.logo)
+        assert logo.is_displayd()
         time.sleep(2)
 
 @allure.feature("раздел Elements")
