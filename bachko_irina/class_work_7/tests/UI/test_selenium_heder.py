@@ -42,6 +42,7 @@ def test_heder_search(web_browser):
         enter_fild = driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('shits')
 
 
+
 time.sleep(5)
 
 
