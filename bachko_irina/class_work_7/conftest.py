@@ -10,6 +10,4 @@ def web_browser(request):
     browser.maximize_window()
 
 
-
-
     browser.quit()
