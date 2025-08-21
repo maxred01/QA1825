@@ -18,7 +18,7 @@ from bachko_irina.class_work_7.locators.locators_buttons import LocatorsButton
 def test_heder_logo(web_browser):
     with allure.step('Запуск и настройка браузера'):
         driver = web_browser
-        driver.get("https://spacex.com/")
+        driver.get("https://spacex.com//")
 
     with allure.step('Отображение логотипа'):
         logo = driver.find_element(By.XPATH, LocatorsButton.logo)
@@ -32,19 +32,19 @@ def test_heder_search(web_browser):
         driver = web_browser
         driver.get("https://spacex.com")
 
-#     with allure.step('Проверка строки поиска'):
-#         search = driver.find_element(By.XPATH, LocatorsButton.shop)
-#         assert search.is_displayd()
-#         driver.find_element(By.XPATH, LocatorsButton.search).click()
-#         enter_fild = driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('abc')
-#         print(enter_fild, get_attributes('abc'))
-#         time.sleep(2)
-#         enter_fild = clear()
-#         enter_fild = driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('shits')
-#
-#
-#
-# time.sleep(5)
+    with allure.step('Проверка строки поиска'):
+        search = driver.find_element(By.XPATH, LocatorsButton.shop)
+        assert search.is_displayd()
+        driver.find_element(By.XPATH, LocatorsButton.search).click()
+        enter_fild = driver.find_element(By.XPATH, LocatorsButton.enter).send_keys('abc')
+        print(enter_fild, get_attributes('abc'))
+        time.sleep(2)
+        enter_fild = clear()
+        enter_fild = driver.find_element(By.XPATH, LocatorsButton.enter).send_keys('shits')
+
+
+
+time.sleep(5)
 
 
 
