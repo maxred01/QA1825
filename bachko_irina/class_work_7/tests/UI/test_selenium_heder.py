@@ -29,16 +29,15 @@ def test_heder_search(web_browser):
         driver = web_browser
         driver.get("https://spacex.com")
 
-    with allure.step('Отображение строки поиска'):
+    with allure.step('Проверка строки поиска'):
         search = driver.find_element(By.XPATH, LocatorsButton.shop)
         assert search.is_displayd()
         driver.find_element(By.XPATH, LocatorsButton.search).click()
-
+        enter = driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('abc')
         time.sleep(2)
 
 
-        driver.get("https://shop.spacex.com")
-driver.maximize_window()
+
 driver.find_element(By.XPATH,  '//button[@class="Heading Link Link--primary Text--subdued u-h8"]').click()
 
 driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('abc')
@@ -48,9 +47,9 @@ driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('abc')
 time.sleep(5)
 
 # Закрыть браузер
-driver.quit()
+        driver.quit()
 
-time.sleep(2)
+
 
 
 
