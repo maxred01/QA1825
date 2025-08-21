@@ -18,7 +18,7 @@ def test_heder_logo(web_browser):
         driver.get("https://www.spacex.com/")
 
     with allure.step('Отображение логотипа'):
-        driver.find_element(By.ID, 'uploadFile').send_keys('C:\\Users\\Irina\\Desktop\\def_7.txt')
+        driver.find_element(By.XPATH, LocatorsButton.logo)
         time.sleep(2)
 
 @allure.feature("раздел Elements")
@@ -28,7 +28,18 @@ def test_buttons(web_browser):
             driver = web_browser
             driver.get("https://demoqa.com/buttons")
 
+driver.get("https://shop.spacex.com")
+driver.maximize_window()
+driver.find_element(By.XPATH,  '//button[@class="Heading Link Link--primary Text--subdued u-h8"]').click()
 
+driver.find_element(By.XPATH, '//input[@id="search-input"]').send_keys('abc')
+
+
+
+time.sleep(5)
+
+# Закрыть браузер
+driver.quit()
 
 time.sleep(2)
 
