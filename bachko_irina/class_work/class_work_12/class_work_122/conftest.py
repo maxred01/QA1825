@@ -1,7 +1,8 @@
-import pytest
-from selenium import webdriver
-import allure
 import time
+import pytest
+import allure
+from selenium import webdriver
+
 import pytest_check as check
 
 @pytest.fixture()

@@ -6,13 +6,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-from bachko_irina.class_work.class_work_12.conftest import web_browser
+from bachko_irina.class_work.class_work_12.class_work_122.conftest import web_browser
 import pytest_check as check
 from bachko_irina.class_work.class_work_12.locators.locators_buttons import LocatorsButton
 
 @allure.feature("раздел Elements")
 @allure.story("Вкладка upload-download")
-def test_upload_download():
+def test_upload_download(web_browser):
     with allure.step('Запуск и настройка браузера'):
         driver = webdriver.Chrome()
         driver.get("https://demoqa.com/upload-download")
