@@ -26,6 +26,19 @@ def test_heder_logo(web_browser):
         time.sleep(2)
 
 @allure.feature("Heder")
+@allure.story("Vehicles_Heder")
+def test_vehicles(web_browser):
+    with allure.step('Запуск и настройка браузера'):
+        driver = web_browser
+        driver.get("https://spacex.com//")
+
+    with allure.step('vehicles'):
+        vehicles = driver.find_element(By.XPATH, LocatorsButton.vehicles)
+        assert vehicles.is_displayd()
+
+        time.sleep(2)
+
+@allure.feature("Heder")
 @allure.story("Search_Heder")
 def test_heder_search(web_browser):
     with allure.step('Запуск и настройка браузера'):
