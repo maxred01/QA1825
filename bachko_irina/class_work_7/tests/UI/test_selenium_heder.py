@@ -12,6 +12,7 @@ from bachko_irina.class_work_7.conftest import web_browser
 import pytest_check as check
 from bachko_irina.class_work_7.locators.locators_buttons import LocatorsButton
 
+
 @allure.feature("Heder")
 @allure.story("logo_Heder")
 def test_heder_logo(web_browser):
