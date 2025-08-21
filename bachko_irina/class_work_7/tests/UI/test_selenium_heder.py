@@ -44,8 +44,7 @@ def test_heder_search(web_browser):
 
 time.sleep(5)
 
-# Закрыть браузер
-driver.quit()
+
 
 
 
