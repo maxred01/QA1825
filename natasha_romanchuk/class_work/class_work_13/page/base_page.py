@@ -27,6 +27,7 @@ class WebPage(object):
 
         return attr
 
+
 def get(self,url):
     self._web_driver.get(url)
 

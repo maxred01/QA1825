@@ -11,6 +11,7 @@ def web_browser(request):
     browser = webdriver.Chrome()
     browser.maximize_window()
 
+
     yield browser
 
     # Если тест упал → сделаем скриншот

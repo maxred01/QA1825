@@ -102,6 +102,7 @@ def test_selenium_button(web_browser):
     #     driver.find_element(By.ID, '(//*[contains(text(),'Click Me')])[3]').click()
 
 
+
 @allure.feature("Раздел Elements")
 @allure.story("Вкладка upload-download")
 def test_selenium(web_browser):
