@@ -29,6 +29,7 @@ def test_main_page():
 
     ]
     for status_code, url_name in urls_and_status:
+
         response = requests.request("GET", url_name,timeout = 3 )
         assert response.status_code == 200, f'Статус код страницы "{url_name}" равен не {status_code} а {response.status_code}'
 

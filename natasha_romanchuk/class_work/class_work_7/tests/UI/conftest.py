@@ -6,13 +6,13 @@ import allure
 import pytest_check as check
 
 
-
 @pytest.fixture
 def web_browser(request):
     browser = webdriver.Chrome()
     browser.maximize_window()
 
-    yield browser   # здесь выполняется тест
+
+    yield browser
 
     # Если тест упал → сделаем скриншот
     if hasattr(request.node, "rep_call") and request.node.rep_call.failed:
@@ -24,6 +24,5 @@ def web_browser(request):
 
 
     browser.quit()
-
 
 

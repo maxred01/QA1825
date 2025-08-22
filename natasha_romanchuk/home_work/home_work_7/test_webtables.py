@@ -13,6 +13,7 @@ import pytest_check as check
 @allure.story("Web Tables")
 def test_web_tables():
 
+
     driver = webdriver.Chrome()
     driver.get("https://demoqa.com/webtables")
     driver.maximize_window()
