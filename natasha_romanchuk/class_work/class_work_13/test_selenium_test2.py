@@ -1,12 +1,6 @@
-import time
 import allure
 from allure_commons.types import LabelType
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-
-import pytest_check as check
 
 @allure.title("Этот тест проверяет заполнение и результат заполнения формы")
 @allure.description("""Тест вводит текст для полей user_name и тд и сверяет результат в полях name и тд""")
@@ -66,14 +60,12 @@ def test_selenium():
 ############class_work_14######################test_clik
 import time
 import allure
-from allure_commons.types import LabelType
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import pytest_check as check
-from natasha_romanchuk.class_work.conftest import web_browser
+from natasha_romanchuk.class_work.class_work_13.tests.conftest import web_browser
 from natasha_romanchuk.class_work.class_work_13.locators.locators_button import LocatorsButton
 
 
