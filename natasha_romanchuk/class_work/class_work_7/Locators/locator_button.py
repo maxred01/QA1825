@@ -4,6 +4,7 @@ class LocatorButton:
     search_button = '//*[@aria-label="Начать поиск"]'
     catalog_button = '//*[@class="catalog_button__yhaM7"]'
 
+
     # авторизация
     action_button_enter = "//a[contains(@href, '/login')]"
     action_button_orders = "//a[contains(@href, '/orders')]"

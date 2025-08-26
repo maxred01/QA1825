@@ -10,6 +10,7 @@ def test_header_elements_displayed(web_browser):
     driver = web_browser
     driver.get('https://emall.by/')
 
+
     elements = [
         ("логотип", LocatorButton.logotip),
         ("строка поиска", LocatorButton.search_input),
