@@ -3,23 +3,29 @@ class LocatorButton:
     search_input = '//*[@enterkeyhint="search"]'
     search_button = '//*[@aria-label="Начать поиск"]'
     catalog_button = '//*[@class="catalog_button__yhaM7"]'
-    action_button_enter = '//*[@href="https://emall.by/login?backurl=/?srsltid=AfmBOopzz7KRzWCgKbuaGNTcyQwF6Ud_ZAFxrcwDh5jL9RFEeicsep06"]'
-    action_button_orders = '//*[@href="https://emall.by/orders"]'
-    action_button_favorites = '//*[@href="https://emall.by/favorites"]'
-    action_button_basket = '//*[@href="https://emall.by/cart"]'
-    actions_button = '//*[@href="https://emall.by/actions"]'
-    lucky_goods_button = '// *[ @ href = "https://emall.by/actions/lucky-goods"]'
-    promocodes_button = '//*[@//*[@href="https://emall.by/actions/promocodes"]'
-    new_button = '//*[@href="https://emall.by/actions/new"]'
-    urgent_goods_button = '//*[@href="https://emall.by/actions/urgent-goods"]'
-    take_more_button = '//*[@href="https://emall.by/actions/take-more"]'
-    naushniki_besprovodnye_button = '// *[ @ href = "https://emall.by/category/naushniki-besprovodnye"]'
-    school_button = '//a[@href="https://emall.by/actions/school-supplies"] [@class="links_links__a__Yxalk"]'
-    detskaya_stirka_button = '//a[@href="https://emall.by/category/4006"] '
-    adress_text = '//*[@class="address_slot_text__kNia1"] '
-    ykazat_adress_button = '//*[@class="touchable_button__c9Zij address_set_address_button__8ixQx"] '
-    payment_delivery_button =  '//*[@href="https://emall.by/information/help/132"][@class="desktop_top__link__91RI4"] '
-    oplata_chastyami_button = '//*[@href="https://emall.by/news/3"]'
-    seller_emall_button = '//*[@href="https://seller.emall.by/"] [@class="desktop_top__link__91RI4"]'
-    business_emall_button = '//*[@href="https://business.emall.by/"]  [@class="desktop_top__link__91RI4"] '
-    edostavka_button = '//*[@href="https://edostavka.by/"] [@class="desktop_top__link__91RI4"]'
+
+    # авторизация
+    action_button_enter = "//a[contains(@href, '/login')]"
+    action_button_orders = "//a[contains(@href, '/orders')]"
+    action_button_favorites = "//a[contains(@href, '/favorites')]"
+    action_button_basket = "//a[contains(@href, '/cart')]"
+
+    # разделы
+    actions_button = "//a[contains(@href, '/actions')]"
+    lucky_goods_button = "//a[contains(@href, '/actions/lucky-goods')]"
+    promocodes_button = "//a[contains(@href, '/actions/promocodes')]"
+    new_button = "//a[contains(@href, '/actions/new')]"
+    urgent_goods_button = "//a[contains(@href, '/actions/urgent-goods')]"
+    take_more_button = "//a[contains(@href, '/actions/take-more')]"
+    naushniki_besprovodnye_button = "//a[contains(@href, '/category/naushniki-besprovodnye')]"
+    school_button = "//a[contains(@href, '/actions/school-supplies')]"
+    detskaya_stirka_button = "//a[contains(@href, '/category/4006')]"
+
+    # верхнее меню
+    adress_text = "//*[@class='address_slot_text__kNia1']"
+    ykazat_adress_button = "//*[@class='touchable_button__c9Zij address_set_address_button__8ixQx']"
+    payment_delivery_button = "//a[contains(@href, '/information/help/132') and contains(@class, 'desktop_top__link__')]"
+    oplata_chastyami_button = "//a[contains(@href, '/news/3')]"
+    seller_emall_button = "//a[contains(@href, 'seller.emall.by') and contains(@class, 'desktop_top__link__')]"
+    business_emall_button = "//a[contains(@href, 'business.emall.by') and contains(@class, 'desktop_top__link__')]"
+    edostavka_button = "//a[contains(@href, 'edostavka.by') and contains(@class, 'desktop_top__link__')]"
