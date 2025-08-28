@@ -10,9 +10,20 @@ class MainPage(WebPage):
 
         super().__init__(web_driver, url)
 
-    vehicles = WebElement(xpath='//div[@id="vehicles-menu-header"]')
-    launches = WebElement(xpath='//a[@routerlink="/launches"]')
-    humanspaceflight = WebElement(xpath='//a[@href="/humanspaceflight"]')
-    rideshare = WebElement(xpath='//a[@href="/rideshare"]')
-    starlink = WebElement(xpath='//a[@href="https://starlink.com"]')
-    starshield = WebElement(xpath='// a[@href = "/starshield"]')
+    Logo = WebElement(xpath='//div[@class="spacex-logo"]')
+    Vehicles = WebElement(xpath='//div[@id="spacex-header"]//span[contains(text(),"Vehicles")]')
+    Launches = WebElement(xpath='//div[@id="spacex-header"]//a[contains(text(),"Launches")]')
+    HumanSpaceflight = WebElement(xpath='//div[@id="spacex-header"]//a[contains(text(),"Human Spaceflight")]')
+    Rideshare = WebElement(xpath='//div[@id="spacex-header"]//a[contains(text(),"Rideshare")]')
+    Starlink = WebElement(xpath='//div[@id="spacex-header"]//a[contains(text(),"Starlink")]')
+    Starshield = WebElement(xpath='//div[@id="spacex-header"]//a[contains(text(),"Starshield")]')
+    Company = WebElement(xpath='//div[@id="spacex-header"]//span[contains(text(),"Company")]')
+    Shop = WebElement(xpath='//div[@id="spacex-header"]//a[contains(text(),"Shop")]')
+
+    Careers = WebElement(xpath='//div[@class ="footer"]//a[contains(text(),"Careers")]')
+    Updates = WebElement(xpath='//div[@class ="footer"]//a[contains(text(),"Updates")]')
+    Privacy = WebElement(xpath='//div[@class ="footer"]//a[contains(text(),"Privacy")]')
+    Policy = WebElement(xpath='//div[@class ="footer"]//a[contains(text(),"Policy")]')
+    Suppliers = WebElement(xpath='//div[@class ="footer"]//a[contains(text(),"Suppliers")]')
+
+
