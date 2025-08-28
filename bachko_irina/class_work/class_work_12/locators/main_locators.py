@@ -12,7 +12,7 @@ class MainPage(WebPage):
 
     vehicles = WebElement(xpath='//div[@id="vehicles-menu-header"]')
     launches = WebElement(xpath='//a[@routerlink="/launches"]')
-    humanspaceflight = WebElement(xpath='//a[@routerlink="/humanspaceflight"]')
-    rideshare = WebElement(xpath='//a[@routerlink = "/rideshare"]')
-
-
+    humanspaceflight = WebElement(xpath='//a[@href="/humanspaceflight"]')
+    rideshare = WebElement(xpath='//a[@href="/rideshare"]')
+    starlink = WebElement(xpath='//a[@href="https://starlink.com"]')
+    starshield = WebElement(xpath='// a[@href = "/starshield"]')
