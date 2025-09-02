@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="12345">
-      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/locators/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/locators/locators_demo_qa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/data/constans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/locators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/locators/locators_button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/locators/main_locators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/locators/shop_locators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/page/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/page/base_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/page/elements.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests/test_main_edostavka.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QA1825.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QA1825.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py" afterDir="false" />
     </list>
@@ -22,6 +37,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -33,122 +56,163 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/locators" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_selenium_ex.test_selenium_radio_button">
-    <configuration name="test_selenium_ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_15\test_selenium_ex.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_selenium_ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_15\test_selenium_ex.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_selenium_ex.test_selenium" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="QA1825" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="QA1825" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_16\locators" />
+      <recent name="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_16\tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_16\tests" />
+      <recent name="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for test_shop_space_x.test_headers">
+    <configuration name="pytest for maksim_tsybulka.class_work.class_work_16.tests.test_click" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium&quot;" />
+      <option name="_new_target" value="&quot;maksim_tsybulka.class_work.class_work_16.tests.test_click&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_selenium_ex.test_selenium_is_selected" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium_is_selected&quot;" />
+      <option name="_new_target" value="&quot;maksim_tsybulka.class_work.class_work_16.tests.test_main&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_selenium_ex.test_selenium_radio_button" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium_radio_button&quot;" />
+      <option name="_new_target" value="&quot;maksim_tsybulka.class_work.class_work_16.tests.test_main&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_selenium_ex.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py&quot;" />
+      <option name="_new_target" value="&quot;maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka.test_footers" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka.test_footers&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka.test_headers" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka.test_headers&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_shop_space_x.test_headers" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_shop_space_x.test_headers&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_main_edostavka.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests/test_main_edostavka.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium_radio_button" />
-        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium_is_selected" />
-        <item itemvalue="Python tests.pytest in test_selenium_ex.py" />
-        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium" />
-        <item itemvalue="Python.test_selenium_ex" />
+        <item itemvalue="Python tests.pytest for test_shop_space_x.test_headers" />
+        <item itemvalue="Python tests.pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka.test_footers" />
+        <item itemvalue="Python tests.pytest in test_main_edostavka.py" />
+        <item itemvalue="Python tests.pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka.test_headers" />
+        <item itemvalue="Python tests.pytest for maksim_tsybulka.class_work.class_work_16.tests.test_main_edostavka" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +246,21 @@
       <option name="project" value="LOCAL" />
       <updated>1753210324441</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="12345">
+      <created>1753378253434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753378253434</updated>
+    </task>
+    <task id="LOCAL-00005" summary="12345">
+      <created>1753378298966</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753378298966</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +290,11 @@
           <url>file://$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_14/tests/test_onliner.py</url>
           <line>57</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_16/tests/test_shop_space_x.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

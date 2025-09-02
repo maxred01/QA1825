@@ -130,9 +130,37 @@ def test_selenium_radio_button():
 
     with allure.step('Прожатие кнопок для открытие вкладок'):
         driver.find_element(By.CSS_SELECTOR, 'label[for="yesRadio"]').click()
-        assert driver.find_element(By.ID, 'yesRadio').is_selected()
-        assert driver.find_element(By.ID, 'noRadio').is_enabled()
+        check.is_true(driver.find_element(By.ID, 'yesRadio').is_selected(), 'ожидалось: что кнопка будет активной')
+        check.is_false(driver.find_element(By.ID, 'noRadio').is_enabled(), 'ожидалось: что кнопка будет активной')
 
+        driver.quit()
+
+
+@allure.title('Это тест проверяет форму')
+@allure.description("""Тест нажимает по кажлй кнопки и проверяет выбран ли радиобатон или нет""")
+@allure.tag("Smoke")
+@allure.severity(Severity.CRITICAL)
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.id("123")
+@allure.manual
+@allure.link("https://hoster.by/", name="Тест-кейсы теста")
+@allure.issue("AUTH-123")
+@allure.testcase("TMS-456")
+@allure.epic("UI автотетсы")
+@allure.feature("Раздел Elements")
+@allure.story("Вкладка Check Box")
+def test_selenium_form():
+    with allure.step('Запускаем и настройка браузер'):
+        driver = webdriver.Chrome()
+        driver.get("https://demoqa.com/webtables")
+        driver.maximize_window()
+        time.sleep(1)
+
+    with allure.step('Прожатие кнопок для открытие вкладок'):
+        elements = driver.find_elements(By.CSS_SELECTOR, 'span[title="Delete"]')
+        driver.find_element(By.CSS_SELECTOR, 'span[title="Delete"]').click()
+        elements_delete = driver.find_elements(By.CSS_SELECTOR, 'span[title="Delete"]')
+        check.not_equal(len(elements), len(elements_delete))
         driver.quit()
 
 
