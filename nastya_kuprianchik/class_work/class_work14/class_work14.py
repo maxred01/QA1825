@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 
 # Открыть страницу
-driver.get("https://www.hoyolab.com/home")
+driver.get("https://www.hoyolab.com")
 driver.maximize_window()
 time.sleep(20)
 #driver.find_element(By.XPATH, '//button[@aria-label="close"]').click()

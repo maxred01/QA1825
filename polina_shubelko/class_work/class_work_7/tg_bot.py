@@ -7,7 +7,7 @@ from telegram.ext import (
     ContextTypes, filters, CallbackQueryHandler
 )
 
-from test_api import test_run_api_tests
+from QA1825.polina_shubelko.class_work.class_work_7.tests.API.test_api import test_run_api_tests
 
 TOKEN = "8156293984:AAF9EszcYfG-Wmi9SCKbzTBcpNsOq9owog0"
 ABOUT_TEXT = """*Обо мне*
@@ -194,4 +194,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
