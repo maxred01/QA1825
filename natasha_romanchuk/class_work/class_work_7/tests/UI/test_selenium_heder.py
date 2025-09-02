@@ -124,22 +124,37 @@ def test_search_product(web_browser):
         search_product.send_keys(Keys.CONTROL + "a") # Выделить все
         search_product.send_keys(Keys.DELETE)         # Очистить
 
-# @allure.feature("Главная страница")
-# @allure.story("Подсчет товаров")
-# def test_count_products(web_browser):
-#     with allure.step('Запускаем и настройка браузер'):
-#         driver = MainPage(web_browser)
-#         driver.cookies_button.click()
-#         driver.close_button.click()
-#
-#     with allure.step('Подсчет количества товаров'):
-#
-#         products = driver.all_products
-#         count_products = products.count()
-#         print(f"На странице найдено товаров: {count_products}")
-#
-#         first_product_text = all_products[0].get_text()
-#         print(f"Текст первого товара: {first_product_text}")
+
+@allure.feature("Главная страница")
+@allure.story("Подсчет товаров и проверка наличия картинок")
+def test_count_products(web_browser):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+
+    with allure.step('Подсчет количества товаров'):
+
+        products = driver.all_products.count()
+        check.greater_equal(products, 10)
+        check.less_equal(products, 60)
+
+@allure.feature("Главная страница")
+@allure.story("Кнопки В корзине кликабельны")
+def test_vkorzine(web_browser):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+    with allure.step('Скролл страницы вниз'):
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    with allure.step('Кликаем по кнопке "В корзине"'):
+        for btn in driver.vkorzine_btn:
+            btn.click()
+        assert btn.is_clickable()
+
+
+
 
     # with allure.step('Отображение логотипа'):
     #     logo = driver.find_element(By.XPATH, driver.logotip)

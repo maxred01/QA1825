@@ -80,3 +80,5 @@ class MainPage(WebPage):
 
     all_products = ManyWebElements(xpath='//div[@class="adult-wrapper_adult__yIhdE vertical_product__hiLyN products_product__DBmFj"]')
     search_results = WebElement(xpath='//span[@class="search_heading_query__Ci6uB"]')
+
+    vkorzine_btn = ManyWebElements(xpath='//div[@class="vertical_actions__YjIyP"]')
