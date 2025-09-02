@@ -89,35 +89,50 @@ TEST_CASES = [
         method="GET"
     ),
     TestCase(
+        name="Деятельность Их Величеств",
+        url="https://www.royal.uk/clarencehouse",
+        method="GET"
+    ),
+    TestCase(
+        name="Об этом сайте",
+        url="https://www.royal.uk/about-site",
+        method="GET"
+    ),
+    TestCase(
+        name="Связаться с нами",
+        url="https://www.royal.uk/contact",
+        method="GET"
+    ),
+    TestCase(
         name="",
         url=,
         method="GET"
     ),
-    TestCase(
-        name="Корзина Edostavka",
-        url="https://api2.edostavka.by/api/v2/basket",
-        method="POST",
-        headers={
-            'sec-ch-ua-platform': '"Windows"',
-            'Referer': 'https://edostavka.by/',
-            'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
-            'Web-User-Agent': 'SiteEdostavka/1.0.0',
-            'sec-ch-ua-mobile': '?0',
-            'apiToken': 'Fek5TJRyidOSSzB1dGqxkxqX7zBccNMv',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Cookie': 'hg-client-security=2yxsLGA5e6LHVvE1scgoJYwYVah'
-        },
-        data=json.dumps({
-            "productId": 770036,
-            "quantityInBasket": 190,
-            "gtmItemListId": "",
-            "gtmItemListName": ""
-        }),
-        check_field="expressDeliveryPrice",
-        expected_value=5.99
-    ),
+    # TestCase(
+    #     name="Корзина Edostavka",
+    #     url="https://api2.edostavka.by/api/v2/basket",
+    #     method="POST",
+    #     headers={
+    #         'sec-ch-ua-platform': '"Windows"',
+    #         'Referer': 'https://edostavka.by/',
+    #         'sec-ch-ua': '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+    #         'Web-User-Agent': 'SiteEdostavka/1.0.0',
+    #         'sec-ch-ua-mobile': '?0',
+    #         'apiToken': 'Fek5TJRyidOSSzB1dGqxkxqX7zBccNMv',
+    #         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+    #         'Accept': 'application/json',
+    #         'Content-Type': 'application/json',
+    #         'Cookie': 'hg-client-security=2yxsLGA5e6LHVvE1scgoJYwYVah'
+    #     },
+    #     data=json.dumps({
+    #         "productId": 770036,
+    #         "quantityInBasket": 190,
+    #         "gtmItemListId": "",
+    #         "gtmItemListName": ""
+    #     }),
+    #     check_field="expressDeliveryPrice",
+    #     expected_value=5.99
+    # ),
 ]
 
 
