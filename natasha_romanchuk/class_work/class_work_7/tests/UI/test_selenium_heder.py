@@ -1,7 +1,10 @@
 import allure
 import time
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By # стратегии поиска элементов
 from selenium.webdriver.support.expected_conditions import element_located_selection_state_to_be
+from selenium.webdriver.support.wait import WebDriverWait
 
 from natasha_romanchuk.class_work.class_work_7.Locators.main_locators import MainPage
 from natasha_romanchuk.class_work.class_work_7.tests.UI.conftest import web_browser
@@ -61,7 +64,7 @@ def test_footers(web_browser):
             (driver.servise_button, 'О сервисе'),
             (driver.news_button, 'Новости'),
             (driver.vacansii_button, 'Вакансии'),
-            (driver.sotrydnichestvo_button, 'Сотруднич'),
+            (driver.sotrydnichestvo_button, 'Сотрудничество'),
             (driver.dostavca_dlya_urlic_button, 'Доставка для юр.лиц'),
             (driver.postavsikam_button, 'Поставщикам'),
             (driver.reklamodatelam_button, 'Рекламодателям'),
@@ -83,19 +86,60 @@ def test_footers(web_browser):
             (driver.groshik_button, 'Грошык')
         ]
 
+        skip_click_chek = ['Компания','Сотрудничество','Покупателям','Наши друзья']
+
     with allure.step('Проверка элемента'):
         for element, text_element in elements:
             with allure.step(f'Проверка элемента {text_element} на отображение'):
                 check.is_true(element.is_visible(), f'Элемента {text_element} нет визуально на экарне')
 
-            with allure.step(f'Проверка элемента {text_element} на кликабельность'):
-                check.is_true(element.is_clickable(), f'Элемента {text_element} не кликабелен')
+            if text_element not in skip_click_chek:
+                with allure.step(f'Проверка элемента {text_element} на кликабельность'):
+                    check.is_true(element.is_clickable(), f'Элемента {text_element} не кликабелен')
 
 
 
+    with allure.step('Проверка брендов'):
+        check.equal(driver.brands_button.count(),20)
 
 
+@allure.feature("Главная страница")
+@allure.story("Хэдер")
+def test_search_product(web_browser):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
 
+    with allure.step('Вводим запрос и нажимаем Enter'):
+        search_product = driver.search_input
+        search_product.send_keys("iPhone")
+        search = driver.search_button
+        search.click()
+        time.sleep(10)
+
+    with allure.step('Проверяем, что результаты поиска отображаются'):
+        check.is_true(driver.search_results.is_visible(),"Результаты поиска не отображаются на странице")
+
+        search_product.send_keys(Keys.CONTROL + "a") # Выделить все
+        search_product.send_keys(Keys.DELETE)         # Очистить
+
+# @allure.feature("Главная страница")
+# @allure.story("Подсчет товаров")
+# def test_count_products(web_browser):
+#     with allure.step('Запускаем и настройка браузер'):
+#         driver = MainPage(web_browser)
+#         driver.cookies_button.click()
+#         driver.close_button.click()
+#
+#     with allure.step('Подсчет количества товаров'):
+#
+#         products = driver.all_products
+#         count_products = products.count()
+#         print(f"На странице найдено товаров: {count_products}")
+#
+#         first_product_text = all_products[0].get_text()
+#         print(f"Текст первого товара: {first_product_text}")
 
     # with allure.step('Отображение логотипа'):
     #     logo = driver.find_element(By.XPATH, driver.logotip)

@@ -1,6 +1,6 @@
 import os
-from natasha_romanchuk.class_work.class_work_13.page.base_page import WebPage
-from natasha_romanchuk.class_work.class_work_13.page.elements import WebElement ,ManyWebElements
+from natasha_romanchuk.class_work.class_work_7.page1.base_page import WebPage
+from natasha_romanchuk.class_work.class_work_7.page1.elements import WebElement ,ManyWebElements
 
 
 class MainPage(WebPage):
@@ -75,3 +75,8 @@ class MainPage(WebPage):
     
     cookies_button = WebElement(xpath='//button[@type="button"]//*[contains(text(),"Принять")]')
     close_button = WebElement(xpath='//button[@type="button"]//*[contains(text(),"Закрыть")]')
+
+    brands_button = ManyWebElements(xpath='//a[@class="brands_link__3NOhi"]')
+
+    all_products = ManyWebElements(xpath='//div[@class="adult-wrapper_adult__yIhdE vertical_product__hiLyN products_product__DBmFj"]')
+    search_results = WebElement(xpath='//span[@class="search_heading_query__Ci6uB"]')

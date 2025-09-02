@@ -1,212 +1,313 @@
-import time
-import requests
 
+import time
 from termcolor import colored
-from selenium.webdriver.common.by import By
+
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
 
 
-class WebPage(object):
+class WebElement(object):
+    _locator = ('', '')
     _web_driver = None
+    _page = None
+    _timeout = 10
+    _wait_after_click = False  # TODO: how we can wait after click?
 
-    def __init__(self, web_driver, url=''):
-        self._web_driver = web_driver
-        self.get(url)
+    def __init__(self, timeout=10, wait_after_click=False, **kwargs):
+        self._timeout = timeout
+        self._wait_after_click = wait_after_click
 
-    def __setattr__(self, name, value):
-        if not name.startswith('_'):
-            self.__getattribute__(name)._set_value(self._web_driver, value)
+        for attr in kwargs:
+            self._locator = (str(attr).replace('_', ' '), str(kwargs.get(attr)))
+
+    def find(self, timeout=10):
+        """ Найти элемент на странице. """
+
+        element = None
+
+        try:
+            element = WebDriverWait(self._web_driver, timeout).until(
+                EC.presence_of_element_located(self._locator)
+            )
+        except:
+            print(colored('Element not found on the page!', 'red'))
+
+        return element
+
+    def wait_to_be_clickable(self, timeout=10, check_visibility=True):
+        """ Подождfть пока элемент будет готов к клику. """
+
+        element = None
+
+        try:
+            element = WebDriverWait(self._web_driver, timeout).until(
+                EC.element_to_be_clickable(self._locator)
+            )
+        except:
+            print(colored('Element not clickable!', 'red'))
+
+        if check_visibility:
+            self.wait_until_not_visible()
+
+        return element
+
+    def is_clickable(self):
+        """ Проверка, готов ли элемент к клику или нет. """
+
+        element = self.wait_to_be_clickable(timeout=0.1)
+        return element is not None
+
+    def is_presented(self):
+        """ Проверка, что элемент представлен на странице. """
+
+        element = self.find(timeout=0.1)
+        return element is not None
+
+    def is_visible(self):
+        """ Проверка, виден ли элемент или нет. """
+
+        element = self.find(timeout=0.1)
+
+        if element:
+            return element.is_displayed()
+
+        return False
+
+    def wait_until_not_visible(self, timeout=10):
+
+        element = None
+
+        try:
+            element = WebDriverWait(self._web_driver, timeout).until(
+                EC.visibility_of_element_located(self._locator)
+            )
+        except:
+            print(colored('Element not visible!', 'red'))
+
+        if element:
+            js = ('return (!(arguments[0].offsetParent === null) && '
+                  '!(window.getComputedStyle(arguments[0]) === "none") &&'
+                  'arguments[0].offsetWidth > 0 && arguments[0].offsetHeight > 0'
+                  ');')
+            visibility = self._web_driver.execute_script(js, element)
+            iteration = 0
+
+            while not visibility and iteration < 10:
+                time.sleep(0.5)
+
+                iteration += 1
+
+                visibility = self._web_driver.execute_script(js, element)
+                print('Element {0} visibility: {1}'.format(self._locator, visibility))
+
+        return element
+
+    def send_keys(self, keys, wait=2):
+        """ Написать текст. """
+
+        keys = keys.replace('\n', '\ue007')
+
+        element = self.find()
+
+        if element:
+            element.click()
+            element.clear()
+            element.send_keys(keys)
+            time.sleep(wait)
         else:
-            super(WebPage, self).__setattr__(name, value)
+            msg = 'Element with locator {0} not found'
+            raise AttributeError(msg.format(self._locator))
 
-    def __getattribute__(self, item):
-        attr = object.__getattribute__(self, item)
+    def get_text(self):
+        """ Взять текст. """
 
-        if not item.startswith('_') and not callable(attr):
-            attr._web_driver = self._web_driver
-            attr._page = self
+        element = self.find()
+        text = ''
 
-        return attr
+        try:
+            text = str(element.text)
+        except Exception as e:
+            print('Error: {0}'.format(e))
 
-    def get(self, url):
-        self._web_driver.get(url)
-        self.wait_page_loaded()
+        return text
 
-    def go_back(self):
-        self._web_driver.back()
-        self.wait_page_loaded()
+    def get_attribute(self, attr_name):
+        """ Взять атрибут. """
 
-    def refresh(self):
-        self._web_driver.refresh()
-        self.wait_page_loaded()
+        element = self.find()
 
-    def screenshot(self, file_name='screenshot.png'):
+        if element:
+            return element.get_attribute(attr_name)
+
+    def _set_value(self, web_driver, value, clear=True):
+        """ Установить значение для элемента ввода. """
+
+        element = self.find()
+
+        if clear:
+            element.clear()
+
+        element.send_keys(value)
+
+    def click(self, hold_seconds=0, x_offset=1, y_offset=1):
+        """ Подождать и нажать на элемент. """
+
+        element = self.wait_to_be_clickable()
+
+        if element:
+            action = ActionChains(self._web_driver)
+            action.move_to_element_with_offset(element, x_offset, y_offset). \
+                pause(hold_seconds).click(on_element=element).perform()
+        else:
+            msg = 'Element with locator {0} not found'
+            raise AttributeError(msg.format(self._locator))
+
+        if self._wait_after_click:
+            self._page.wait_page_loaded()
+
+    def right_mouse_click(self, x_offset=0, y_offset=0, hold_seconds=0):
+        """ Нажать на элемент правой кнопкой мыши. """
+
+        element = self.wait_to_be_clickable()
+
+        if element:
+            action = ActionChains(self._web_driver)
+            action.move_to_element_with_offset(element, x_offset, y_offset). \
+                pause(hold_seconds).context_click(on_element=element).perform()
+        else:
+            msg = 'Element with locator {0} not found'
+            raise AttributeError(msg.format(self._locator))
+
+    def double_click(self, x_offset=0, y_offset=0, hold_seconds=0):
+            """ Нажать на элемент правой кнопкой мыши. """
+
+            element = self.wait_to_be_clickable()
+
+            if element:
+                action = ActionChains(self._web_driver)
+                action.move_to_element_with_offset(element, x_offset, y_offset). \
+                    pause(hold_seconds).double_click(on_element=element).perform()
+            else:
+                msg = 'Element with locator {0} not found'
+                raise AttributeError(msg.format(self._locator))
+
+
+    def highlight_and_make_screenshot(self, file_name='element.png'):
+        """ Выделите элемент и сделайте снимок экрана всей страницы.. """
+
+        element = self.find()
+
+        # Прокрутите страницу до элемента:
+        self._web_driver.execute_script("arguments[0].scrollIntoView();", element)
+
+        # Добавьте красную рамку к стилю:
+        self._web_driver.execute_script("arguments[0].style.border='3px solid red'", element)
+
+        # Сделать скрин страницы:
         self._web_driver.save_screenshot(file_name)
 
-    def scroll_down(self, offset=0):
-        """ Прокрутите страницу вниз. """
+    def scroll_to_element(self):
+        """ Прокрутка к элементу. """
 
-        if offset:
-            self._web_driver.execute_script('window.scrollTo(0, {0});'.format(offset))
-        else:
-            self._web_driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
+        element = self.find()
 
-    def scroll_up(self, offset=0):
-        """ Прокрутить страницу вверх. """
+        # Прокрутите страницу до элемента:
+        # Вариант №1 для перехода к элементу:
+        # self._web_driver.execute_script("arguments[0].scrollIntoView();", element)
 
-        if offset:
-            self._web_driver.execute_script('window.scrollTo(0, -{0});'.format(offset))
-        else:
-            self._web_driver.execute_script('window.scrollTo(0, -document.body.scrollHeight);')
+        # Вариант №2 для перехода к элементу:
+        try:
+            element.send_keys(Keys.DOWN)
+        except Exception as e:
+            pass  # Просто проигнорим ошибку, если мы не можем отправить ключи элементу
 
-    def switch_to_iframe(self, iframe):
-        """ Переключитесь на iframe по его имени. """
-        self._web_driver.switch_to.frame(iframe)
+    def delete(self):
+        """ Удалить элемент. """
 
-    def get_cookies(self):
-        """ Этот метод выводит все доступные файлы cookie для текущей сессии. """
-        return self._web_driver.get_cookies()
+        element = self.find()
 
-    def add_cookie(self, name, value):
-        """ Этот метод помогает настроить файл cookie для сессии. """
-        return self._web_driver.add_cookie(name=name, value=value)
+        # Удалить элемент:
+        self._web_driver.execute_script("arguments[0].remove();", element)
 
-    def switch_to_alert_accept(self):
-        """ Deprecated use switch_to_alert. """
-        self._web_driver.switch_to.alert.accept()
 
-    def switch_to_window(self, window=0):
-        """ Переключитесь на вкладку по его индексу. """
-        self._web_driver.switch_to.window(self._web_driver.window_handles[window])
+class ManyWebElements(WebElement):
 
-    def switch_out_iframe(self):
-        """ Отменить фокус iframe. """
-        self._web_driver.switch_to.default_content()
+    def __getitem__(self, item):
+        """ Получить список элементов и попытаться вернуть требуемый элемент. """
 
-    def validate_html(self, url):
-        """Функция для проверки валидации HTML страницы"""
-        validator_url = 'https://validator.w3.org/nu/?out=json'
-        headers = {'Content-Type': 'text/html; charset=utf-8'}
-        data = requests.get(url).text
-        response = requests.post(validator_url, headers=headers, data=data.encode('utf-8'))
-        results = response.json()
+        elements = self.find()
+        return elements[item]
+
+    def find(self, timeout=10):
+        """ Найти элемент на странице. """
+
+        elements = []
+
+        try:
+            elements = WebDriverWait(self._web_driver, timeout).until(
+                EC.presence_of_all_elements_located(self._locator)
+            )
+        except:
+            print(colored('Elements not found on the page!', 'red'))
+
+        return elements
+
+    def _set_value(self, web_driver, value):
+        """ Примечание: данное действие неприменимо для списка элементов. """
+        raise NotImplemented('This action is not applicable for the list of elements')
+
+    def click(self, hold_seconds=0, x_offset=0, y_offset=0):
+        """ Примечание: данное действие неприменимо для списка элементов. """
+        raise NotImplemented('This action is not applicable for the list of elements')
+
+    def count(self):
+        """ Сумма элементов. """
+
+        elements = self.find()
+        return len(elements)
+
+    def get_text(self):
+        """ Взять текст элементов. """
+
+        elements = self.find()
+        result = []
+
+        for element in elements:
+            text = ''
+
+            try:
+                text = str(element.text)
+            except Exception as e:
+                print('Error: {0}'.format(e))
+
+            result.append(text)
+
+        return result
+
+    def get_attribute(self, attr_name):
+        """ Взять атрибут элементов. """
+
+        results = []
+        elements = self.find()
+
+        for element in elements:
+            results.append(element.get_attribute(attr_name))
+
         return results
 
-    def get_current_url(self):
-        """ Возвращает URL текущего браузера. """
-        return self._web_driver.current_url
+    def highlight_and_make_screenshot(self, file_name='element.png'):
+        """ Выделите элементы и сделайте скриншот всей страницы.. """
 
-    def execute_script(self, script):
-        """ Возвращает JS скрипт. """
-        return self._web_driver.execute_script(script)
+        elements = self.find()
 
-    def get_page_source(self):
-        """ Возвращает тело текущей страницы. """
+        for element in elements:
+            # Прокрутите страницу до элемента:
+            self._web_driver.execute_script("arguments[0].scrollIntoView();", element)
 
-        source = ''
-        try:
-            source = self._web_driver.page_source
-        except:
-            print(colored('Can not get page source', 'red'))
+            # Добавьте красную рамку к стилю:
+            self._web_driver.execute_script("arguments[0].style.border='3px solid red'", element)
 
-        return source
-
-    def check_js_errors(self, ignore_list=None):
-        """ Эта функция проверяет ошибки JS на странице. """
-
-        ignore_list = ignore_list or []
-
-        logs = self._web_driver.get_log('browser')
-        for log_message in logs:
-            if log_message['level'] != 'WARNING':
-                ignore = False
-                for issue in ignore_list:
-                    if issue in log_message['message']:
-                        ignore = True
-                        break
-
-                assert ignore, 'JS error "{0}" on the page!'.format(log_message)
-
-    def wait_page_loaded(self, timeout=60, check_js_complete=True,
-                         check_page_changes=False, check_images=False,
-                         wait_for_element=None,
-                         wait_for_xpath_to_disappear='',
-                         sleep_time=2):
-        """ Эта функция ждет, пока страница не будет полностью загружена.
-            Мы используем много разных способов определить, загружена страница или нет.:
-            1) Проверить статус JS
-            2) Проверить модификацию в исходном коде страницы
-            3) Убедитесь, что все изображения загружены полностью
-               (Примечание: по умолчанию эта проверка отключена)
-            4) Убедиться, что ожидаемые элементы, представленные на странице
-        """
-
-        page_loaded = False
-        double_check = False
-        k = 0
-
-        if sleep_time:
-            time.sleep(sleep_time)
-
-        # Получить исходный код страницы для отслеживания изменений в HTML:
-        source = ''
-        try:
-            source = self._web_driver.page_source
-        except:
-            pass
-
-        # Подождать, пока страница загрузится (и прокрутить ее, чтобы убедиться, что все объекты будут загружены):
-        while not page_loaded:
-            time.sleep(0.5)
-            k += 1
-
-            if check_js_complete:
-                # Прокрутить вниз и подождите, пока страница загрузится:
-                try:
-                    self._web_driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
-                    page_loaded = self._web_driver.execute_script("return document.readyState == 'complete';")
-                except Exception as e:
-                    pass
-
-            if page_loaded and check_page_changes:
-                # Проверьть не изменился ли источник страницы
-                new_source = ''
-                try:
-                    new_source = self._web_driver.page_source
-                except:
-                    pass
-
-                page_loaded = new_source == source
-                source = new_source
-
-            # Подождить когда какой-то элемент исчезнет:
-            if page_loaded and wait_for_xpath_to_disappear:
-                bad_element = None
-
-                try:
-                    bad_element = WebDriverWait(self._web_driver, 0.1).until(
-                        EC.presence_of_element_located((By.XPATH, wait_for_xpath_to_disappear))
-                    )
-                except:
-                    pass  # Игнорировать ошибки тайм-аута
-
-                page_loaded = not bad_element
-
-            if page_loaded and wait_for_element:
-                try:
-                    page_loaded = WebDriverWait(self._web_driver, 0.1).until(
-                        EC.element_to_be_clickable(wait_for_element._locator)
-                    )
-                except:
-                    pass  # Игнорировать ошибки тайм-аута
-
-            assert k < timeout, 'The page loaded more than {0} seconds!'.format(timeout)
-
-            # Проверить два раза, что страница полностью загружена:
-            if page_loaded and not double_check:
-                page_loaded = False
-                double_check = True
-
-        # Поднимать вверх (скролл):
-        self._web_driver.execute_script('window.scrollTo(document.body.scrollHeight, 0);')
+        # Сделать скрин страницы:
+        self._web_driver.save_screenshot(file_name)
