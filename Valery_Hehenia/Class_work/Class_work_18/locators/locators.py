@@ -6,7 +6,7 @@ from Valery_Hehenia.Class_work.Class_work_18.page.elements import WebElement, Ma
 class ButtonPage(WebPage):
     def __init__(self, web_driver, url=''):
         if not url:
-            url = os.getenv("BUTTON_URL") or 'https://demoqa.com/buttons'
+            url = os.getenv("BUTTON_URL") or 'https://www.kinopoisk.ru/'
 
         super().__init__(web_driver, url)
 
