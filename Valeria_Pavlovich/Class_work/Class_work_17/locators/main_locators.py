@@ -14,7 +14,11 @@ class MainPage(WebPage):
     bad_vision_version = WebElement(id='bad_vision')
     belavia_logo = WebElement(xpath='//img[@alt="БЕЛАВИА - Авиакомпания Республики Беларусь"]')
 
-    support_service = WebElement(xpath='(//*[@id="footer"]//p[text()="Справочная служба"])[1]')
+    support_service = WebElement(xpath='(//*[@id="footer"]//p[text()="Справочная служба"])')
+    contacts = WebElement(xpath='//*[@id="footer"]//*[@id="belarus-only"]')
+    email = WebElement(xpath='(//*[@id="footer"]//a[text()="support@belavia.by"])')
+    official_name = WebElement(xpath='//*[@id="footer"]//*[@itemprop="name"]')
+    address = WebElement(xpath='//*[@id="footer"]//*[@itemprop="address"]')
 
     sales_office = WebElement(xpath='(//*[@id="footer"]//a[text()="Кассы продаж"])')
     timetable = WebElement(xpath='(//*[@id="footer"]//a[text()="Расписание"])')
@@ -34,7 +38,13 @@ class MainPage(WebPage):
     vk = WebElement(xpath='//*[@id="footer"]//*[@alt="VKontakte"]')
     telegram = WebElement(xpath='//*[@id="footer"]//*[@alt="Telegram"]')
 
-
+    slide_00 = WebElement(xpath='//*[@aria-describedby="slick-slide00"]')
+    slide_01 = WebElement(xpath='//*[@aria-describedby="slick-slide01"]')
+    slide_02 = WebElement(xpath='//*[@aria-describedby="slick-slide02"]')
+    slide_03 = WebElement(xpath='//*[@aria-describedby="slick-slide03"]')
+    slide_04 = WebElement(xpath='//*[@aria-describedby="slick-slide04"]')
+    slide_05 = WebElement(xpath='//*[@aria-describedby="slick-slide05"]')
+    slide_06 = WebElement(xpath='//*[@aria-describedby="slick-slide06"]')
 
 
 
