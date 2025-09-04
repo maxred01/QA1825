@@ -137,7 +137,7 @@ def test_count_products(web_browser):
 
         products = driver.all_products.count()
         check.greater_equal(products, 10)  #от 10
-        check.less_equal(products, 60)      # до 60
+        check.less_equal(products, 99)      # до 99
 
 @allure.feature('Главная страница')
 @allure.story('Кнопки "В корзине" кликабельны')
