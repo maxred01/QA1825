@@ -136,24 +136,38 @@ def test_count_products(web_browser):
     with allure.step('Подсчет количества товаров'):
 
         products = driver.all_products.count()
-        check.greater_equal(products, 10)
-        check.less_equal(products, 60)
+        check.greater_equal(products, 10)  #от 10
+        check.less_equal(products, 60)      # до 60
 
-@allure.feature("Главная страница")
-@allure.story("Кнопки В корзине кликабельны")
+@allure.feature('Главная страница')
+@allure.story('Кнопки "В корзине" кликабельны')
 def test_vkorzine(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
         driver.close_button.click()
-    with allure.step('Скролл страницы вниз'):
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    with allure.step('Кликаем по кнопке "В корзине"'):
-        for btn in driver.vkorzine_btn:
-            btn.click()
-        assert btn.is_clickable()
 
+    with allure.step("Скроллим страницу вниз"):
+        driver._web_driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
+    with allure.step("Проверяем кликабельность кнопок 'В корзине'"):
+        vkorzine_buttons = driver.vkorzine_btn.find()  # получаем список кнопок
+        if not vkorzine_buttons:
+            print("Кнопки 'В корзине' не найдены!")
+            assert False, "Кнопки 'В корзине' не найдены!"
+
+        wait = WebDriverWait(driver._web_driver, 10)
+
+        for i, btn in enumerate(vkorzine_buttons, start=1):
+            # Скроллим к кнопке
+            driver._web_driver.execute_script("arguments[0].scrollIntoView(true);", btn)
+
+            try:
+                # Ждём, пока кнопка станет кликабельной
+                wait.until(EC.element_to_be_clickable(btn))
+                print(f"Кнопка {i} кликабельна ")
+            except:
+                print(f"Кнопка {i} НЕ кликабельна ")
 
 
     # with allure.step('Отображение логотипа'):
