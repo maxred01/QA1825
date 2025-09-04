@@ -51,10 +51,10 @@ else:
 
 # Задача 4 Конвертер дат
 
-# date = input('Введите дату (ДД.ММ.ГГ или ДД/ММ/ГГ):')
-# date = date.replace('/','.')
+# data = input('Введите дату (ДД.ММ.ГГ или ДД/ММ/ГГ):')
+# data = data.replace('/','.')
 #
-# convert_data = date.split('-')
+# convert_data = data.split('-')
 # print(convert_data)
 
 

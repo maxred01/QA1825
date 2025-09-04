@@ -19,7 +19,7 @@ def test_get():
 def test_post():
     url = "https://webapi.belavia.by/graphql/query/nemo"
 
-    payload = "{\"query\":\"mutation RunSearch($params: AviaSearchParameters!) {\\n  RunGeneralSearch(parameters: $params) {\\n    id\\n    __typename\\n  }\\n}\\n\",\"variables\":{\"params\":{\"segments\":[{\"arrival\":{\"iata\":\"MOW\"},\"departure\":{\"iata\":\"MSQ\"},\"date\":\"2025-07-11\"}],\"passengers\":[{\"passengerType\":\"ADT\",\"extendedPassengerType\":null,\"count\":1},{\"passengerType\":\"CLD\",\"extendedPassengerType\":null,\"count\":0},{\"passengerType\":\"INF\",\"extendedPassengerType\":null,\"count\":0}],\"ffpMode\":false,\"currency\":\"BYN\"}}}"
+    payload = "{\"query\":\"mutation RunSearch($params: AviaSearchParameters!) {\\n  RunGeneralSearch(parameters: $params) {\\n    id\\n    __typename\\n  }\\n}\\n\",\"variables\":{\"params\":{\"segments\":[{\"arrival\":{\"iata\":\"MOW\"},\"departure\":{\"iata\":\"MSQ\"},\"data\":\"2025-07-11\"}],\"passengers\":[{\"passengerType\":\"ADT\",\"extendedPassengerType\":null,\"count\":1},{\"passengerType\":\"CLD\",\"extendedPassengerType\":null,\"count\":0},{\"passengerType\":\"INF\",\"extendedPassengerType\":null,\"count\":0}],\"ffpMode\":false,\"currency\":\"BYN\"}}}"
     headers = {
         'accept': '*/*',
         'accept-language': 'ru',

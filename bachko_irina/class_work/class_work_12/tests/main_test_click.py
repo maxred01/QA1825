@@ -12,21 +12,6 @@ def test_heders(web_browser):
         driver = MainPage(web_browser)
 
 
-        # with allure.step('Отображение элементов header'):
-        #     elements = [
-        #         ("button vehicles ", driver.vehicles),
-        #         ("button launches", driver.launches),
-        #         ("button humanspaceflight", driver.humanspaceflight),
-        #         ("button rideshare", driver.rideshare),
-        #         ("button starlink", driver.starlink),
-        #         ("button starshield", driver.starshield),
-        #     ]
-        #
-        #     for name, locator in elements:
-        #         with allure.step(f"Отображение: {name}"):
-        #             assert locator.is_visible(), f"Элемент '{name}' не отображается"
-        #     time.sleep(2)
-
     with allure.step('Подготовка тестовых данных'):
         elements = [
             (driver.Logo, 'spacex-logo'),

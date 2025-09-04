@@ -1,7 +1,7 @@
 import os
 
-from bachko_irina.class_work.class_work_12.page.elements import WebElement, ManyWebElements
-from bachko_irina.class_work.class_work_13.base_page import WebPage
+from bachko_irina.class_work.class_work_12.page.elements import WebElement
+from bachko_irina.class_work.class_work_12.page.base_page import WebPage
 
 class ButtonPage(WebPage):
     def __init__(self, web_driver, url=''):
