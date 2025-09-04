@@ -23,4 +23,4 @@ class MainPage(WebPage):
     btn_footer7 = WebElement(xpatch='//div[@class="footer"]//a[@href="hoyolab.com/article/928383?bbs_theme=dark&bbs_theme_device=1", "Правила сообщества"]')
 
     btn_selector = WebElement(xpatch='//div[@class="mhy-interest-selector__footer"]//span[contains(text(), "Готово")]')
-    btn_dialog = WebElement(xpatch='//div[@class="el-dialog hyv-web-login-dialog iframe-level-1"]//button[@aria-label="close"]')
+    btn_close_login_popup = WebElement(xpath='//button[@class="el-dialog__headerbtn"]')

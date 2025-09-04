@@ -9,8 +9,8 @@ import pytest_check as check
 def test_header(web_browser):
     with allure.step('Запускаем и настраиваем'):
         driver = MainPage(web_browser)
-        time.sleep(10)
-        driver.btn_dialog.click()
+        driver.btn_close_login_popup.click()
+        driver.btn_selector.click()
 
     with allure.step('Подготовка тестовых данных'):
         elements = [
