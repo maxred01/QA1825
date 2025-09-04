@@ -3,56 +3,85 @@ import allure
 from Valeria_Pavlovich.Class_work.Class_work_17.locators.main_locators import MainPage
 import pytest_check as check
 
-@allure.feature('Main page')
-@allure.story('Header')
-def test_buttons(web_browser):
-    with allure.step('Browser start'):
+@allure.feature('Главная страница')
+@allure.story('Хэдер')
+def test_header_elements(web_browser):
+    with allure.step('Запускаем браузер'):
         driver = MainPage(web_browser)
 
-    with allure.step('Test data preparation'):
+    with allure.step('Подготавливаем тестовые данных'):
         elements = [
-            (driver.menu_btn, 'Menu'),
-            (driver.language_btn, 'Language'),
-            (driver.account_btn, 'Account'),
-            (driver.bad_vision_version, 'Bad vision'),
-            (driver.belavia_logo, 'Logo'),
+            (driver.belavia_logo, 'Логотип Белавиа'),
+            (driver.bad_vision_version, 'Версия для слабовидящих'),
+            (driver.account_btn, 'Личный аккаунт'),
+            (driver.language_btn, 'Язык'),
+            (driver.menu_btn, 'Меню'),
         ]
-    with allure.step('Element test'):
+    with allure.step('Проверяем элементы хэдера'):
         for element, text_element in elements:
-            with allure.step(f'Element {text_element} visibility test'):
-                check.is_true(element.is_visible(), f'Element {text_element} is not visible')
-            with allure.step(f'Element {text_element} clickability test'):
-                check.is_true(element.is_clickable(), f'Element {text_element} is not clickable')
+            with allure.step(f'Проверяем видимость элемента {text_element}'):
+                check.is_true(element.is_visible(), f'Элемент {text_element} не отображается на экране')
+            with allure.step(f'Проверяем нажатие элемента {text_element}'):
+                check.is_true(element.is_clickable(), f'Элемент {text_element} не нажимается')
 
-@allure.feature('Main page')
-@allure.story('Footer')
-def test_buttons(web_browser):
-    with allure.step('Browser start'):
+@allure.feature('Главная страница')
+@allure.story('Слайдер')
+def test_slider_elements(web_browser):
+    with allure.step('Запускаем браузер'):
         driver = MainPage(web_browser)
 
-    with allure.step('Test data preparation'):
+    with allure.step('Подготавливаем тестовые данных'):
         elements = [
-            (driver.support_service, 'Support service'),
-            (driver.sales_office, 'Sales office'),
-            (driver.timetable, 'Timetable'),
-            (driver.departure_arrival, 'Departure'),
-            (driver.citizen_request, 'Citizen request'),
-            (driver.cargo_transport, 'Cargo transportation'),
-            (driver.for_agents, 'For agents'),
-            (driver.on_air_magazine, 'OnAir magazine'),
-            (driver.feedback, 'Feedback'),
-            (driver.media_contact, 'Media contact'),
-            (driver.improvement_year, 'Improvement year'),
+            (driver.slide_00, 'Слайд 1'),
+            (driver.slide_01, 'Слайд 2'),
+            (driver.slide_02, 'Слайд 3'),
+            (driver.slide_03, 'Слайд 4'),
+            (driver.slide_04, 'Слайд 5'),
+            (driver.slide_05, 'Слайд 6'),
+            (driver.slide_06, 'Слайд 7')
+        ]
+    with allure.step('Проверяем элементы слайдера'):
+        for element, text_element in elements:
+            with allure.step(f'Проверяем видимость элемента {text_element}'):
+                check.is_true(element.is_visible(), f'Элемент {text_element} не отображается на экране')
+            with allure.step(f'Проверяем нажатие элемента {text_element}'):
+                check.is_true(element.is_clickable(), f'Элемент {text_element} не нажимается')
+                time.sleep(5)
+
+
+@allure.feature('Главная страница')
+@allure.story('Футер')
+def test_footer_elements(web_browser):
+    with allure.step('Запускаем браузер'):
+        driver = MainPage(web_browser)
+
+    with allure.step('Подготавливаем тестовые данных'):
+        elements = [
+            (driver.support_service, 'Справочная служба'),
+            (driver.contacts, 'Контакты'),
+            (driver.email, 'Электронная почта'),
+            (driver.official_name, 'Полное название компании'),
+            (driver.address, 'Адрес головного офиса'),
+            (driver.sales_office, 'Кассы продаж'),
+            (driver.timetable, 'Расписание'),
+            (driver.departure_arrival, 'Табло вылета/прилета'),
+            (driver.citizen_request, 'Обращения граждан'),
+            (driver.cargo_transport, 'Грузовые перевозки'),
+            (driver.for_agents, 'Агентам'),
+            (driver.on_air_magazine, 'Журнал OnAir'),
+            (driver.feedback, 'Обратная связь'),
+            (driver.media_contact, 'Для СМИ'),
+            (driver.improvement_year, '2025 – Год благоустройства'),
             (driver.facebook, 'Facebook'),
             (driver.twitter, 'Twitter'),
             (driver.instagram, 'Instagram'),
             (driver.youtube, 'Youtube'),
-            (driver.vk, 'VKontakte'),
+            (driver.vk, 'Вконтакте'),
             (driver.telegram, 'Telegram')
         ]
-    with allure.step('Element test'):
+    with allure.step('Проверяем элементы футера'):
         for element, text_element in elements:
-            with allure.step(f'Element {text_element} visibility test'):
-                assert element.is_visible(), f'Element {text_element} is not visible'
-            with allure.step(f'Element {text_element} clickability test'):
-                assert element.is_clickable(), f'Element {text_element} is not clickable'
+            with allure.step(f'Проверяем видимость элемента {text_element}'):
+                check.is_true(element.is_visible(), f'Элемент {text_element} не отображается на экране')
+            with allure.step(f'Проверяем нажатие элемента {text_element}'):
+                check.is_true(element.is_clickable(), f'Элемент {text_element} не нажимается')
