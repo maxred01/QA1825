@@ -1,4 +1,5 @@
-﻿import time
+﻿from Valery_Hehenia.Class_work.Class_work_18.locators.locators_main_page import MainPage
+import time
 import allure
 import pytest_check as check
 
@@ -96,7 +97,7 @@ def test_categories(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Карусель")
-def test_carusel(web_browser):
+def test_carusel_click(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
 
@@ -110,27 +111,47 @@ def test_carusel(web_browser):
              (driver.carusel_btn_previous, 'Кнопка назад'),
                     ]
 
-    # with allure.step('Проверка элемента'):
-    #     for element, text_element in elements:
-    #         with allure.step(f'Проверка элемента {text_element} на отображение'):
-    #             check.is_true(element.is_visible(), f'Элемента {text_element} нет визуально на экарне')
-    #
-    #         with allure.step(f'Проверка элемента {text_element} на кликабельность'):
-    #             check.is_true(element.is_clickable(), f'Элемента {text_element} не кликабелен')
+    with allure.step('Проверка элемента'):
+        for element, text_element in elements:
+            with allure.step(f'Проверка элемента {text_element} на отображение'):
+                check.is_true(element.is_visible(), f'Элемента {text_element} нет визуально на экарне')
+
+            with allure.step(f'Проверка элемента {text_element} на кликабельность'):
+                check.is_true(element.is_clickable(), f'Элемента {text_element} не кликабелен')
 
 
+
+@allure.feature("Главная страница")
+@allure.story("Карусель")
+def test_carusel_slide(web_browser):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+
+    with allure.step('Подготовка тестовых данных'):
+        slides = [driver.carusel_img_samsung,
+                  driver.carusel_img_nexus,
+                  driver.carusel_img_iphone,
+                  ]
 
     with allure.step('Проверка слайда по стрелке вправо'):
-        slides = [MainPage.carusel_img_samsung, MainPage.carusel_img_nexus, MainPage.carusel_img_iphone]
+        assert driver.carusel_img_samsung.is_visible(), f"Слайд 1 не отображается!"
+        print(f"Слайд 1 отображается")
 
-        for i, slide in slides:
-
-            active_slide = web_browser.find_element(*slide)
-            assert active_slide.is_displayed(), f"Слайд {i + 1} не отображается!"
-            print(f"Слайд {i + 1} отображается: {slide}")
-
+        for i, slide in enumerate(slides):
+            assert slide.is_visible(), f"Слайд {i + 1} не отображается!"
+            print(f"Слайд {i + 1} отображается")
 
             if i < len(slides) - 1:
-                next_btn = web_browser.find_element(MainPage.carusel_btn_next)
-                next_btn.click()
-                time.sleep(1)
+                driver.carusel_btn_next.click()
+                time.sleep(0.5)
+
+
+    with allure.step('Проверка слайда по стрелке влево'):
+        for i in range(len(slides) - 1, -1, -1):  # Индексы: 2, 1, 0
+            current_slide = slides[i]
+            assert current_slide.is_visible(), f"Слайд {i + 1} не отображается!"
+            print(f"Слайд {i + 1} отображается")
+
+            if i > 0:
+                driver.carusel_btn_previous.click()
+                time.sleep(0.5)

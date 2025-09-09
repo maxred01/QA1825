@@ -12,7 +12,6 @@ def pytest_runtest_makereport(item, call):
     setattr(item, "rep_" + rep.when, rep)
     return rep
 
-
 @pytest.fixture
 def chrome_options():
     options = Options()

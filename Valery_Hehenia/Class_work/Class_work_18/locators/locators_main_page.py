@@ -46,7 +46,7 @@ class MainPage(WebPage):
 
 
     carusel_block = WebElement(id = "carouselExampleIndicators")
-    carusel_btn_next = WebElement(xpath = '//span[@class="carousel-control-next"]')
+    carusel_btn_next = WebElement(xpath = '//a[@class="carousel-control-next"]')
     carusel_btn_previous = WebElement(xpath = '//a[@class="carousel-control-prev"]')
 
     carusel_img_samsung = WebElement(xpath = '//img[@src="Samsung1.jpg"]')
