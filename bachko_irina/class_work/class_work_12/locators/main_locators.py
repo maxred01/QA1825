@@ -1,7 +1,7 @@
 import os
+from tehno.page.base_page import WebPage
+from tehno.page.elements import ManyWebElements, WebElement
 
-from bachko_irina.class_work.class_work_12.page.elements import WebElement
-from bachko_irina.class_work.class_work_12.page.base_page import WebPage
 
 class MainPage(WebPage):
     def __init__(self, web_driver, url=''):

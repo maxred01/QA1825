@@ -1,12 +1,12 @@
 import os
 
-from bachko_irina.class_work.class_work_12.page.base_page import WebPage
-from bachko_irina.class_work.class_work_12.page.elements import WebElement, ManyWebElements
+from tehno.page.base_page import WebPage
+from tehno.page.elements import WebElement, ManyWebElements
 
 class ShopPage(WebPage):
     def __init__(self, web_driver, url=''):
         if not url:
-            url = os.getenv("MAIN_URL") or "https://shop.spacex.com/"
+            url = os.getenv("MAIN_URL") or "https://shop.spacex.com"
 
         super().__init__(web_driver, url)
 
@@ -16,7 +16,7 @@ class ShopPage(WebPage):
 
     text_price_1 = WebElement(xpath='//span[@data-product-id = "6993329717327"]')
 
-    product_item= WebElement(xpath='//div[@class="ProductItem "]')
+    product_item= ManyWebElements(xpath='//div[@class="ProductItem "]')
 
     product_item_2 = ManyWebElements(xpath='//div[@class="ProductItem__Info ProductItem__Info--center"]')
     product_item_name = ManyWebElements(xpath='//div[@class="ProductItem__Info ProductItem__Info--center"]//a')
