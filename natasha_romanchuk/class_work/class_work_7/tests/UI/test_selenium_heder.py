@@ -2,12 +2,10 @@ import allure
 import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By # стратегии поиска элементов
-from selenium.webdriver.support.expected_conditions import element_located_selection_state_to_be
 from selenium.webdriver.support.wait import WebDriverWait
 
 from natasha_romanchuk.class_work.class_work_7.Locators.main_locators import MainPage
-from natasha_romanchuk.class_work.class_work_7.tests.UI.conftest import web_browser
+from natasha_romanchuk.class_work.class_work_7.tests.conftest import web_browser
 import pytest_check as check
 
 @allure.feature("Header Navigation")
