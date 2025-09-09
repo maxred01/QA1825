@@ -31,9 +31,6 @@ def test_footer_links(web_browser):
         driver.cookies_button.click()
         driver.close_button.click()
 
-    with allure.step("Скроллим страницу вниз"):
-        driver._web_driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
     with allure.step('Подготовка тестовых данных'):
         footer_links = [
             (driver.servise_button, "https://emall.by/information/company/about-service"),
@@ -51,8 +48,8 @@ def test_footer_links(web_browser):
         for button, expected_url in footer_links:
             with allure.step(f"Кликаем по кнопке и проверяем страницу"):
                 button.click()
-                WebDriverWait(driver._web_driver,15).until(EC.url_contains(expected_url))
-                current_url = driver._web_driver.current_url
+                driver.wait_page_loaded()
+                current_url = driver.get_current_url()
 
                 assert current_url == expected_url, f"Ожидали {expected_url}, а получили {current_url}"
-                # driver.open("https://emall.by")
+                driver.go_back()
