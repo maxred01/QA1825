@@ -3,15 +3,17 @@ import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-
+from nuts_nuts_nuts.conftest import chrome_options
 from natasha_romanchuk.class_work.class_work_7.Locators.main_locators import MainPage
-from natasha_romanchuk.class_work.class_work_7.tests.conftest import web_browser
+from nuts_nuts_nuts.conftest import web_browser
 import pytest_check as check
+from nuts_nuts_nuts.page1.base_page import WebPage
+from nuts_nuts_nuts.page1.elements import WebElement
 
 @allure.feature("Header Navigation")
 @allure.story("Visual Elements Display")
 @allure.severity(allure.severity_level.NORMAL)
-def test_header_elements_displayed(web_browser):
+def test_header_elements_displayed(web_browser, chrome_options):
     with allure.step('Запускаем и настраиваем браузер'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
@@ -187,6 +189,48 @@ def test_kontakty(web_browser):
             f"Ожидали страницу Контакты, а открылась {current_url}"
 
 
+
+@allure.feature('Главная страница')
+@allure.story('Переход по ссылкам футера')
+def test_footer_links(web_browser):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+
+    with allure.step('Подготовка тестовых данных'):
+        footer_links = [
+            (driver.servise_button, "https://emall.by/information/company/about-service"),
+            (driver.contacty_button, "https://emall.by/information/company/contacts"),
+            (driver.news_button, "https://emall.by/news"),
+            (driver.postavsikam_button, "https://emall.by/information/company/conditions-for-selecting-a-counterparty"),
+            (driver.reklamodatelam_button, "https://emall.by/information/company/advertisement"),
+            (driver.vopros_otvet_button, "https://emall.by/information/help"),
+            (driver.dostavka_oplata_button, "https://emall.by/information/help/132"),
+            (driver.tovari_ot_emall_button, "https://emall.by/shop/1"),
+            (driver.punkti_vidachi_button, "https://emall.by/map"),
+
+        ]
+
+        for button, expected_url in footer_links:
+            with allure.step(f"Кликаем по кнопке и проверяем страницу"):
+                button.click()
+                driver.wait_page_loaded()
+                current_url = driver.get_current_url()
+
+                assert current_url == expected_url, f"Ожидали {expected_url}, а получили {current_url}"
+                driver.go_back()
+
+@allure.feature('Главная страница')
+@allure.story('Добавление товара в корзину')
+def test_add_goods(web_browser):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+
+    with allure.step('Добавляем товар в корзину'):
+        driver.v_korzine_dtn_1.click()
 
 
 

@@ -1,6 +1,6 @@
 import os
-from natasha_romanchuk.class_work.class_work_7.page1.base_page import WebPage
-from natasha_romanchuk.class_work.class_work_7.page1.elements import WebElement ,ManyWebElements
+from nuts_nuts_nuts.page1.base_page import WebPage
+from nuts_nuts_nuts.page1.elements import WebElement ,ManyWebElements
 
 
 class MainPage(WebPage):
@@ -82,3 +82,4 @@ class MainPage(WebPage):
     search_results = WebElement(xpath='//span[@class="search_heading_query__Ci6uB"]')
 
     vkorzine_btn = ManyWebElements(xpath='//div[@class="vertical_actions__YjIyP"]')
+    v_korzine_dtn_1 = WebElement(xpath='(//div[@class="adult-wrapper_adult__yIhdE vertical_product__hiLyN products_product__DBmFj"]//span[contains(text(),"В корзину")])[1]')
