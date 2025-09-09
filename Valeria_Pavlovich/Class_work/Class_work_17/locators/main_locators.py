@@ -1,7 +1,7 @@
 import os
-from Valeria_Pavlovich.Class_work.Class_work_17.page.base_page import WebPage
-from Valeria_Pavlovich.Class_work.Class_work_17.page.elements import WebElement
-from Valeria_Pavlovich.Class_work.Class_work_17.page.elements import ManyWebElements
+from B2_framework.page.base_page import WebPage
+from B2_framework.page.elements import ManyWebElements, WebElement
+
 class MainPage(WebPage):
     def __init__(self, web_driver, url=''):
         if not url:

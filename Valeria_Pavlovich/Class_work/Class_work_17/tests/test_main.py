@@ -2,6 +2,8 @@ import time
 import allure
 from Valeria_Pavlovich.Class_work.Class_work_17.locators.main_locators import MainPage
 import pytest_check as check
+from B2_framework.conftest import web_browser
+from B2_framework.conftest import chrome_options
 
 @allure.feature('Главная страница')
 @allure.story('Хэдер')
