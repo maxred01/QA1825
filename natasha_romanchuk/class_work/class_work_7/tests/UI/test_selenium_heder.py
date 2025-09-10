@@ -188,37 +188,65 @@ def test_kontakty(web_browser):
         assert current_url == "https://emall.by/information/company/contacts", \
             f"Ожидали страницу Контакты, а открылась {current_url}"
 
-
-
-@allure.feature('Главная страница')
-@allure.story('Переход по ссылкам футера')
+@allure.feature("Главная страница,Footer")
+@allure.story("Проверка всех ссылок футера")
 def test_footer_links(web_browser):
-    with allure.step('Запускаем и настройка браузер'):
+    with allure.step("Запуск браузера и закрытие баннеров"):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
         driver.close_button.click()
 
-    with allure.step('Подготовка тестовых данных'):
-        footer_links = [
-            (driver.servise_button, "https://emall.by/information/company/about-service"),
-            (driver.contacty_button, "https://emall.by/information/company/contacts"),
-            (driver.news_button, "https://emall.by/news"),
-            (driver.postavsikam_button, "https://emall.by/information/company/conditions-for-selecting-a-counterparty"),
-            (driver.reklamodatelam_button, "https://emall.by/information/company/advertisement"),
-            (driver.vopros_otvet_button, "https://emall.by/information/help"),
-            (driver.dostavka_oplata_button, "https://emall.by/information/help/132"),
-            (driver.tovari_ot_emall_button, "https://emall.by/shop/1"),
-            (driver.punkti_vidachi_button, "https://emall.by/map"),
+    footer_links = [
+        (driver.servise_button, "https://emall.by/information/company/about-service"),
+        (driver.contacty_button, "https://emall.by/information/company/contacts"),
+        (driver.news_button, "https://emall.by/news"),
+        (driver.postavsikam_button, "https://emall.by/information/company/conditions-for-selecting-a-counterparty"),
+        (driver.reklamodatelam_button, "https://emall.by/information/company/advertisement"),
+        (driver.vopros_otvet_button, "https://emall.by/information/help"),
+        (driver.dostavka_oplata_button, "https://emall.by/information/help/132"),
+        (driver.tovari_ot_emall_button, "https://emall.by/shop/1"),
+        (driver.punkti_vidachi_button, "https://emall.by/map"),
+        (driver.vacansii_button, "https://jobs.e-dostavka.by/"),
+        (driver.dostavca_dlya_urlic_button, "https://business.emall.by/catalog/"),
+        (driver.stat_prodavcom_button, "https://seller.emall.by/"),
+        (driver.prodaza_avto_button, "https://emall.by/news/82"),
+        (driver.polz_soglashenie_button, "https://api-preprod.emall.by/649008c9c6277_publichnyj-dogovor-emall.pdf"),
+        (driver.soglashenie_o_creditax_button, "https://api-preprod.emall.by/storage/admin/files/UOEpXjJF8xBxksqpphDwn5HKKr6SizVhijbqxEww.pdf"),
+        (driver.edostavca_button, "https://edostavka.by/#modal-opened"),
+        (driver.evropochta_button, "https://evropochta.by/"),
+        (driver.evroopt_button, "https://evroopt.by/"),
+        (driver.xit_button, "https://hitdiscount.by/"),
+        (driver.groshik_button, "https://groshyk.by/"),
+        (driver.sviazatsa_snamy_button, "https://emall.by/?modal_id=feedback_modal&feedback_modal.props=%7B%7D"),
+    ]
 
-        ]
+    for button, expected_url in footer_links:
+        with allure.step(f"Проверяем кнопку → {expected_url}"):
+            original_window = driver._web_driver.current_window_handle
+            windows_before = driver._web_driver.window_handles
 
-        for button, expected_url in footer_links:
-            with allure.step(f"Кликаем по кнопке и проверяем страницу"):
-                button.click()
-                driver.wait_page_loaded()
-                current_url = driver.get_current_url()
+            # кликаем по кнопке
+            button.click()
 
-                assert current_url == expected_url, f"Ожидали {expected_url}, а получили {current_url}"
+            # ждём загрузку страницы
+            driver.wait_page_loaded()
+
+            # проверяем, открылась ли новая вкладка
+            windows_after = driver._web_driver.window_handles
+            if len(windows_after) > len(windows_before):
+                # переключаемся на новую вкладку
+                new_window = [w for w in windows_after if w not in windows_before][0]
+                driver._web_driver.switch_to.window(new_window)
+
+            # берём текущий URL
+            current_url = driver.get_current_url()
+            assert current_url == expected_url, f"Ожидали {expected_url}, а получили {current_url}"
+
+            # если новая вкладка — закрываем её и возвращаемся обратно
+            if len(windows_after) > len(windows_before):
+                driver._web_driver.close()
+                driver._web_driver.switch_to.window(original_window)
+            else:
                 driver.go_back()
 
 @allure.feature('Главная страница')

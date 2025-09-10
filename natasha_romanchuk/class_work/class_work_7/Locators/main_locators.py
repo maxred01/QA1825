@@ -20,7 +20,7 @@ class MainPage(WebPage):
     action_button_enter = WebElement(xpath='//div[@id="header__inner"]//span[contains(text(),"Войти")]')
     action_button_orders = WebElement(xpath='//div[@id="header__inner"]//span[contains(text(),"Заказы")]')
     action_button_favorites = WebElement(xpath='//div[@id="header__inner"]//span[contains(text(),"Избранное")]')
-    action_button_basket = WebElement(xpath='//div[@id="header__inner"]//span[contains(text(),"Корзина")]')
+    action_button_basket = WebElement(xpath='//a[@href="https://emall.by/cart"]')
 
     # разделы
     actions_button = WebElement(xpath='//div[@id="header__inner"]//a[contains(text(),"Акции")]')
@@ -83,3 +83,8 @@ class MainPage(WebPage):
 
     vkorzine_btn = ManyWebElements(xpath='//div[@class="vertical_actions__YjIyP"]')
     v_korzine_dtn_1 = WebElement(xpath='(//div[@class="adult-wrapper_adult__yIhdE vertical_product__hiLyN products_product__DBmFj"]//span[contains(text(),"В корзину")])[1]')
+    korzina_product_name = WebElement(xpath='//a[@class="product_name__4NbXl"]')
+    korzina_product_counter = WebElement(xpath='//div[@class="cart_prices__value__3mhYj"]//*[contains(text(),"товар")]')
+    product_counter = WebElement(xpath='//div[@class="product_counter__nqFWd"]//*[@aria-label="Количество"]')
+    korzina_product_price= WebElement(xpath='//div[@class="cart_prices__total__Gtyvn"]//*[contains(text(),"р.")]')
+    bage_korzina_count= WebElement(xpath='//span[@class="badge-animation_badge__nBsm5 medium"]')
