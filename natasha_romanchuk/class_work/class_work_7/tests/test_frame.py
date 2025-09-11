@@ -118,11 +118,11 @@ def test_footer_links(web_browser):
                 new_window = [w for w in windows_after if w not in windows_before][0]
                 driver._web_driver.switch_to.window(new_window)
 
-            # берём текущий URL
+            #берём текущий URL
             current_url = driver.get_current_url()
             assert current_url == expected_url, f"Ожидали {expected_url}, а получили {current_url}"
 
-            # если новая вкладка — закрываем её и возвращаемся обратно
+            #если новая вкладка — закрываем её и возвращаемся обратно
             if len(windows_after) > len(windows_before):
                 driver._web_driver.close()
                 driver._web_driver.switch_to.window(original_window)
@@ -168,16 +168,20 @@ def test_add_goods_and_check_cart(web_browser):
 
     with allure.step('Добавляем товар в корзину'):
         driver.v_korzine_dtn_1.click()
+        main_prise = driver.main_product_price.get_text()
+        main_prise = main_prise.replace(' р.', '')
+        main_prise = main_prise.replace(',', '.')
 
     with allure.step('Переходим в корзину'):
         driver.action_button_basket.click()
 
     with allure.step('Проверяем, что товар отображается в корзине'):
+        product_name_1 = driver.main_product_name.get_text()
         product_name = driver.korzina_product_name.get_text()
         assert product_name != "", f"Товар не появился в корзине"
+        assert product_name_1 == product_name , f"Названия товаров не совпадают"
 
     with allure.step('Проверяем количество товара'):
-
         counter = driver.product_counter.get_attribute('value')   # если input
         bage = driver.bage_korzina_count.get_text()               # если текст внутри элемента
 
@@ -185,4 +189,10 @@ def test_add_goods_and_check_cart(web_browser):
 
     with allure.step('Проверяем цену товара'):
         price = driver.korzina_product_price.get_text()
-        assert price != "", "Цена товара не отображается"
+        price = price.replace(' р.', '')
+        price = price.replace(',', '.')
+        print((price))
+        print((main_prise))
+        assert float(price) > 0
+        assert price == main_prise
+
