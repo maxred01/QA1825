@@ -24,6 +24,17 @@ class WebElement(object):
         for attr in kwargs:
             self._locator = (str(attr).replace('_', ' '), str(kwargs.get(attr)))
 
+    def move_to_element(self, x_offset=0, y_offset=0, hold_seconds=1):
+        """ перетащить мышку на указанный элемент. """
+        element = self.wait_to_be_clickable()
+
+        if element:
+            action = ActionChains(self._web_driver)
+            action.move_to_element_with_offset(element, x_offset, y_offset).pause(hold_seconds).perform()
+        else:
+            msg = 'Element with locator {0} not found'
+            raise AttributeError(msg.format(self._locator))
+
     def find(self, timeout=10):
         """ Найти элемент на странице. """
 

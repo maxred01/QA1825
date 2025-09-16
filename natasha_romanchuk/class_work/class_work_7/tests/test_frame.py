@@ -9,6 +9,7 @@ from nuts_nuts_nuts.conftest import web_browser
 import pytest_check as check
 from nuts_nuts_nuts.page1.base_page import WebPage
 from nuts_nuts_nuts.page1.elements import WebElement
+from selenium.webdriver.common.by import By
 
 
 # def test_footer_links(web_browser):
@@ -195,4 +196,25 @@ def test_add_goods_and_check_cart(web_browser):
         print((main_prise))
         assert float(price) > 0
         assert price == main_prise
+
+
+@allure.feature('Главная страница')
+@allure.story('Добавление товара в "Избранное"')
+def test_add_goods_at_favorites(web_browser):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+
+    with allure.step('Добавляем товар в "Избранное"'):
+        driver.main_img.move_to_element()
+        element1 = driver.main_name.get_text()
+        driver.main_izbrannoe.click()
+
+    with allure.step('Переходим в "Избранное"'):
+        driver.action_button_favorites.click()
+        element2 = driver.favorite_name.get_text()
+        assert element1 == element2
+
+
 

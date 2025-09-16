@@ -88,6 +88,11 @@ class MainPage(WebPage):
     korzina_product_counter = WebElement(xpath='//div[@class="cart_prices__value__3mhYj"]//*[contains(text(),"товар")]')
     product_counter = WebElement(xpath='//div[@class="product_counter__nqFWd"]//*[@aria-label="Количество"]')
     korzina_product_price= WebElement(xpath='//div[@class="cart_prices__total__Gtyvn"]//*[contains(text(),"р.")]')
-    main_product_price= WebElement(xpath='(//div[@data-nosnippet="true"]//*[contains(text(),"р.")])[1]')
-    main_skidka= WebElement(xpath='((//div[@bis_skin_checked="1"]//span[@class="tag_tag__1KrVp tag_tag_size_small__qndcB tag_tag_reverse__qv92T"])[1]')
+    main_product_price= WebElement(xpath='(//div[@data-nosnippet="true"]//span[@class="price_main__ZI_hw price_main_red__nTPA_"])[1]')
+    main_skidka= WebElement(xpath='(//div[@bis_skin_checked="1"]//span[@class="tag_tag__1KrVp tag_tag_size_small__qndcB tag_tag_reverse__qv92T"])[1]')
     bage_korzina_count= WebElement(xpath='//span[@class="badge-animation_badge__nBsm5 medium"]')
+    main_izbrannoe= WebElement(xpath='(//*[@aria-label="Добавить в избранное"])[1]')
+    main_img= WebElement(xpath='(//*[@class="product-webp-png-image_image__TCZIc card-image_image__eENi8"])[1]')
+    main_name= WebElement(xpath='(//a[@class="vertical_title__FM_Ud"])[1]')
+    favorite_name= WebElement(xpath='//a[@style="-webkit-line-clamp: 3;"]')
+

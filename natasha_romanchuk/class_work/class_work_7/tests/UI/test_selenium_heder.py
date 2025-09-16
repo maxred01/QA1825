@@ -123,6 +123,7 @@ def test_search_product(web_browser):
 
         search_product.send_keys(Keys.CONTROL + "a") # Выделить все
         search_product.send_keys(Keys.DELETE)         # Очистить
+        assert search_product.is
 
 
 @allure.feature("Главная страница")
@@ -251,6 +252,7 @@ def test_add_goods_and_check_cart(web_browser):
     with allure.step('Добавляем товар в корзину'):
         driver.v_korzine_dtn_1.click()
         main_prise = driver.main_product_price.get_text()
+        main_prise = main_prise.split('\n')[0]
         main_prise = main_prise.replace(' р.', '')
         main_prise = main_prise.replace(',', '.')
 
