@@ -51,7 +51,7 @@ def test_header_elements_displayed(web_browser, chrome_options):
                 check.is_true(element.is_clickable(), f'Элемента {text_element} не кликабелен')
 
 @allure.feature("Главная страница")
-@allure.story("Футер")
+@allure.story("Футер, отображение и кликабельность элементов")
 def test_footers(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
@@ -104,7 +104,7 @@ def test_footers(web_browser):
 
 
 @allure.feature("Главная страница")
-@allure.story("Хэдер")
+@allure.story("Хэдер, ввод запроса в поисковую строку и удаление запроса")
 def test_search_product(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
@@ -159,12 +159,10 @@ def test_vkorzine(web_browser):
         wait = WebDriverWait(driver._web_driver, 10)
 
         for i, btn in enumerate(vkorzine_buttons, start=1):
-            # Скроллим к кнопке
-            driver._web_driver.execute_script("arguments[0].scrollIntoView(true);", btn)
+            driver._web_driver.execute_script("arguments[0].scrollIntoView(true);", btn)   # Скроллим к кнопке
 
             try:
-                # Ждём, пока кнопка станет кликабельной
-                wait.until(EC.element_to_be_clickable(btn))
+                wait.until(EC.element_to_be_clickable(btn))    # Ждём, пока кнопка станет кликабельной
                 print(f"Кнопка {i} кликабельна ")
             except:
                 print(f"Кнопка {i} НЕ кликабельна ")
@@ -225,33 +223,26 @@ def test_footer_links(web_browser):
             original_window = driver._web_driver.current_window_handle
             windows_before = driver._web_driver.window_handles
 
-            # кликаем по кнопке
-            button.click()
+            button.click()  # кликаем по кнопке
+            driver.wait_page_loaded() # ждём загрузку страницы
 
-            # ждём загрузку страницы
-            driver.wait_page_loaded()
-
-            # проверяем, открылась ли новая вкладка
-            windows_after = driver._web_driver.window_handles
+            windows_after = driver._web_driver.window_handles   # проверяем, открылась ли новая вкладка
             if len(windows_after) > len(windows_before):
-                # переключаемся на новую вкладку
-                new_window = [w for w in windows_after if w not in windows_before][0]
+                new_window = [w for w in windows_after if w not in windows_before][0]  # переключаемся на новую вкладку
                 driver._web_driver.switch_to.window(new_window)
 
-            # берём текущий URL
-            current_url = driver.get_current_url()
+            current_url = driver.get_current_url() # берём текущий URL
             assert current_url == expected_url, f"Ожидали {expected_url}, а получили {current_url}"
 
-            # если новая вкладка — закрываем её и возвращаемся обратно
-            if len(windows_after) > len(windows_before):
+            if len(windows_after) > len(windows_before): # если новая вкладка — закрываем её и возвращаемся обратно
                 driver._web_driver.close()
                 driver._web_driver.switch_to.window(original_window)
             else:
                 driver.go_back()
 
 @allure.feature('Главная страница')
-@allure.story('Добавление товара в корзину')
-def test_add_goods(web_browser):
+@allure.story('Добавление товара в корзину и проверка корзины')
+def test_add_goods_and_check_cart(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
@@ -259,8 +250,33 @@ def test_add_goods(web_browser):
 
     with allure.step('Добавляем товар в корзину'):
         driver.v_korzine_dtn_1.click()
+        main_prise = driver.main_product_price.get_text()
+        main_prise = main_prise.replace(' р.', '')
+        main_prise = main_prise.replace(',', '.')
 
+    with allure.step('Переходим в корзину'):
+        driver.action_button_basket.click()
 
+    with allure.step('Проверяем, что товар отображается в корзине'):
+        product_name_1 = driver.main_product_name.get_text()
+        product_name = driver.korzina_product_name.get_text()
+        assert product_name != "", f"Товар не появился в корзине"
+        assert product_name_1 == product_name, f"Названия товаров не совпадают"
+
+    with allure.step('Проверяем количество товара'):
+        counter = driver.product_counter.get_attribute('value')  # если input
+        bage = driver.bage_korzina_count.get_text()  # если текст внутри элемента
+
+        assert counter == bage, f'Ожидали количество{counter}, а получили количество {bage}'
+
+    with allure.step('Проверяем цену товара'):
+        price = driver.korzina_product_price.get_text()
+        price = price.replace(' р.', '')
+        price = price.replace(',', '.')
+        print((price))
+        print((main_prise))
+        assert float(price) > 0
+        assert price == main_prise
 
         # with allure.step('Отображение логотипа'):
     #     logo = driver.find_element(By.XPATH, driver.logotip)

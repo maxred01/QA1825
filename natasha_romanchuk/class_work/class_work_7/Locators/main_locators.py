@@ -89,4 +89,5 @@ class MainPage(WebPage):
     product_counter = WebElement(xpath='//div[@class="product_counter__nqFWd"]//*[@aria-label="Количество"]')
     korzina_product_price= WebElement(xpath='//div[@class="cart_prices__total__Gtyvn"]//*[contains(text(),"р.")]')
     main_product_price= WebElement(xpath='(//div[@data-nosnippet="true"]//*[contains(text(),"р.")])[1]')
+    main_skidka= WebElement(xpath='((//div[@bis_skin_checked="1"]//span[@class="tag_tag__1KrVp tag_tag_size_small__qndcB tag_tag_reverse__qv92T"])[1]')
     bage_korzina_count= WebElement(xpath='//span[@class="badge-animation_badge__nBsm5 medium"]')
