@@ -71,7 +71,7 @@ def test_products_count_by_category(web_browser):
     for cat_element, cat_name, expected_products in categories:
         with allure.step(f'Проверяем категорию {cat_name}'):
             cat_element.click()
-            time.sleep(1)  # можно заменить на WebDriverWait
+            time.sleep(1)
 
             displayed_products = driver.get_all_products()
 
@@ -89,14 +89,14 @@ def test_category_switching_chaotic(web_browser):
         driver = MainPage(web_browser)
         time.sleep(1)
 
-    # Словарь категорий и их ожидаемых товаров
+
     categories = {
         "Phones": (driver.cat_phones, phones),
         "Laptops": (driver.cat_laptops, laptops),
         "Monitors": (driver.cat_monitors, monitors),
     }
 
-    # Создаём "хаотичный" порядок выбора категорий
+
     category_names = list(categories.keys())
     random.shuffle(category_names)
 
@@ -105,7 +105,7 @@ def test_category_switching_chaotic(web_browser):
 
         with allure.step(f'Нажимаем на категорию {cat_name}'):
             cat_element.click()
-            time.sleep(1)  # можно заменить на WebDriverWait
+            time.sleep(1)
 
         with allure.step(f'Проверяем товары в категории {cat_name}'):
             displayed_products = driver.get_all_products()
@@ -137,7 +137,7 @@ def test_category_navigation_buttons_absence(web_browser):
     for cat_element, cat_name in categories:
         with allure.step(f'Переходим в категорию {cat_name}'):
             cat_element.click()
-            time.sleep(1)  # можно заменить на WebDriverWait
+            time.sleep(1)
 
 
         with allure.step('Скроллим страницу до блока товаров'):
@@ -160,11 +160,11 @@ def test_navigation_buttons_with_boundaries(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
 
-    # Получаем список товаров на текущей (первой) странице
+
     with allure.step("Собираем товары на первой странице"):
         first_page_products = driver.get_all_products()
 
-    # --- Листаем вперед ---
+
     with allure.step("Переходим на следующую страницу с помощью Next"):
         driver.btn_next.click()
         time.sleep(1)
@@ -172,7 +172,7 @@ def test_navigation_buttons_with_boundaries(web_browser):
         check.is_false(first_page_products == next_page_products,
                        "Товары не изменились после клика Next")
 
-    # --- Листаем назад ---
+
     with allure.step("Возвращаемся на предыдущую страницу с помощью Previous"):
         driver.btn_previous.click()
         time.sleep(1)
