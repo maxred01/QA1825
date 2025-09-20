@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
- natasha_romanchuk_home_work_7
-    <list default="true" id="07e0ceca-eb53-4415-aa3e-ba6ab38d4814" name="Changes" comment="Мой 13 коммит">
-      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7/test_webtables.py" afterDir="false" />
-
-    <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="12345">
-      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/locators/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/locators/locators_demo_qa.py" afterDir="false" />
- main
+    <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="commit class work 20 &#10;add categories, carusel">
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/data/products.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/results/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_categories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QA1825.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QA1825.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py" beforeDir="false" afterPath="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/locators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/locators_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/locators_main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/main_locators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_frame.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/results/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,270 +31,162 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
- natasha_romanchuk_home_work_7
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;ibachko&quot;
+    &quot;assignee&quot;: &quot;genady21&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/maxred01/QA1825.git&quot;,
-    &quot;accountId&quot;: &quot;f4c470ff-a4b0-4cc8-8304-6fd475254580&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;maxred01&quot;,
-    &quot;repository&quot;: &quot;QA1825&quot;
+    &quot;accountId&quot;: &quot;5d40fcac-075f-4d1f-a807-11a6ea26311c&quot;
   }
 }</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2xKPvyBGmmERFYr6idp8bqRkGV9" />
-
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2zgyATNr7uGEiL09omsBYrGDF3F" />
-main
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
- natasha_romanchuk_home_work_7
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.pytest for test_webtables.test_delete_record.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_webtables.test_edit_record.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_webtables.test_pagination.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_webtables.test_search_record.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_webtables.test_web_tables.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in test_webtables.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Home_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.home_work_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.home_work_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.imput_example.executor&quot;: &quot;Run&quot;,
-    &quot;Python.peremennaya_variable.executor&quot;: &quot;Run&quot;,
-    &quot;Python.selenium.executor&quot;: &quot;Run&quot;,
-    &quot;Python.selenium1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.selenium_test2.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.type_data.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;natasha__romanchuk__home__work__7&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.pytest for test_categories.test_category_navigation_buttons_absence.executor": "Run",
+    "Python tests.pytest for test_categories.test_category_switching_chaotic.executor": "Run",
+    "Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.executor": "Run",
+    "Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow.executor": "Run",
+    "Python tests.pytest for test_categories.test_phones_category.executor": "Run",
+    "Python tests.pytest for test_categories.test_products_by_category.executor": "Run",
+    "Python tests.pytest for test_categories.test_products_count_by_category.executor": "Run",
+    "Python tests.pytest for test_categories.test_products_name_and_price.executor": "Run",
+    "Python tests.pytest for test_main_page.test_carusel.executor": "Run",
+    "Python tests.pytest for test_main_page.test_footers.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "valery__hehenia__home__work__site",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable"
   }
-}</component>
-  <component name="RunManager" selected="Python tests.pytest for test_webtables.test_delete_record">
-    <configuration name="pytest for test_webtables.test_delete_record" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\results" />
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_selenium_ex.test_selenium_radio_button">
-    <configuration name="test_selenium_ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
- main
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-natasha_romanchuk_home_work_7
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_webtables.test_delete_record&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_webtables.test_edit_record" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_15\test_selenium_ex.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_selenium_ex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
- main
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
- natasha_romanchuk_home_work_7
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_webtables.test_edit_record&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_webtables.test_pagination" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\st\PycharmProjects\QA1825\maksim_tsybulka\class_work\class_work_15\test_selenium_ex.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_selenium_ex.test_selenium" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
- main
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
- natasha_romanchuk_home_work_7
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
-
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
-main
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
- natasha_romanchuk_home_work_7
-      <option name="_new_target" value="&quot;test_webtables.test_pagination&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_webtables.test_search_record" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_categories.test_products_name_and_price">
+    <configuration name="pytest for test_categories.test_category_navigation_buttons_absence" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
-
-      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_selenium_ex.test_selenium_is_selected" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
- main
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
- natasha_romanchuk_home_work_7
-      <option name="_new_target" value="&quot;test_webtables.test_search_record&quot;" />
+      <option name="_new_target" value="&quot;test_categories.test_category_navigation_buttons_absence&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_webtables.test_web_tables" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_categories.test_category_switching_chaotic" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/natasha_romanchuk/home_work/home_work_7" />
-
-      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium_is_selected&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_selenium_ex.test_selenium_radio_button" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
- main
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
- natasha_romanchuk_home_work_7
-      <option name="_new_target" value="&quot;test_webtables.test_web_tables&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-
-      <option name="_new_target" value="&quot;test_selenium_ex.test_selenium_radio_button&quot;" />
+      <option name="_new_target" value="&quot;test_categories.test_category_switching_chaotic&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_selenium_ex.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_categories.test_navigation_buttons_with_boundaries" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/maksim_tsybulka/class_work/class_work_15/test_selenium_ex.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
- main
+      <option name="_new_target" value="&quot;test_categories.test_navigation_buttons_with_boundaries&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_categories.test_products_name_and_price" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_categories.test_products_name_and_price&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
- natasha_romanchuk_home_work_7
-        <item itemvalue="Python tests.pytest for test_webtables.test_delete_record" />
-        <item itemvalue="Python tests.pytest for test_webtables.test_pagination" />
-        <item itemvalue="Python tests.pytest for test_webtables.test_search_record" />
-        <item itemvalue="Python tests.pytest for test_webtables.test_edit_record" />
-        <item itemvalue="Python tests.pytest for test_webtables.test_web_tables" />
-
-        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium_radio_button" />
-        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium_is_selected" />
-        <item itemvalue="Python tests.pytest in test_selenium_ex.py" />
-        <item itemvalue="Python tests.pytest for test_selenium_ex.test_selenium" />
-        <item itemvalue="Python.test_selenium_ex" />
- main
+        <item itemvalue="Python tests.pytest for test_categories.test_products_name_and_price" />
+        <item itemvalue="Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries" />
+        <item itemvalue="Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow" />
+        <item itemvalue="Python tests.pytest for test_categories.test_category_navigation_buttons_absence" />
+        <item itemvalue="Python tests.pytest for test_categories.test_category_switching_chaotic" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -321,7 +218,31 @@ main
       <option name="project" value="LOCAL" />
       <updated>1753210324441</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit class work 19">
+      <option name="closed" value="true" />
+      <created>1756315246371</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756315246371</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit class work 19 (1)">
+      <option name="closed" value="true" />
+      <created>1756315846272</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756315846272</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit class work 20 &#10;add categories, carusel">
+      <option name="closed" value="true" />
+      <created>1756932355488</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756932355488</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,7 +258,10 @@ main
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="12345" />
-    <option name="LAST_COMMIT_MESSAGE" value="12345" />
+    <MESSAGE value="commit class work 19" />
+    <MESSAGE value="commit class work 19 (1)" />
+    <MESSAGE value="commit class work 20 &#10;add categories, carusel" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit class work 20 &#10;add categories, carusel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
