@@ -1,15 +1,16 @@
-﻿from Valery_Hehenia.Class_work.Class_work_18.locators.locators_main_page import MainPage
-import time
+﻿import time
 import allure
 import pytest_check as check
 
 from Valery_Hehenia.Class_work.Class_work_18.locators.locators_main_page import MainPage
+from das_magaz.conftest import webdriver
+from das_magaz.conftest import chrome_options, web_browser
 
 
 
 @allure.feature("Главная страница")
 @allure.story("Хедер")
-def test_headers(web_browser):
+def test_headers(web_browser, chrome_options):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
 

@@ -7,8 +7,17 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv1" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Valery_Hehenia/Home_work/Home_work_7/allure-results" />
+      <excludeFolder url="file://$MODULE_DIR$/Valeria_Pavlovich" />
+      <excludeFolder url="file://$MODULE_DIR$/Velke Arseniy" />
+      <excludeFolder url="file://$MODULE_DIR$/bachko_irina" />
+      <excludeFolder url="file://$MODULE_DIR$/maksim_tsybulka" />
+      <excludeFolder url="file://$MODULE_DIR$/nastya_kuprianchik" />
+      <excludeFolder url="file://$MODULE_DIR$/natasha_romanchuk" />
+      <excludeFolder url="file://$MODULE_DIR$/polina_shubelko" />
+      <excludeFolder url="file://$MODULE_DIR$/stasya_voishnis" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (QA1825)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

@@ -40,9 +40,17 @@ class MainPage(WebPage):
     cat_phones = WebElement(xpath = """//a[@onclick="byCat('phone')"]""")
     cat_laptops = WebElement(xpath = """//a[@onclick="byCat('notebook')"]""")
     cat_monitors = WebElement(xpath = """//a[@onclick="byCat('monitor')"]""")
+    products_list = ManyWebElements(css_selector='#tbodyid .card-title')
 
 
- #################Carusel##################
+    btn_previous = WebElement(xpath = '//button[@id="prev2"]')
+    btn_next = WebElement(xpath = '//button[@id="next2"]')
+
+
+    def get_all_products(self):
+        return [product.text for product in self.products_list]
+
+    #################Carusel##################
 
 
     carusel_block = WebElement(id = "carouselExampleIndicators")
