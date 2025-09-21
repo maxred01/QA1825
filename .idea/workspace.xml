@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="commit class work 20 &#10;add categories, carusel">
-      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/data/products.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/results/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_categories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/QA1825.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QA1825.iml" afterDir="false" />
+    <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="commit class work 20 &#10;add categories tests update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/locators.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/locators_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/locators_main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/locators/main_locators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/conftest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_frame.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/results/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/results/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/results/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_categories.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +64,9 @@
     "Python tests.pytest for test_categories.test_products_by_category.executor": "Run",
     "Python tests.pytest for test_categories.test_products_count_by_category.executor": "Run",
     "Python tests.pytest for test_categories.test_products_name_and_price.executor": "Run",
+    "Python tests.pytest for test_login.test_login_user.executor": "Run",
+    "Python tests.pytest for test_login.test_register_and_login.executor": "Run",
+    "Python tests.pytest for test_login.test_register_user.executor": "Run",
     "Python tests.pytest for test_main_page.test_carusel.executor": "Run",
     "Python tests.pytest for test_main_page.test_footers.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -85,41 +81,7 @@
       <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_categories.test_products_name_and_price">
-    <configuration name="pytest for test_categories.test_category_navigation_buttons_absence" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_categories.test_category_navigation_buttons_absence&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_categories.test_category_switching_chaotic" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_categories.test_category_switching_chaotic&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest for test_login.test_register_and_login">
     <configuration name="pytest for test_categories.test_navigation_buttons_with_boundaries" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
@@ -134,23 +96,6 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_categories.test_navigation_buttons_with_boundaries&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="QA1825" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -171,13 +116,64 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_login.test_login_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.test_login_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_login.test_register_and_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.test_register_and_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_login.test_register_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="QA1825" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login.test_register_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_login.test_register_and_login" />
+        <item itemvalue="Python tests.pytest for test_login.test_login_user" />
+        <item itemvalue="Python tests.pytest for test_login.test_register_user" />
         <item itemvalue="Python tests.pytest for test_categories.test_products_name_and_price" />
         <item itemvalue="Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries" />
-        <item itemvalue="Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow" />
-        <item itemvalue="Python tests.pytest for test_categories.test_category_navigation_buttons_absence" />
-        <item itemvalue="Python tests.pytest for test_categories.test_category_switching_chaotic" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756932355488</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit class work 20 &#10;add categorieы tests">
+      <option name="closed" value="true" />
+      <created>1758385226166</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758385226166</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit class work 20 &#10;add categories tests update">
+      <option name="closed" value="true" />
+      <created>1758385396070</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758385396070</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +273,9 @@
     <MESSAGE value="commit class work 19" />
     <MESSAGE value="commit class work 19 (1)" />
     <MESSAGE value="commit class work 20 &#10;add categories, carusel" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit class work 20 &#10;add categories, carusel" />
+    <MESSAGE value="commit class work 20 &#10;add categorieы tests" />
+    <MESSAGE value="commit class work 20 &#10;add categories tests update" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit class work 20 &#10;add categories tests update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
