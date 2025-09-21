@@ -7,6 +7,8 @@ from Valery_Hehenia.Class_work.Class_work_18.locators.locators_main_page import 
 from das_magaz.conftest import webdriver
 from das_magaz.conftest import chrome_options, web_browser
 import pytest_check as check
+from allure_commons.types import LabelType
+
 
 
 
@@ -18,7 +20,9 @@ def generate_random_user():
 
 
 @allure.feature("Авторизация")
-@allure.story("Логин пользователя")
+@allure.story("Регистрация, авторизация и выход пользователя с валидными данными")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase("https://trello.com/c/c4bQkcYV/1-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BB%D0%BE%D0%B3%D0%B0%D1%83%D1%82-%D1%81-%D0%B2%D0%B0%D0%BB%D0%B8%D0%B4%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8", "РА-001")
 def test_register_and_login_and_logout(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)

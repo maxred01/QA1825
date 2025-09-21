@@ -66,9 +66,12 @@ class MainPage(WebPage):
 
     signup_username = WebElement(id = "sign-username")
     signup_password = WebElement(id = "sign-password")
+
     login_username = WebElement(id = "loginusername")
     login_password = WebElement(id = "loginpassword")
     logout_btn = WebElement(id = "logout2")
+
     nameofuser_btn = WebElement(id = "nameofuser")
+
     btn_signup_confirm = WebElement(xpath = '//button[@onclick="register()"]')
     btn_login_confirm = WebElement(xpath = '//button[@onclick="logIn()"]')
