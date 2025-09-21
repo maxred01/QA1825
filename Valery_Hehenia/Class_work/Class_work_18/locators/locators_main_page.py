@@ -17,8 +17,8 @@ class MainPage(WebPage):
     contact_btn = WebElement(css_selector = '[data-target="#exampleModal"]')
     about_btn = WebElement(css_selector = '#cartur')
     cart_btn = WebElement(xpath = '//a[@id="cartur"]')
-    login_btn = WebElement(css_selector = '[data-target="#logInModal"]')
-    sugnup_btn = WebElement(css_selector = '[data-target="#signInModal"]')
+    login_btn = WebElement(xpath = '//a[@id="login2"]')
+    sugnup_btn = WebElement(xpath = '//a[@id="signin2"]')
 
 
     #################Footer##################
@@ -62,3 +62,13 @@ class MainPage(WebPage):
     carusel_img_iphone = WebElement(xpath = '//img[@src="iphone1.jpg"]')
 
 
+    ###############################Login####################
+
+    signup_username = WebElement(id = "sign-username")
+    signup_password = WebElement(id = "sign-password")
+    login_username = WebElement(id = "loginusername")
+    login_password = WebElement(id = "loginpassword")
+    logout_btn = WebElement(id = "logout2")
+    nameofuser_btn = WebElement(id = "nameofuser")
+    btn_signup_confirm = WebElement(xpath = '//button[@onclick="register()"]')
+    btn_login_confirm = WebElement(xpath = '//button[@onclick="logIn()"]')

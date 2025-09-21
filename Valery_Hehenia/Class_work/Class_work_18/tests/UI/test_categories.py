@@ -1,26 +1,12 @@
 import time
 import allure
 import random
-import pytest_check as check
-from selenium.webdriver.common.by import By
 
 from Valery_Hehenia.Class_work.Class_work_18.locators.locators_main_page import MainPage
 from Valery_Hehenia.Class_work.Class_work_18.data.products import phones, laptops, monitors
-from Valery_Hehenia.Class_work.Class_work_18.data.products import info_phones, info_laptops, info_monitors
-from Valery_Hehenia.Class_work.Class_work_18.data.products import CATEGORY_INFO
+
 from das_magaz.conftest import webdriver
 from das_magaz.conftest import chrome_options, web_browser
-
-
-
-# import pytest
-# import time
-# from selenium import webdriver
-# from selenium.webdriver.common.by import By
-
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import pytest_check as check
 
 
