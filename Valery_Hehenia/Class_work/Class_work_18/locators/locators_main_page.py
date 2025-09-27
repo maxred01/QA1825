@@ -15,7 +15,7 @@ class MainPage(WebPage):
     logo_btn = WebElement(css_selector = '#nava')
     home_btn = WebElement(css_selector = 'nav a:nth-of-type(2)')
     contact_btn = WebElement(css_selector = '[data-target="#exampleModal"]')
-    about_btn = WebElement(css_selector = '#cartur')
+    about_btn = WebElement(xpath = '//a[@data-target="#videoModal"]')
     cart_btn = WebElement(xpath = '//a[@id="cartur"]')
     login_btn = WebElement(xpath = '//a[@id="login2"]')
     sugnup_btn = WebElement(xpath = '//a[@id="signin2"]')
@@ -75,3 +75,42 @@ class MainPage(WebPage):
 
     btn_signup_confirm = WebElement(xpath = '//button[@onclick="register()"]')
     btn_login_confirm = WebElement(xpath = '//button[@onclick="logIn()"]')
+
+
+
+    #####################Tab#################
+    # Проверочные элементы
+    slider_block = WebElement(id = "carouselExampleIndicators")
+    contact_modal = WebElement(id = "exampleModal")
+    about_us_modal = WebElement(id = "videoModal")
+    cart_title = WebElement(xpath = "//h2[text()='Products']")
+    login_modal = WebElement(id = "logInModal")
+    signup_modal = WebElement(id = "signInModal")
+
+
+
+
+
+    #####################Contact#################
+
+    contact_email = WebElement(id="recipient-email")
+    contact_name = WebElement(id="recipient-name")
+    contact_message = WebElement(id="message-text")
+    contact_send_message = WebElement(xpath = '//button[@onclick="send()"]')
+
+
+
+
+
+    #####################Close_and_x#################
+    contact_button_close = WebElement(xpath = "//div[@id='exampleModal']//button[text()='Close']")
+    aboutus_button_close = WebElement(xpath="//div[@id='videoModal']//button[text()='Close']")
+    login_button_close = WebElement(xpath = "//div[@id='logInModal']//button[text()='Close']")
+    signup_button_close = WebElement(xpath = "//div[@id='signInModal']//button[text()='Close']")
+
+
+    contact_button_x = WebElement(xpath="//div[@id='exampleModal']//button[@aria-label='Close']")
+    aboutus_button_x = WebElement(xpath="//div[@id='videoModal']//button[@aria-label='Close']")
+    login_button_x = WebElement(xpath="//div[@id='logInModal']//button[@aria-label='Close']")
+    signup_button_x = WebElement(xpath="//div[@id='signInModal']//button[@aria-label='Close']")
+
