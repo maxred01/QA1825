@@ -237,9 +237,16 @@ class ManyWebElements(WebElement):
 
     def __getitem__(self, item):
         """ Получить список элементов и попытаться вернуть требуемый элемент. """
-
         elements = self.find()
         return elements[item]
+
+    def __iter__(self):
+        """ Позволяет итерироваться по элементам (for el in page.items). """
+        return iter(self.find())
+
+    def __len__(self):
+        """ Позволяет использовать len(page.items). """
+        return len(self.find())
 
     def find(self, timeout=10):
         """ Найти элемент на странице. """
