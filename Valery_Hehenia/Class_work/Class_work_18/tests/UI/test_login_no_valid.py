@@ -20,7 +20,10 @@ def generate_random_user():
 @allure.feature("Регистрация")
 @allure.story("Регистрация с пустыми полями")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/fKiXRvsE/2-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BC%D0%B8-%D0%BF%D0%BE%D0%BB%D1%8F%D0%BC%D0%B8", "РА-002")
+@allure.testcase(
+    "https://trello.com/c/fKiXRvsE/2-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BC%D0%B8-%D0%BF%D0%BE%D0%BB%D1%8F%D0%BC%D0%B8",
+    "РА-002"
+)
 def test_register_empty_field(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -49,7 +52,10 @@ def test_register_empty_field(web_browser):
 @allure.feature("Регистрация")
 @allure.story("Регистрация с пустым полем Пароль")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/D7VkSLnt/3-%D1%80%D0%B0-3-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BC-%D0%BF%D0%BE%D0%BB%D0%B5%D0%BC-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C", "РА-003")
+@allure.testcase(
+    "https://trello.com/c/D7VkSLnt/3-%D1%80%D0%B0-3-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BC-%D0%BF%D0%BE%D0%BB%D0%B5%D0%BC-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C",
+    "РА-003"
+)
 def test_register_no_password(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -79,7 +85,10 @@ def test_register_no_password(web_browser):
 @allure.feature("Регистрация")
 @allure.story("Регистрация с пустым полем Логин")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/FLKFDjYR/4-%D1%80%D0%B0-004-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BC-%D0%BF%D0%BE%D0%BB%D0%B5%D0%BC-%D0%BB%D0%BE%D0%B3%D0%B8%D0%BD", "РА-004")
+@allure.testcase(
+    "https://trello.com/c/FLKFDjYR/4-%D1%80%D0%B0-004-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BC-%D0%BF%D0%BE%D0%BB%D0%B5%D0%BC-%D0%BB%D0%BE%D0%B3%D0%B8%D0%BD",
+    "РА-004"
+)
 def test_register_no_login(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -109,7 +118,10 @@ def test_register_no_login(web_browser):
 @allure.feature("Регистрация")
 @allure.story("Регистраиция: ввод 50 символов")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/USqer7zf/5-%D1%80%D0%B0-5-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D0%B8%D1%86%D0%B8%D1%8F-%D0%B2%D0%B2%D0%BE%D0%B4-50-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2", "РА-005")
+@allure.testcase(
+    "https://trello.com/c/USqer7zf/5-%D1%80%D0%B0-5-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D0%B8%D1%86%D0%B8%D1%8F-%D0%B2%D0%B2%D0%BE%D0%B4-50-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2",
+    "РА-005"
+)
 def test_register_fifty_symbol(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -140,7 +152,10 @@ def test_register_fifty_symbol(web_browser):
 @allure.feature("Регистрация")
 @allure.story("Регистрация: использование спец символов")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/M99vsAD0/6-%D1%80%D0%B0-6-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%BF%D0%B5%D1%86-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2", "РА-006")
+@allure.testcase(
+    "https://trello.com/c/M99vsAD0/6-%D1%80%D0%B0-6-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%BF%D0%B5%D1%86-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2",
+    "РА-006"
+)
 def test_register_spec_symbol(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -170,7 +185,10 @@ def test_register_spec_symbol(web_browser):
 @allure.feature("Авторизация")
 @allure.story("Авторизация: с пустими полями")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/G4cFXh1w/7-%D1%80%D0%B0-7-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BC%D0%B8-%D0%BF%D0%BE%D0%BB%D1%8F%D0%BC%D0%B8", "РА-007")
+@allure.testcase(
+    "https://trello.com/c/G4cFXh1w/7-%D1%80%D0%B0-7-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BC%D0%B8-%D0%BF%D0%BE%D0%BB%D1%8F%D0%BC%D0%B8",
+    "РА-007"
+)
 def test_autorized_empty_field(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -200,7 +218,10 @@ def test_autorized_empty_field(web_browser):
 @allure.feature("Авторизация")
 @allure.story("Авторизация с пустым полем Пароль")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/OT2ayWOX/8-%D1%80%D0%B0-008-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C", "РА-008")
+@allure.testcase(
+    "https://trello.com/c/OT2ayWOX/8-%D1%80%D0%B0-008-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5-%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C",
+    "РА-008"
+)
 def test_autorized_no_password(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -230,7 +251,10 @@ def test_autorized_no_password(web_browser):
 @allure.feature("Авторизация")
 @allure.story("Авторизация с пустым полем Логин")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/tnoN33nt/9-%D1%80%D0%B0-009-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5-%D0%BB%D0%BE%D0%B3%D0%B8%D0%BD", "РА-009")
+@allure.testcase(
+    "https://trello.com/c/tnoN33nt/9-%D1%80%D0%B0-009-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5-%D0%BB%D0%BE%D0%B3%D0%B8%D0%BD",
+    "РА-009"
+)
 def test_autorized_no_login(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -260,7 +284,10 @@ def test_autorized_no_login(web_browser):
 @allure.feature("Авторизация")
 @allure.story("Авторизация: ввод 50 символов")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/USqer7zf/5-%D1%80%D0%B0-010-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%B2%D0%B2%D0%BE%D0%B4-50-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2", "РА-010")
+@allure.testcase(
+    "https://trello.com/c/USqer7zf/5-%D1%80%D0%B0-010-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%B2%D0%B2%D0%BE%D0%B4-50-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2",
+    "РА-010"
+)
 def test_autorized_no_login(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -290,7 +317,10 @@ def test_autorized_no_login(web_browser):
 @allure.feature("Регистрация")
 @allure.story("Регистрация: Существующий пользователь")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/dXEjZAPl/10-%D1%80%D0%B0-010-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BD%D0%B5%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B8%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C", "РА-011")
+@allure.testcase(
+    "https://trello.com/c/dXEjZAPl/10-%D1%80%D0%B0-010-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BD%D0%B5%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B8%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C",
+    "РА-011"
+)
 def test_register_register_person(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)

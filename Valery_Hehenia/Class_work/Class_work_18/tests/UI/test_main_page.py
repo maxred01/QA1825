@@ -5,11 +5,16 @@ import pytest_check as check
 from Valery_Hehenia.Class_work.Class_work_18.locators.locators_main_page import MainPage
 from das_magaz.conftest import webdriver
 from das_magaz.conftest import chrome_options, web_browser
-
+from allure_commons.types import LabelType
 
 
 @allure.feature("Главная страница")
 @allure.story("Хедер")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/42sS4Esu/46-%D0%B3%D1%81-001-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%85%D0%B5%D0%B4%D0%B5%D1%80%D0%B0",
+                 "ГС-001"
+)
 def test_headers(web_browser, chrome_options):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
@@ -24,8 +29,6 @@ def test_headers(web_browser, chrome_options):
              (driver.cart_btn, 'Cart'),
              (driver.login_btn, 'Log in'),
              (driver.sugnup_btn, 'Sign un'),
-
-
                     ]
 
     with allure.step('Проверка элемента'):
@@ -39,6 +42,11 @@ def test_headers(web_browser, chrome_options):
 
 @allure.feature("Главная страница")
 @allure.story("Футер")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/Vb9yHM3L/47-%D0%B3%D1%81-002-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%84%D1%83%D1%82%D0%B5%D1%80%D0%B0",
+                 "ГС-002"
+)
 def test_footers(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
@@ -70,11 +78,14 @@ def test_footers(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Категории")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/wwhfdi0s/48-%D0%B3%D1%81-003-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B9",
+                 "ГС-003"
+)
 def test_categories(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
-
-        #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(1)
 
 
@@ -98,10 +109,14 @@ def test_categories(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Карусель")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/9Lre6icM/49-%D0%B3%D1%81-004-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%B0%D1%80%D1%83%D1%81%D0%B5%D0%BB%D0%B8",
+                 "ГС-004"
+)
 def test_carusel_click(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
-
         time.sleep(1)
 
 
@@ -124,6 +139,11 @@ def test_carusel_click(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Карусель")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/lckYdPiu/45-%D0%B3%D1%81-004-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%B0%D1%80%D1%83%D1%81%D0%B5%D0%BB%D0%B8",
+                 "ГС-005"
+)
 def test_carusel_slide(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
