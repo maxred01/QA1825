@@ -8,6 +8,7 @@ from Valery_Hehenia.Class_work.Class_work_18.data.products import phones, laptop
 from das_magaz.conftest import webdriver
 from das_magaz.conftest import chrome_options, web_browser
 import pytest_check as check
+from allure_commons.types import LabelType
 
 
 
@@ -16,6 +17,11 @@ import pytest_check as check
 
 @allure.feature("Главная страница")
 @allure.story("Товары по категориям")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/jUSUP3aw/41-%D1%82%D0%BA-001-%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B9-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BE%D0%B2",
+                 "ТК-001"
+)
 def test_products_by_category(web_browser):
     with allure.step('Запускаем и настраиваем браузер'):
         driver = MainPage(web_browser)
@@ -43,6 +49,11 @@ def test_products_by_category(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Количество товаров в категории")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/BrhdFLLD/42-%D1%82%D0%BA-002-%D0%BA%D0%BE%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BE%D0%B2-%D0%B2-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8",
+                 "ТК-002"
+)
 def test_products_count_by_category(web_browser):
     with allure.step('Запускаем и настраиваем браузер'):
         driver = MainPage(web_browser)
@@ -70,6 +81,11 @@ def test_products_count_by_category(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Переключение между категориями")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/EQH0pyhM/43-%D1%82%D0%BA-003-%D0%BA%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B9-%D0%B8-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%BE%D0%B2",
+                 "ТК-003"
+)
 def test_category_switching_chaotic(web_browser):
     with allure.step('Запускаем и настраиваем браузер'):
         driver = MainPage(web_browser)
@@ -109,6 +125,11 @@ def test_category_switching_chaotic(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Проверка кнопок навигации категорий")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/lgellgTt/44-%D1%82%D0%BA-004-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BE%D0%BA-%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8%D0%B8-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B9",
+                 "ТК-004"
+)
 def test_category_navigation_buttons_absence(web_browser):
     with allure.step('Запускаем браузер и открываем главную страницу'):
         driver = MainPage(web_browser)
@@ -126,7 +147,7 @@ def test_category_navigation_buttons_absence(web_browser):
             time.sleep(1)
 
 
-        with allure.step('Скроллим страницу до блока товаров'):
+        with allure.step('Скролим страницу до блока товаров'):
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             time.sleep(1)
 
@@ -142,6 +163,11 @@ def test_category_navigation_buttons_absence(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Функциональность кнопок Next и Previous")
+@allure.label(LabelType.LANGUAGE, "python")
+@allure.testcase(
+    "https://trello.com/c/tx7Rgwaj/40-%D1%82%D0%BA-004-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BE%D0%BA-%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8%D0%B8-%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B9",
+                 "ТК-005"
+)
 def test_navigation_buttons_with_boundaries(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)

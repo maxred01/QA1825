@@ -32,7 +32,10 @@ def generate_order_data():
 @allure.feature("Вкладка Cart")
 @allure.story("Проверка отображения пустой корзины")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/XTbalOmx/34-bc-001-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BE%D1%82%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B9-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B", "BC-001")
+@allure.testcase(
+    "https://trello.com/c/XTbalOmx/34-bc-001-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BE%D1%82%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%83%D1%81%D1%82%D0%BE%D0%B9-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B",
+    "BC-001"
+)
 def test_empty_cart(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -53,7 +56,10 @@ def test_empty_cart(web_browser):
 @allure.feature("Вкладка Cart")
 @allure.story("Добавление товара в корзину")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/HOCnhAUw/35-bc-002-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0-%D0%B2-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%83", "BC-002")
+@allure.testcase(
+    "https://trello.com/c/HOCnhAUw/35-bc-002-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0-%D0%B2-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%83",
+    "BC-002"
+)
 def test_add_product_to_cart(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -91,7 +97,10 @@ def test_add_product_to_cart(web_browser):
 @allure.feature("Вкладка Cart")
 @allure.story("Удаление товара из корзины")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/Di1XADTk/36-bc-003-%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0-%D0%B8%D0%B7-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B", "BC-003")
+@allure.testcase(
+    "https://trello.com/c/Di1XADTk/36-bc-003-%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0-%D0%B8%D0%B7-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B",
+    "BC-003"
+)
 def test_remove_product_to_cart(web_browser):
     driver = MainPage(web_browser)
     time.sleep(1)
@@ -135,7 +144,10 @@ def test_remove_product_to_cart(web_browser):
 @allure.feature("Вкладка Cart")
 @allure.story("Проверка суммы корзины")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/kE7AjLi2/37-bc-004-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%81%D1%83%D0%BC%D0%BC%D1%8B-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B", "BC-004")
+@allure.testcase(
+    "https://trello.com/c/kE7AjLi2/37-bc-004-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%81%D1%83%D0%BC%D0%BC%D1%8B-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B",
+    "BC-004"
+)
 def test_cart_total_sum(web_browser):
     driver = MainPage(web_browser)
     time.sleep(0.5)
@@ -181,7 +193,10 @@ def test_cart_total_sum(web_browser):
 @allure.feature("Вкладка Cart")
 @allure.story("Проверка кнопки Place Order")
 @allure.label(LabelType.LANGUAGE, "python")
-@allure.testcase("https://trello.com/c/GaWoLZWQ/38-bc-005-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8-place-order", "BC-005")
+@allure.testcase(
+    "https://trello.com/c/GaWoLZWQ/38-bc-005-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8-place-order",
+    "BC-005"
+)
 def test_place_order_modal(web_browser):
     driver = MainPage(web_browser)
     time.sleep(0.5)
