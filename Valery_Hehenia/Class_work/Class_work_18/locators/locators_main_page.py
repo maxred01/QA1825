@@ -114,3 +114,29 @@ class MainPage(WebPage):
     login_button_x = WebElement(xpath="//div[@id='logInModal']//button[@aria-label='Close']")
     signup_button_x = WebElement(xpath="//div[@id='signInModal']//button[@aria-label='Close']")
 
+    #####################Cart#################
+
+    cart_items = ManyWebElements(xpath ='//tbody[@id="tbodyid"]/tr')
+    place_order_btn= WebElement(xpath ='//button[text()="Place Order"]')
+
+
+    product_items = ManyWebElements(xpath='//div[@id="tbodyid"]/div//a')
+    add_to_cart_btn = WebElement(xpath ='//a[@class="btn btn-success btn-lg"]')
+    remove_to_cart_btn = WebElement(xpath ="//a[text()='Delete']")
+    total_sum = WebElement(xpath = '//h3[@id="totalp"]')
+    price_text = WebElement(xpath = '//td[3]')
+    modal_order_place_order = WebElement(xpath='//div[@id="orderModal" and contains(@class, "modal")]')
+    purchase_btn_place_order = WebElement(xpath='//button[@onclick="purchaseOrder()"]')
+
+
+
+    name_input = WebElement(xpath='//input[@id="name"]')
+    country_input = WebElement(xpath='//input[@id="country"]')
+    city_input = WebElement(xpath='//input[@id="city"]')
+    credit_card_input = WebElement(xpath='//input[@id="card"]')
+    month_input = WebElement(xpath='//input[@id="month"]')
+    year_input = WebElement(xpath='//input[@id="year"]')
+    purchase_btn = WebElement(xpath='//button[text()="Purchase"]')
+
+    # Модальное окно с сообщением о покупке
+    purchase_success_modal = WebElement(xpath='//div[contains(@class,"sweet-alert")]')
