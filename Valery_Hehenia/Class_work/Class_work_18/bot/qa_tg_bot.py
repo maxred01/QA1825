@@ -1,25 +1,25 @@
-﻿from telegram import Update
-from telegram.ext import Application, CommandHandler, ContextTypes
-import os
+﻿import os
 import zipfile
 import time
 import asyncio
 from pathlib import Path
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
 
-# ==== ПУТИ ПОД ТВОЙ ПРОЕКТ ====
-TESTS_DIR = r"D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI"
-RESULTS_DIR = Path(r"D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\results")
-REPORT_DIR = Path(r"D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Сlass_work_18\allure-report")
+UI_TESTS = Path("./tests/UI")
+API_TESTS = Path("./tests/API")
+RESULTS_DIR = Path("./allure-results")
+REPORT_DIR = Path("./allure-report")
 
-# ==== ТОКЕН БОТА ====
-BOT_TOKEN = "8055190659:AAGeOUr8YNyCyUCSvJKcyCEFH18ow780O60"
+def clean_results():
+    RESULTS_DIR.mkdir(exist_ok=True)
+    for f in RESULTS_DIR.glob("*"):
+        if f.is_file():
+            f.unlink()
 
 
-# ==== Создание папок, если их нет ====
-for path in [RESULTS_DIR, REPORT_DIR]:
-    path.mkdir(parents=True, exist_ok=True)
-
-async def execute_command(cmd: str, timeout: int = 300) -> str:
+async def execute_command(cmd: str, update: Update, timeout: int = 300) -> str:
+    """Выполняет shell-команду с таймаутом и возвращает результат"""
     try:
         proc = await asyncio.create_subprocess_shell(
             cmd,
@@ -36,116 +36,147 @@ async def execute_command(cmd: str, timeout: int = 300) -> str:
         return f"⚠️ Ошибка: {str(e)}"
 
 
-async def run_tests(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🔍 Запускаю тесты...")
+async def run_tests(update: Update, context: ContextTypes.DEFAULT_TYPE, test_path: Path):
+    await update.message.reply_text(f"🔍 Запускаю тесты: {test_path.name}")
+    clean_results()
+    cmd = f'pytest -s -v "{test_path}" --alluredir="{RESULTS_DIR}"'
+    stdout = await execute_command(cmd, update)
+    short_result = "\n".join([line for line in stdout.split("\n") if "FAILED" in line or "ERROR" in line])
+    if short_result:
+        await update.message.reply_text(f"📊 Результаты тестов:\n{short_result[:3000]}")
+    else:
+        await update.message.reply_text("✅ Все тесты прошли успешно!")
 
-    RESULTS_DIR.mkdir(exist_ok=True)
-    for file in RESULTS_DIR.glob("*"):
-        file.unlink()
+async def run_tests_ui(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await run_tests(update, context, UI_TESTS)
 
-    cmd = f"pytest -s -v {TESTS_DIR} --alluredir={RESULTS_DIR}"
-    result = await execute_command(cmd)
+async def run_tests_api(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await run_tests(update, context, API_TESTS)
 
-    if not any(RESULTS_DIR.iterdir()):
-        await update.message.reply_text("⚠️ allure-results пуст. Возможно, тесты не запустились.")
-        return
+async def run_tests_all(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Все тесты по очереди без создания подкаталогов
+    await run_tests(update, context, UI_TESTS)
+    await run_tests(update, context, API_TESTS)
 
-    short_result = "\n".join([line for line in result.split("\n") if "FAILED" in line or "ERROR" in line])
-    await update.message.reply_text(
-        f"📊 Результаты тестов:\n{short_result[:3000]}" if short_result else "✅ Все тесты прошли успешно!"
-    )
+
 
 
 async def generate_allure_report(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    try:
-        if not RESULTS_DIR.exists() or not any(RESULTS_DIR.iterdir()):
-            await update.message.reply_text("❌ Нет данных для отчета")
-            return
+    """Генерация Allure отчета из всех существующих папок в results"""
+    results_dir = Path("./results")
+    report_dir = Path("./allure-report")
+    report_dir.mkdir(exist_ok=True)
 
-        await update.message.reply_text("📈 Генерирую Allure-отчет...")
-        REPORT_DIR.mkdir(exist_ok=True)
+    # Находим все подкаталоги с результатами тестов
+    test_dirs = [p for p in results_dir.iterdir() if p.is_dir() and any(p.iterdir())]
+    if not test_dirs:
+        await update.message.reply_text("❌ Нет данных для отчета: папка results пуста")
+        return
 
-        cmd = f"allure generate {RESULTS_DIR} --clean -o {REPORT_DIR}"
-        await execute_command(cmd)
+    await update.message.reply_text(f"📈 Генерирую Allure-отчет из: {', '.join(p.name for p in test_dirs)}")
 
-        report_index = REPORT_DIR / "index.html"
-        if not report_index.exists():
-            await update.message.reply_text("❌ Ошибка генерации: index.html не найден")
-            return
+    for test_dir in test_dirs:
+        cmd = f'allure generate "{test_dir}" --clean -o "{report_dir}"'
+        result = await execute_command(cmd, update)
+        await update.message.reply_text(result)
 
-        await update.message.reply_text("📦 Создаю архив...")
-        timestamp = int(time.time())
-        zip_name = f"allure_report_{timestamp}.zip"
+    report_index = report_dir / "index.html"
+    if not report_index.exists():
+        await update.message.reply_text("❌ Ошибка генерации: index.html не найден")
+        return
 
-        with zipfile.ZipFile(zip_name, 'w', zipfile.ZIP_DEFLATED) as zipf:
-            for root, _, files in os.walk(REPORT_DIR):
-                for file in files:
-                    file_path = Path(root) / file
-                    arcname = os.path.join("allure-report", os.path.relpath(file_path, REPORT_DIR))
-                    zipf.write(file_path, arcname=arcname)
+    await update.message.reply_text("✅ Allure Report успешно сгенерирован!")
+async def open_allure_report(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Генерация и открытие интерактивного Allure отчета из всех существующих папок в results"""
+    results_dir = Path("./results")
+    report_dir = Path("./allure-report")
+    report_dir.mkdir(exist_ok=True)
 
-            for root, _, files in os.walk(RESULTS_DIR):
-                for file in files:
-                    file_path = Path(root) / file
-                    arcname = os.path.join("allure-results", os.path.relpath(file_path, RESULTS_DIR))
-                    zipf.write(file_path, arcname=arcname)
+    # Находим все подкаталоги с результатами тестов
+    test_dirs = [p for p in results_dir.iterdir() if p.is_dir() and any(p.iterdir())]
+    if not test_dirs:
+        await update.message.reply_text("❌ Нет данных для отчета: папка results пуста")
+        return
 
-        await update.message.reply_text("📤 Отправляю архив...")
-        with open(zip_name, 'rb') as zip_file:
-            await context.bot.send_document(
-                chat_id=update.effective_chat.id,
-                document=zip_file,
-                filename=zip_name,
-                caption="📊 Allure Report (с исходными данными)"
-            )
+    await update.message.reply_text(f"📈 Генерирую Allure-отчет из: {', '.join(p.name for p in test_dirs)}")
 
-        os.remove(zip_name)
-        await update.message.reply_text("✅ Отчет успешно отправлен!")
+    # Генерация отчета из каждой папки, объединяя результаты
+    combined_results = Path("./results/combined")
+    combined_results.mkdir(exist_ok=True)
+    # Копируем все файлы из существующих папок в combined_results
+    for test_dir in test_dirs:
+        for file in test_dir.iterdir():
+            target = combined_results / file.name
+            if file.is_file():
+                target.write_bytes(file.read_bytes())
+            elif file.is_dir():
+                # Простое копирование содержимого директорий
+                for subfile in file.rglob("*"):
+                    rel_path = subfile.relative_to(file)
+                    dest = combined_results / rel_path
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    if subfile.is_file():
+                        dest.write_bytes(subfile.read_bytes())
 
-    except Exception as e:
-        await update.message.reply_text(f"⚠️ Ошибка: {str(e)}")
+    # Генерация отчета в report_dir
+    cmd = f'allure generate "{combined_results}" --clean -o "{report_dir}"'
+    result = await execute_command(cmd, update)
+    await update.message.reply_text(result)
+
+    report_index = report_dir / "index.html"
+    if not report_index.exists():
+        await update.message.reply_text("❌ Ошибка генерации: index.html не найден")
+        return
+
+    await update.message.reply_text("✅ Allure Report успешно сгенерирован! 🔹 Открываю интерактивно...")
+
+    # Открываем интерактивно
+    os.system(f'start cmd /k allure serve "{combined_results}"')
 
 
 async def full_cycle(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Полный цикл: тесты + отчет"""
     await run_tests(update, context)
     await generate_allure_report(update, context)
 
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Информация о боте"""
     about_text = """
-🤖 *QA Allure Bot*
+🤖 *Allure Report Bot*
+Версия: 2.1
+Автор: Ваша команда
 Функционал:
-- /runtests – запуск тестов
-- /allurereport – генерация отчета
-- /fullreport – тесты + отчет
+- Запуск тестов (/runtests)
+- Генерация отчета (/allurereport)
+- Полный цикл (/fullreport)
     """
-    await update.message.reply_text(about_text.strip(), parse_mode='MarkdownV2')
+    await update.message.reply_text(
+        about_text.strip(),
+        parse_mode='MarkdownV2',
+        disable_web_page_preview=True
+    )
 
 
 def main():
-    app = Application.builder().token(BOT_TOKEN).build()
+    application = Application.builder().token("8289688062:AAFZevVUE_dWH5U4VQAtCc3W3VUAcoqXchY").build()
 
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("runtests", run_tests))
-    app.add_handler(CommandHandler("allurereport", generate_allure_report))
-    app.add_handler(CommandHandler("fullreport", full_cycle))
-    app.add_handler(CommandHandler("about", about))
+    handlers = [
+        CommandHandler("runtests_ui", run_tests_ui),
+        CommandHandler("runtests_api", run_tests_api),
+        CommandHandler("runtests_all", run_tests_all),
+        CommandHandler("allurereport", generate_allure_report),
+        CommandHandler("openreport", open_allure_report),
+        CommandHandler("fullreport", full_cycle),
+        CommandHandler("about", about)
+    ]
 
-    print("✅ Бот запущен и ждёт команды...")
-    app.run_polling()
+    for handler in handlers:
+        application.add_handler(handler)
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Приветствие при старте"""
-    await update.message.reply_text(
-        "👋 Привет! Я *QA Allure Bot*.\n\n"
-        "Я умею запускать тесты и отправлять Allure-отчёты.\n"
-        "Доступные команды:\n"
-        "/runtests – Запуск тестов\n"
-        "/allurereport – Генерация отчёта\n"
-        "/fullreport – Тесты + отчёт\n"
-        "/about – Информация о боте",
-        parse_mode="MarkdownV2"
-    )
+    print("🤖 Бот запущен, ждём команд...")
+    application.run_polling()
+
 
 if __name__ == "__main__":
     main()
