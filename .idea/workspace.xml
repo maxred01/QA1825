@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="commit class work 20 &#10;add test_register_no_valid" />
+    <list default="true" id="179be14b-8541-4426-b2d5-ffcf6622b062" name="Changes" comment="commit class work 20 &#10;add api test">
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/cart/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/login/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/mainpage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/modalwindows/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/tabs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/bot/qa_tg_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/bot/qa_tg_bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/mainpage/test_categories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/login/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_login_no_valid.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/login/test_login_no_valid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/mainpage/test_main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_modal_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/modalwindows/test_modal_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_tab_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/cart/test_tab_cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/test_tabs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI/tabs/test_tabs.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,133 +63,172 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.pytest for test_categories.test_category_navigation_buttons_absence.executor": "Run",
-    "Python tests.pytest for test_categories.test_category_switching_chaotic.executor": "Run",
-    "Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.executor": "Run",
-    "Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow.executor": "Run",
-    "Python tests.pytest for test_categories.test_phones_category.executor": "Run",
-    "Python tests.pytest for test_categories.test_products_by_category.executor": "Run",
-    "Python tests.pytest for test_categories.test_products_count_by_category.executor": "Run",
-    "Python tests.pytest for test_categories.test_products_name_and_price.executor": "Run",
-    "Python tests.pytest for test_login.test_login_user.executor": "Run",
-    "Python tests.pytest for test_login.test_register_and_login.executor": "Run",
-    "Python tests.pytest for test_login.test_register_user.executor": "Run",
-    "Python tests.pytest for test_login_no_valid.test_register_and_login_and_logout.executor": "Run",
-    "Python tests.pytest for test_login_no_valid.test_register_no_login.executor": "Run",
-    "Python tests.pytest for test_login_no_valid.test_register_spec_symbol.executor": "Run",
-    "Python tests.pytest for test_main_page.test_carusel.executor": "Run",
-    "Python tests.pytest for test_main_page.test_footers.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "valery__hehenia__home__work__site",
-    "last_opened_file_path": "D:/Studies/QA/DZ/QA1825/Valery_Hehenia/Class_work/Class_work_18/tests/UI",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_api.test_add_to_cart_without_cookie.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_api.test_delete_item_invalid_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_api.test_entries_structure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_api.test_get_entries.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_api.test_login_empty_fields.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_api.test_login_wrong_password.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_api.test_signup_existing_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_api.test_view_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_category_navigation_buttons_absence.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_category_switching_chaotic.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_navigation_buttons_with_boundaries.test_navigation_buttons_full_flow.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_phones_category.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_products_by_category.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_products_count_by_category.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_categories.test_products_name_and_price.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login.test_login_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login.test_register_and_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login.test_register_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login_no_valid.test_autorized_no_register_person.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login_no_valid.test_register_and_login_and_logout.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login_no_valid.test_register_no_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login_no_valid.test_register_register_person.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_login_no_valid.test_register_spec_symbol.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_main_page.test_carusel.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_main_page.test_carusel_click.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_main_page.test_carusel_slide.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_main_page.test_categories.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_main_page.test_footers.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_main_page.test_headers.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_modal_contact.test_submitting_empty_form.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_modal_contact.test_submitting_form_with_valid_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_modal_contact.test_submitting_long_message.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_modal_contact.test_submitting_no_message.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tab_cart.test_add_product_to_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tab_cart.test_cart_total_sum.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tab_cart.test_empty_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tab_cart.test_place_order_modal.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tab_cart.test_purchase_empty_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tab_cart.test_remove_product_to_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_closing_modal_close.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_closing_modal_x.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_contact_modal_clears_after_close.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_login_modal_clears_after_close.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_open_about_us_tab.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_open_cart_tab.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_open_contact_tab.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_open_home_tab.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_open_login_tab.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_open_signup_tab.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_tabs.test_signup_modal_clears_after_close.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;valery__hehenia__home__work__site&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Studies/QA/DZ/QA1825/Valery_Hehenia/Class_work/Class_work_18/data&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\data" />
       <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\results" />
-      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI" />
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI\mainpage" />
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI\tabs" />
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI\cart" />
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI\modalwindows" />
+      <recent name="D:\Studies\QA\DZ\QA1825\Valery_Hehenia\Class_work\Class_work_18\tests\UI\login" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_login_no_valid.test_register_spec_symbol">
-    <configuration name="pytest for test_login_no_valid.test_register_and_login_and_logout" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_api.test_delete_item_invalid_id">
+    <configuration name="pytest for test_api.test_add_to_cart_without_cookie" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/API" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login_no_valid.test_register_and_login_and_logout&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_add_to_cart_without_cookie&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_login_no_valid.test_register_no_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_api.test_delete_item_invalid_id" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/API" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login_no_valid.test_register_no_login&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_delete_item_invalid_id&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_login_no_valid.test_register_spec_symbol" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_api.test_login_empty_fields" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/API" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login_no_valid.test_register_spec_symbol&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_login_empty_fields&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_login.test_login_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_api.test_login_wrong_password" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/API" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.test_login_user&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_login_wrong_password&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_login.test_register_and_login" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_api.test_signup_existing_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="QA1825" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/UI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Valery_Hehenia/Class_work/Class_work_18/tests/API" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_login.test_register_and_login&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_signup_existing_user&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_login_no_valid.test_register_spec_symbol" />
-        <item itemvalue="Python tests.pytest for test_login_no_valid.test_register_no_login" />
-        <item itemvalue="Python tests.pytest for test_login_no_valid.test_register_and_login_and_logout" />
-        <item itemvalue="Python tests.pytest for test_login.test_register_and_login" />
-        <item itemvalue="Python tests.pytest for test_login.test_login_user" />
+        <item itemvalue="Python tests.pytest for test_api.test_delete_item_invalid_id" />
+        <item itemvalue="Python tests.pytest for test_api.test_add_to_cart_without_cookie" />
+        <item itemvalue="Python tests.pytest for test_api.test_login_empty_fields" />
+        <item itemvalue="Python tests.pytest for test_api.test_login_wrong_password" />
+        <item itemvalue="Python tests.pytest for test_api.test_signup_existing_user" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +325,71 @@
       <option name="project" value="LOCAL" />
       <updated>1758468462959</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="commit class work 20 &#10;add test_register_no_valid">
+      <option name="closed" value="true" />
+      <created>1758468599365</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758468599365</updated>
+    </task>
+    <task id="LOCAL-00012" summary="commit class work 20 &#10;add test_register_no_valid (add authorized)">
+      <option name="closed" value="true" />
+      <created>1758486273642</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1758486273642</updated>
+    </task>
+    <task id="LOCAL-00013" summary="commit class work 20 &#10;add test_tabs and modal">
+      <option name="closed" value="true" />
+      <created>1759000489390</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759000489390</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commit class work 20 &#10;add modal_contact">
+      <option name="closed" value="true" />
+      <created>1759011111547</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1759011111547</updated>
+    </task>
+    <task id="LOCAL-00015" summary="commit class work 20 &#10;add tab cart">
+      <option name="closed" value="true" />
+      <created>1759060314310</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1759060314310</updated>
+    </task>
+    <task id="LOCAL-00016" summary="commit class work 20 &#10;add and edit test-case">
+      <option name="closed" value="true" />
+      <created>1759086288196</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1759086288196</updated>
+    </task>
+    <task id="LOCAL-00017" summary="commit class work 20 &#10;add and edit test-case">
+      <option name="closed" value="true" />
+      <created>1759094265989</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1759094265989</updated>
+    </task>
+    <task id="LOCAL-00018" summary="commit class work 20 &#10;add api test">
+      <option name="closed" value="true" />
+      <created>1759166772134</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1759166772134</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -294,7 +412,13 @@
     <MESSAGE value="commit class work 20 &#10;add categories tests update" />
     <MESSAGE value="commit class work 20 &#10;add test_register_and_login_and_logout" />
     <MESSAGE value="commit class work 20 &#10;add test_register_no_valid" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit class work 20 &#10;add test_register_no_valid" />
+    <MESSAGE value="commit class work 20 &#10;add test_register_no_valid (add authorized)" />
+    <MESSAGE value="commit class work 20 &#10;add test_tabs and modal" />
+    <MESSAGE value="commit class work 20 &#10;add modal_contact" />
+    <MESSAGE value="commit class work 20 &#10;add tab cart" />
+    <MESSAGE value="commit class work 20 &#10;add and edit test-case" />
+    <MESSAGE value="commit class work 20 &#10;add api test" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit class work 20 &#10;add api test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
