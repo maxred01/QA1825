@@ -2,11 +2,12 @@ import time
 import allure
 from maksim_tsybulka.class_work.class_work_16.locators.main_locators import MainPage
 import pytest_check as check
-
+from super_puper_frame.conftest import web_browser
+from super_puper_frame.conftest import chrome_options
 
 @allure.feature("Главная страница")
 @allure.story("Хедер")
-def test_headers(web_browser):
+def test_headers(web_browser, chrome_options):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
         driver.btn_cookies.click()
@@ -41,7 +42,7 @@ def test_headers(web_browser):
 
 @allure.feature("Главная страница")
 @allure.story("Футер")
-def test_footers(web_browser):
+def test_footers(web_browser, chrome_options):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
         driver.btn_cookies.click()
@@ -88,3 +89,16 @@ def test_footers(web_browser):
 
     with allure.step('Проверка брендов'):
         check.equal(driver.btn_brands.count(), 94)
+
+
+
+@allure.feature("Главная страница")
+@allure.story("Корзина")
+def test_footers(web_browser, chrome_options):
+    with allure.step('Запускаем и настройка браузер'):
+        driver = MainPage(web_browser)
+        driver.btn_cookies.click()
+        driver.btn_onboarding.click()
+        price = driver.main_product_price.get_text()
+        price = price.split('\n')[0]
+        print(price)

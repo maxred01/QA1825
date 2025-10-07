@@ -1,6 +1,6 @@
 import os
-from maksim_tsybulka.class_work.class_work_16.page.base_page import WebPage
-from maksim_tsybulka.class_work.class_work_16.page.elements import WebElement, ManyWebElements
+from super_puper_frame.page.base_page import WebPage
+from super_puper_frame.page.elements import ManyWebElements, WebElement
 
 
 class MainPage(WebPage):
@@ -49,7 +49,8 @@ class MainPage(WebPage):
     btn_footer_22 = WebElement(xpath='//footer[@id="footer"]//*[contains(text(),"Евроопт")]')
     btn_footer_23 = WebElement(xpath='//footer[@id="footer"]//*[contains(text(),"Хит!")]')
     btn_footer_24 = WebElement(xpath='//footer[@id="footer"]//*[contains(text(),"Грошык")]')
-
+    main_product_price = WebElement(
+        xpath='(//div[@data-nosnippet="true"]//span[@class="price_main__ZI_hw price_main_red__nTPA_"])[1]')
 
     btn_cookies = WebElement(xpath='//div[@id="cookies-modal-title"]//span[contains(text(), "Принять")]')
     btn_onboarding = WebElement(xpath='//div[@id="onboarding-banner"]//span[contains(text(), "Закрыть")]')
