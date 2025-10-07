@@ -23,7 +23,7 @@ def test_main_page():
         (408, "https://emall.by/brands/379"),
         (408, "https://emall.by/brands/24302"),
         (408, "https://emall.by/product/2151379"),
-        (408, "https://emall.by/actions/construction-renovation"),
+        (404, "https://emall.by/actions/construction-renovation"),
         (408, "https://emall.by/actions/vacation-calling"),
 
 

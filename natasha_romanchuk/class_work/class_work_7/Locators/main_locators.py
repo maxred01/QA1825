@@ -95,4 +95,7 @@ class MainPage(WebPage):
     main_img= WebElement(xpath='(//*[@class="product-webp-png-image_image__TCZIc card-image_image__eENi8"])[1]')
     main_name= WebElement(xpath='(//a[@class="vertical_title__FM_Ud"])[1]')
     favorite_name= WebElement(xpath='//a[@style="-webkit-line-clamp: 3;"]')
+    brands= WebElement(xpath='(//*[@target="_self"])[25]//i')
+
+    brands_link=ManyWebElements(xpath='//a[@class="brands_brand_card__pOg7K"]')
 

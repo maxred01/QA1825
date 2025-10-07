@@ -3,18 +3,21 @@ import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
 from nuts_nuts_nuts.conftest import chrome_options
 from natasha_romanchuk.class_work.class_work_7.Locators.main_locators import MainPage
 from nuts_nuts_nuts.conftest import web_browser
 import pytest_check as check
 from nuts_nuts_nuts.page1.base_page import WebPage
 from nuts_nuts_nuts.page1.elements import WebElement
+from nuts_nuts_nuts.page1.elements import ManyWebElements
 
-@allure.feature("Header Navigation")
-@allure.story("Visual Elements Display")
+@allure.feature("Главная страница")
+@allure.story("Хэдер, проверка элементов на отображение и кликабельность")
 @allure.severity(allure.severity_level.NORMAL)
 def test_header_elements_displayed(web_browser, chrome_options):
-    with allure.step('Запускаем и настраиваем браузер'):
+    with allure.step('Запуск и настройка браузера'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
         driver.close_button.click()
@@ -53,7 +56,7 @@ def test_header_elements_displayed(web_browser, chrome_options):
 @allure.feature("Главная страница")
 @allure.story("Футер, отображение и кликабельность элементов")
 def test_footers(web_browser):
-    with allure.step('Запускаем и настройка браузер'):
+    with allure.step('Запуск и настройка браузера'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
         driver.close_button.click()
@@ -98,36 +101,78 @@ def test_footers(web_browser):
                     check.is_true(element.is_clickable(), f'Элемента {text_element} не кликабелен')
 
 
+@allure.feature("Главная страница")
+@allure.story("Проверка количества отображаемых брендов с прокруткой")
+def test_brands_count(web_browser):
+    driver = MainPage(web_browser)
 
-    with allure.step('Проверка брендов'):
-        check.equal(driver.brands_button.count(),20)
+    with allure.step("Настройка браузера"):
+        driver.cookies_button.click()
+        driver.close_button.click()
 
+    with allure.step("Нажимаем на кнопку открытия списка брендов"):
+        open_brands_button = driver.brands
+        open_brands_button.click()
+
+    with allure.step("Ожидаем видимость брендов"):
+        wait = WebDriverWait(web_browser, 20)
+        brands_elements = wait.until(
+            EC.visibility_of_all_elements_located(
+                (By.XPATH, '//a[contains(@class,"brands_brand_card")]')
+            )
+        )
+
+    with allure.step("Прокручиваем к каждому бренду"):
+        for brand in brands_elements:
+            ActionChains(web_browser).move_to_element(brand).perform()
+
+    with allure.step("Проверяем количество брендов"):
+        brands_count = len(brands_elements)
+        check.greater_equal(brands_count, 5)  # минимум 5 брендов
+
+        check.less_equal(brands_count, 1000)    # максимум 1000 брендов
 
 @allure.feature("Главная страница")
-@allure.story("Хэдер, ввод запроса в поисковую строку и удаление запроса")
-def test_search_product(web_browser):
-    with allure.step('Запускаем и настройка браузер'):
+@allure.story("Хэдер, ввод запроса в поисковую строку")
+def test_search_product_valid_query(web_browser):
+    with allure.step('Запуск и настройка браузера'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
         driver.close_button.click()
 
-    with allure.step('Вводим запрос и нажимаем Enter'):
-        search_product = driver.search_input
-        search_product.send_keys("iPhone")
-        search = driver.search_button
-        search.click()
-        time.sleep(10)
+    with allure.step('Вводим запрос и нажимаем Поиск'):
+        search_input = driver.search_input
+        search_input.send_keys("iPhone")
+        driver.search_button.click()
+        time.sleep(3)
 
     with allure.step('Проверяем, что результаты поиска отображаются'):
-        check.is_true(driver.search_results.is_visible(),"Результаты поиска не отображаются на странице")
+        check.is_true(driver.search_results.is_visible(), "Результаты поиска не отображаются")
 
-        search_product.send_keys(Keys.CONTROL + "a") # Выделить все
-        search_product.send_keys(Keys.DELETE)         # Очистить
-        assert search_product.is
-
+    with allure.step('Проверяем, что в результатах есть iPhone'):
+        results_text = driver.search_results.get_text().lower()
+        check.is_true("iphone" in results_text, f"'iPhone' не найден в результатах: {results_text}")
 
 @allure.feature("Главная страница")
-@allure.story("Подсчет товаров и проверка наличия картинок")
+@allure.story("Хэдер, очистка строки поиска")
+def test_search_clear_field(web_browser):
+    with allure.step('Запуск и настройка браузера'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+
+    with allure.step('Вводим запрос и очищаем строку'):
+        search_input = driver.search_input
+        search_input.send_keys("iPhone")
+        search_input.send_keys(Keys.CONTROL + "a")
+        search_input.send_keys(Keys.DELETE)
+
+    with allure.step('Проверяем, что поле поиска стало пустым'):
+        after_clear_value = search_input.get_attribute("value")
+        check.equal(after_clear_value, "", f"Ожидали пустое поле поиска, но получили '{after_clear_value}'")
+
+@allure.feature("Главная страница")
+@allure.story("Подсчет товаров на главной странице")
 def test_count_products(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
@@ -140,10 +185,31 @@ def test_count_products(web_browser):
         check.greater_equal(products, 10)  #от 10
         check.less_equal(products, 99)      # до 99
 
+@allure.feature("Главная страница")
+@allure.story("Проверка отображения картинок у всех товаров")
+def test_check_product_images_visible(web_browser):
+    with allure.step('Запускаем браузер и открываем главную страницу'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+
+    with allure.step('Получаем все товары на странице'):
+        products = driver.all_products.count()
+        check.greater_equal(products, 1, "На странице нет товаров для проверки картинок")
+
+    with allure.step('Проверяем, что у каждого товара картинка отображается'):
+        for i in range(products):
+            img_element = driver.all_products[i].find_element(By.TAG_NAME, "img")  # ищем <img> внутри каждого товара
+
+            img_src = img_element.get_attribute("src")
+            check.is_not_none(img_src, f"У товара №{i+1} отсутствует картинка (src=None)")
+            check.not_equal(img_src.strip(), "", f"У товара №{i+1} пустой src для картинки")  # проверяем, что атрибут src не пустой
+            check.is_true(img_element.is_displayed(), f"Картинка у товара №{i+1} не отображается на странице")  # проверяем, что картинка реально отображается
+
 @allure.feature('Главная страница')
 @allure.story('Кнопки "В корзине" кликабельны')
 def test_vkorzine(web_browser):
-    with allure.step('Запускаем и настройка браузер'):
+    with allure.step('Запуск и настройка браузера'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
         driver.close_button.click()
@@ -168,8 +234,9 @@ def test_vkorzine(web_browser):
             except:
                 print(f"Кнопка {i} НЕ кликабельна ")
 
+
 @allure.feature('Главная страница')
-@allure.story('Переход на сраницу "Контакты"через футер')
+@allure.story('Переход на сраницу "Контакты" через футер')
 def test_kontakty(web_browser):
     with allure.step('Запускаем и настройка браузер'):
         driver = MainPage(web_browser)
@@ -187,8 +254,9 @@ def test_kontakty(web_browser):
         assert current_url == "https://emall.by/information/company/contacts", \
             f"Ожидали страницу Контакты, а открылась {current_url}"
 
-@allure.feature("Главная страница,Footer")
-@allure.story("Проверка всех ссылок футера")
+
+@allure.feature("Главная страница")
+@allure.story("Проверка всех ссылок футера и переход на них")
 def test_footer_links(web_browser):
     with allure.step("Запуск браузера и закрытие баннеров"):
         driver = MainPage(web_browser)
@@ -242,9 +310,9 @@ def test_footer_links(web_browser):
                 driver.go_back()
 
 @allure.feature('Главная страница')
-@allure.story('Добавление товара в корзину и проверка корзины')
+@allure.story('Добавление товара в корзину и проверка его отображения, количества и цены')
 def test_add_goods_and_check_cart(web_browser):
-    with allure.step('Запускаем и настройка браузер'):
+    with allure.step('Запуск и настройка браузера'):
         driver = MainPage(web_browser)
         driver.cookies_button.click()
         driver.close_button.click()
@@ -280,18 +348,23 @@ def test_add_goods_and_check_cart(web_browser):
         assert float(price) > 0
         assert price == main_prise
 
-        # with allure.step('Отображение логотипа'):
-    #     logo = driver.find_element(By.XPATH, driver.logotip)
-    #     assert logo.is_displayed()
-    #
-    # with allure.step('Отображение строки поиска'):
-    #     search  = driver.find_element(By.XPATH, driver.search_input)
-    #     assert search.is_displayed()
-    #
-    # with allure.step('Отображение иконки поиска'):
-    #     search_btn  = driver.find_element(By.XPATH, driver.search_button)
-    #     assert search_btn.is_displayed()
-    #
-    # with allure.step('Отображение кнопки каталог'):
-    #     catalog_btn  = driver.find_element(By.XPATH, driver.catalog_button)
-    #     assert catalog_btn.is_displayed()
+
+@allure.feature('Главная страница')
+@allure.story('Добавление товара в "Избранное" и его отображение в "Избранное"')
+def test_add_goods_at_favorites(web_browser):
+    with allure.step('Запуск и настройка браузера'):
+        driver = MainPage(web_browser)
+        driver.cookies_button.click()
+        driver.close_button.click()
+
+    with allure.step('Добавляем товар в "Избранное"'):
+        driver.main_img.move_to_element()
+        element1 = driver.main_name.get_text()
+        driver.main_izbrannoe.click()
+
+    with allure.step('Переходим в "Избранное"'):
+        driver.action_button_favorites.click()
+        element2 = driver.favorite_name.get_text()
+        assert element1 == element2
+
+
