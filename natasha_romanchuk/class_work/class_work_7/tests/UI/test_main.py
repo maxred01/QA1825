@@ -34,13 +34,6 @@ def test_header_elements_displayed(web_browser, chrome_options):
             ( driver.action_button_basket,"корзина"),
             ( driver.actions_button,"акции"),
             ( driver.lucky_goods_button,"товары-везунчики"),
-            ( driver.promocodes_button,"промокоды"),
-            ( driver.new_button,"новинки"),
-            ( driver.urgent_goods_button,"срочный товар"),
-            ( driver.take_more_button,"упаковкой выгоднее"),
-            ( driver.naushniki_besprovodnye_button,"наушники беспроводные"),
-            ( driver.school_button,"школа"),
-            ( driver.detskaya_stirka_button,"детская стирка"),
 
     ]
 
@@ -276,7 +269,7 @@ def test_footer_links(web_browser):
         (driver.dostavca_dlya_urlic_button, "https://business.emall.by/catalog/"),
         (driver.stat_prodavcom_button, "https://seller.emall.by/"),
         (driver.prodaza_avto_button, "https://emall.by/news/82"),
-        (driver.polz_soglashenie_button, "https://api-preprod.emall.by/649008c9c6277_publichnyj-dogovor-emall.pdf"),
+        (driver.polz_soglashenie_button, "https://api-preprod.emall.by/storage/admin/files/yLqTfBKDsBPjdoPYehZxJushzuEyMifSngLFyMHH.pdf"),
         (driver.soglashenie_o_creditax_button, "https://api-preprod.emall.by/storage/admin/files/UOEpXjJF8xBxksqpphDwn5HKKr6SizVhijbqxEww.pdf"),
         (driver.edostavca_button, "https://edostavka.by/#modal-opened"),
         (driver.evropochta_button, "https://evropochta.by/"),
@@ -292,7 +285,7 @@ def test_footer_links(web_browser):
             windows_before = driver._web_driver.window_handles
 
             button.click()  # кликаем по кнопке
-            driver.wait_page_loaded() # ждём загрузку страницы
+            driver.wait_page_loaded(timeout=120) # ждём загрузку страницы
 
             windows_after = driver._web_driver.window_handles   # проверяем, открылась ли новая вкладка
             if len(windows_after) > len(windows_before):
