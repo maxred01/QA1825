@@ -129,7 +129,6 @@ def test_brands_count(web_browser):
     with allure.step("Проверяем количество брендов"):
         brands_count = len(brands_elements)
         check.greater_equal(brands_count, 5)  # минимум 5 брендов
-
         check.less_equal(brands_count, 1000)    # максимум 1000 брендов
 
 @allure.feature("Главная страница")
